@@ -1,5 +1,6 @@
 backend:
  name: github
+ # name: git-gateway
  repo: DDB-D/headlessCMS
  branch: master
  site_domain: silly-lalande-b4d4b4.netlify.com

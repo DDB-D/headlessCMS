@@ -2,17 +2,8 @@
 <html>
   {% include head.html %}
   <body>
-    {{ content }}
-    <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
+  <h1>foo</h1>
+    {{ content }}    
+    {% include script_netlify_redirectToCMS.html %}
   </body>
 </html>
