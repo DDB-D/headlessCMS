@@ -34,3 +34,6 @@ exclude:
   - Gemfile.lock
 # sass:
 #   style: compact
+#
+# invalid date error
+exclude: [vendor]
