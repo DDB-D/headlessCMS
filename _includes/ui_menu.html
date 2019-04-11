@@ -1,0 +1,19 @@
+<!-- menu button & overlay -->
+<!-- menu button -->
+  <div class="menu">
+    <button id="trigger-overlay" type="button" class="ui_menuButton">Menu</button>
+  </div>
+<!-- menu overlay -->
+<div class="overlay overlay-hugeinc">
+  <button type="button" class="overlay-close">Close</button>
+  <nav>
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>
+<!-- end: menu button & overlay -->

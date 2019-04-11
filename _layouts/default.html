@@ -2,8 +2,22 @@
 <html>
   {% include head.html %}
   <body>
-  <h1>foo</h1>
-    {{ content }}    
+
+    <div="container">
+
+      {% include ui_menu.html %}
+      {% include script_loadScripts.html %} <!-- atm ui_menu -->
+
+      <div class="home">
+        <h1> Hartgeld Studio </h1>
+        <p> aödlkjfkaölsfjöldsaf </p>
+      </div>
+
+      {{ content }}
+
+    </div>
+
+
     {% include script_netlify_redirectToCMS.html %}
   </body>
 </html>

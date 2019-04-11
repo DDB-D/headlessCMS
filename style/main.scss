@@ -1,9 +1,15 @@
 ---
 ---
-    
+
 @import "variables";
 
-h1 {
-	font-size: $font-size-base;
-	color: red;
-}
+// Layout
+@import "layout";
+
+// Typography
+@import "fonts";
+@import "type_calcSize";  // type: calculate type size – sass script using vw/vh
+@import "type";
+
+// UI-Elements
+@import "ui_menu";

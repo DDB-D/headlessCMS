@@ -1,0 +1,17 @@
+/* Typography */
+
+body { font-family: 'Inter', sans-serif; }
+
+p {
+  font-weight: 400;
+	color: $col_type;
+  $map: (576: 26, 768: 24, 992: 34);
+  font-size: least-squares-fit($map);
+}
+
+h1 {
+  font-weight: 700;
+  color: $col_type;
+  $map: (576: 36, 768: 36, 992: 56);
+  font-size: least-squares-fit($map);
+}
