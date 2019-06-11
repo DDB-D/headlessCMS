@@ -6,7 +6,7 @@ layout: default
 title: Home
 ---
 
-<!--
+
 <ul>
   {% for post in site.posts %}
     <li>
@@ -14,4 +14,3 @@ title: Home
     </li>
   {% endfor %}
 </ul>
--->

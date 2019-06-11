@@ -1,17 +1,21 @@
+///////////////
+/* UI – Menu */
+///////////////
+
 /* Menu button */
  .ui_menuButton{
 
   color: $col_type;
   background: transparent;
   border: none;
-  font-size: 50px;
-  font-weight: 800;
+  //font-size: 50px;
+  //font-weight: 800;
   text-transform: uppercase;
   cursor: pointer;
 
 }
 
-// Menu modal //
+/* Menu modal */
 .overlay {
 	position: fixed;
 	width: 100%;

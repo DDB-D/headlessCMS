@@ -8,7 +8,7 @@ description: >
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: hlgrrdlt
-github_username:  DDB-D
+github_username:  hartgeld
 
 # Build settings
 markdown: kramdown
@@ -18,13 +18,15 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
-# sass:
-#   style: compact
-#
-# invalid date error
+sass:
+    # style: compact
+    load_paths:
+      - _sass
+      - node_modules/normalize-scss/sass
 exclude: [vendor]
 assets:
    sources:
      -assets/fonts
      -assets/javascript
      -assets/graphics
+     -node_modules

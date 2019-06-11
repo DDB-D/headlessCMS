@@ -1,0 +1,6 @@
+#ui_home_logoType{
+  font-weight: 500;
+  $map: (576: 11, 768: 11, 992: 11);
+  font-size: least-squares-fit($map);
+  letter-spacing: 0.5em;
+}

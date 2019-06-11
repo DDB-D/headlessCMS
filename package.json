@@ -1,0 +1,27 @@
+{
+  "name": "headlesscms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DDB-D/headlessCMS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DDB-D/headlessCMS/issues"
+  },
+  "homepage": "https://github.com/DDB-D/headlessCMS#readme",
+  "dependencies": {
+    "circletype": "^2.3.0",
+    "flowtype-js": "^0.1.1",
+    "jquery": "^3.4.1",
+    "letteringjs": "^0.7.0",
+    "normalize-scss": "^7.0.1",
+    "simplefocus-flowtype-js": "^1.1.0"
+  }
+}

@@ -1,7 +1,11 @@
+///////////////////
+/* layout / grid */
+///////////////////
+
 body{
   background-color: $col_background;
 }
-
+/*
 .background{
   position: fixed;
   top: 0;
@@ -10,16 +14,33 @@ body{
   right: 0;
   overflow: auto;
 }
+*/
 
-.container{
+.grid{
+  height: 100vh;
   display: grid;
-  grid-template-columns: [home][fr][menu]
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  grid-template-rows: [header] auto [body] 1fr;
+  grid-template-columns: [left-gutter] 2fr [home] 2fr [body] 6fr [menu] 2fr [right-gutter] 1fr;
 }
 
+/*
 .home{
-  grid-column: home;
+  grid-row: header;
+  grid-column: left-gutter;
+  object-fit: contain;
+}
+*/
+
+.menu{
+  grid-row: header;
+  grid-column: right-gutter;
+  text-align: right;
+  object-fit: contain;
 }
 
-.ui_home{
-  grid-column: menu;
+.content{
+  grid-column: home/right-gutter;
+  grid-row: body;
 }

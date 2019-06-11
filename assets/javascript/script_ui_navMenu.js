@@ -1,10 +1,7 @@
 (function() {
 	var triggerBttn = document.getElementById( 'trigger-overlay' );
 	var overlay = document.querySelector( 'div.overlay' );
-  console.log(overlay);
-  //
   var closeBttn = document.querySelector( 'button.overlay-close' );
-  console.log(closeBttn);
 
 		transEndEventNames = {
 			'WebkitTransition': 'webkitTransitionEnd',
@@ -41,5 +38,5 @@
 
 	triggerBttn.addEventListener( 'click', toggleOverlay );
 	closeBttn.addEventListener( 'click', toggleOverlay );
-  
+
 })();
