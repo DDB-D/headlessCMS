@@ -1,21 +1,30 @@
-///////////////
-/* UI – Menu */
-///////////////
 
-/* Menu button */
+// menu type
+.ui_menu_type{
+  display: inline-block;
+  margin-left: 75px;
+  margin-top: 32px;
+}
+// remove button default style
  .ui_menuButton{
-
-  color: $col_type;
   background: transparent;
   border: none;
-  //font-size: 50px;
-  //font-weight: 800;
-  text-transform: uppercase;
   cursor: pointer;
-
+}
+// ui_menu.js script selector
+.ui_menu_changeType{
+  white-space: nowrap;
+  overflow: hidden;
 }
 
+/*
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 50px;}
+}*/
+
 /* Menu modal */
+/*
 .overlay {
 	position: fixed;
 	width: 100%;
@@ -24,8 +33,10 @@
 	left: 0;
 	background: $col_background_invert;
 }
+*/
 
 /* Overlay closing cross */
+/*
 .overlay .overlay-close {
 	width: 80px;
 	height: 80px;
@@ -40,8 +51,10 @@
 	outline: none;
 	z-index: 100;
 }
+*/
 
 /* Menu style */
+/*
 .overlay nav {
 	text-align: center;
 	position: relative;
@@ -80,8 +93,9 @@
 .overlay ul li a:focus {
   color: $color-link;
 }
-
+*/
 /* Effects */
+/*
 .overlay-hugeinc {
 	opacity: 0;
 	visibility: hidden;
@@ -119,3 +133,5 @@
 	-webkit-transform: translateY(25%) rotateX(-35deg);
 	transform: translateY(25%) rotateX(-35deg);
 }
+
+*/

@@ -1,11 +1,11 @@
 ///////////////////
-/* layout / grid */
+/* Layout / Grid */
 ///////////////////
 
 body{
   background-color: $col_background;
 }
-/*
+
 .background{
   position: fixed;
   top: 0;
@@ -14,33 +14,60 @@ body{
   right: 0;
   overflow: auto;
 }
-*/
 
 .grid{
   height: 100vh;
   display: grid;
+
+  grid-template-columns: 1fr 1fr 5fr 2fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
+
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
-  grid-template-rows: [header] auto [body] 1fr;
-  grid-template-columns: [left-gutter] 2fr [home] 2fr [body] 6fr [menu] 2fr [right-gutter] 1fr;
+
+  //justify-items: center;
+
 }
 
-/*
-.home{
-  grid-row: header;
-  grid-column: left-gutter;
-  object-fit: contain;
+.layout_ui_home{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  align-self: center;
+  //init flex
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-self: center;
+  justify-self: center;
 }
-*/
 
-.menu{
-  grid-row: header;
-  grid-column: right-gutter;
-  text-align: right;
-  object-fit: contain;
+.layout_ui_menu{
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  align-self: center;
 }
 
-.content{
-  grid-column: home/right-gutter;
-  grid-row: body;
+.layout_ui_content{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.layout_comingSoon{
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  align-self: center;
+  //init flex
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-self: center;
+  justify-self: center;
 }

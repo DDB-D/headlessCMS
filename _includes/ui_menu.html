@@ -1,21 +1,26 @@
+
 <!-- menu button & overlay -->
-<!-- menu button -->
-  <div class="menu">
-    <button id="trigger-overlay" type="button" class="ui_menuButton">
-        <h1>Menu</h1>
-    </button>
-  </div>
-<!-- menu overlay -->
-<div class="overlay overlay-hugeinc">
-  <button type="button" class="overlay-close">Close</button>
-  <nav>
-    <ul>
-      {% for post in site.posts %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
+<div class="layout_ui_menu">
+  <!--<button id="trigger-overlay" type="button" class="ui_menuButton" >-->
+    <!-- menu icon -->
+    <!--
+    <div id="menu-toggle">
+      <div id="hamburger">
+        <span class="burger"></span>
+        <span class="burger"></span>
+        <span class="burger"></span>
+      </div>
+      <div id="cross">
+        <span class="burger"></span>
+        <span class="burger"></span>
+      </div>
+    </div>
+    -->
+    <!-- menu type -->
+    <div class="ui_menu_type" >
+          <h1 class="ui_type" id="ui_menu_changeType">Menu</h1>
+    </div>
+  <!-- </button> -->
 </div>
+
 <!-- end: menu button & overlay -->

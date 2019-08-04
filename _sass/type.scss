@@ -14,6 +14,16 @@ p {
 h1 {
   font-weight: 500;
   color: $col_type;
-  //$map: (576: 24, 768: 24, 992: 34);
-  //font-size: least-squares-fit($map);
+  $map: (576: 24, 768: 24, 992: 34);
+  font-size: least-squares-fit($map);
+}
+
+.ui_type {
+  font-weight: 500;
+  color: $col_type;
+  $map: (576: 13, 768: 13, 992: 13);
+  font-size: least-squares-fit($map);
+
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
 }

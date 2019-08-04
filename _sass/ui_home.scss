@@ -1,6 +1,36 @@
-#ui_home_logoType{
-  font-weight: 500;
-  $map: (576: 11, 768: 11, 992: 11);
-  font-size: least-squares-fit($map);
-  letter-spacing: 0.5em;
+// rotate logoType
+@-webkit-keyframes rotate_logoType /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate_logoType {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotate_logoType {
+  -webkit-animation: rotate_logoType 60s linear infinite;
+  -moz-animation: rotate_logoType 60s linear infinite;
+  -ms-animation: rotate_logoType 60s linear infinite;
+  -o-animation: rotate_logoType 60s linear infinite;
+  animation: rotate_logoType 60s linear infinite;
 }

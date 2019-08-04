@@ -4,9 +4,9 @@
 title: Hartgeld Studio
 email: lorehartgeld@gmail.com
 description: >
-  Hartgeld Studio. Form x Type x Code.
+  Hartgeld · Form · Code · Type
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.holgerardelt.de/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: hlgrrdlt
 github_username:  hartgeld
 
