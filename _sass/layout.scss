@@ -4,6 +4,7 @@
 
 body{
   background-color: $col_background;
+  margin: 0;
 }
 
 .background{
@@ -13,20 +14,6 @@ body{
   bottom: 0;
   right: 0;
   overflow: auto;
-}
-
-.grid{
-  height: 100vh;
-  display: grid;
-
-  grid-template-columns: 1fr 1fr 5fr 2fr 2fr;
-  grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
-
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
-
-  //justify-items: center;
-
 }
 
 // contains ui_home and ui_menu
@@ -42,19 +29,12 @@ body{
 }
 
 .layout_ui_home{
-
   width: auto;
   height: auto;
-
   // keep above overlay
   z-index: 2;
-
   //hide on moblie
   visibility: hidden;
-}
-
-.layout_ui_home_mobile{
-  
 }
 
 .layout_ui_menu{
@@ -71,12 +51,31 @@ body{
   z-index: 2;
 }
 
+
+// content area
 .layout_ui_content{
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 4;
-  grid-row-end: 5;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: "header"
+                       "body"
+                       "foot";
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
 }
+.content_stage_head{
+  align-self: end;
+  margin-left: 5px;
+  margin-right: 50px;
+}
+
+.layout_ui_home_mobile{
+  width: auto;
+  height: auto;
+  visibility: visible;
+}
+
+
 
 //to be removed
 .layout_comingSoon{
