@@ -1,0 +1,18 @@
+
+@media only screen and (min-width: 600px) {
+
+  .ui_head{
+      //margin-top: 50px;
+      padding-top: -50px;
+      flex-direction: row;
+  }
+
+    .layout_ui_home{
+      //not visible on mobile
+      visibility: visible;
+      margin-left: 120px;
+    }
+
+
+
+}

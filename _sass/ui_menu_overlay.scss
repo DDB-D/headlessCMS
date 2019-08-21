@@ -1,0 +1,43 @@
+.overlay {
+  position: fixed;
+  background: $col_background_highlight;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+.overlay.open li {
+  animation: fadeInRight .5s ease forwards;
+  animation-delay: .35s;
+}
+.overlay.open li:nth-of-type(2) {
+  animation-delay: .4s;
+}
+.overlay.open li:nth-of-type(3) {
+  animation-delay: .45s;
+}
+.overlay.open li:nth-of-type(4) {
+  animation-delay: .50s;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}

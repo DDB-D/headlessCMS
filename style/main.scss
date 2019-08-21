@@ -7,6 +7,7 @@
 
 // Layout / Grid
 @import "layout";
+@import "layout_tablet";
 
 // Typography
 @import "type_loadFonts";
@@ -14,6 +15,7 @@
 @import "type";
 
 // UI-Elements
-@import "ui_menu";
+@import "ui_menu_type";
 @import "ui_menu_icon";
+@import "ui_menu_overlay";
 @import "ui_home";

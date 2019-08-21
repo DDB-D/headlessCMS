@@ -5,23 +5,30 @@ var ui_menu_text = new ShuffleText(document.querySelector('#ui_menu_changeType')
 var $my_menuButton = $(".layout_ui_menu");
 /* first animation on page load */
 ui_menu_text.start();
-// on click
+// on click execute overlay
 $my_menuButton.on("click", function(){
-  // text animation
+  // menu overlay is active
   if ($my_menuButton.hasClass('isActive')) {
+    // run text animation
     ui_menu_text.setText("MENU");
     ui_menu_text.start();
+    // run icon animation
+    $(".ui_menu_icon").toggleClass('open_menuIcon');
+    // close modal
+    $('.overlay').removeClass('open');
+    // set modal to isActive=false
     $(this).toggleClass('isActive');
-    console.log("clicked");
   } else {
+    // run text animation
     ui_menu_text.setText("CLOSE");
     ui_menu_text.start();
+    // run icon animation
+    $(".ui_menu_icon").toggleClass('open_menuIcon');
+    // open modal
+    $('.overlay').addClass('open');
+    // set modal to isActive=false
     $(this).toggleClass('isActive');
   }
-  // burger icon transform
-    //var menu = $('.menu-toggle');
-    //menu.toggleClass('menu_is_active')
-
 });
 // on hover
 $my_menuButton.on({

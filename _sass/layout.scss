@@ -29,26 +29,46 @@ body{
 
 }
 
+// contains ui_home and ui_menu
+.ui_head{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
 .layout_ui_home{
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  align-self: center;
-  //init flex
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-self: center;
-  justify-self: center;
+
+  width: auto;
+  height: auto;
+
+  // keep above overlay
+  z-index: 2;
+
+  //hide on moblie
+  visibility: hidden;
+}
+
+.layout_ui_home_mobile{
+  
 }
 
 .layout_ui_menu{
-  grid-column-start: 5;
-  grid-column-end: 6;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  align-self: center;
+
+  //init flex
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 0px;
+  //set pointer
+  cursor: pointer;
+
+  //set menu button on top of overlay-menu
+  z-index: 2;
 }
 
 .layout_ui_content{
@@ -58,6 +78,7 @@ body{
   grid-row-end: 5;
 }
 
+//to be removed
 .layout_comingSoon{
   grid-column-start: 3;
   grid-column-end: 5;
