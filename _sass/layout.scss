@@ -31,8 +31,6 @@ body{
 .layout_ui_home{
   width: auto;
   height: auto;
-  // keep above overlay
-  z-index: 2;
   //hide on moblie
   visibility: hidden;
 }
@@ -73,11 +71,13 @@ body{
   width: auto;
   height: auto;
   visibility: visible;
+  z-index:-1;
 }
 
 
 
 //to be removed
+/*
 .layout_comingSoon{
   grid-column-start: 3;
   grid-column-end: 5;
@@ -91,3 +91,4 @@ body{
   align-self: center;
   justify-self: center;
 }
+*/

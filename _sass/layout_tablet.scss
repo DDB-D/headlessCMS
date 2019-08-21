@@ -11,6 +11,8 @@
       //not visible on mobile
       visibility: visible;
       margin-left: 120px;
+      // keep above overlay
+      z-index: 2;
     }
 
     .layout_ui_home_mobile{
