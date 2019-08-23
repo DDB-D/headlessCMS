@@ -26,6 +26,7 @@ body{
     align-items: center;
     justify-content: space-between;
     margin-top: 30px;
+    z-index: 1;
 }
 
 .layout_ui_home{
@@ -56,7 +57,7 @@ body{
 
 
 // content area
-
+/*
 .content_stage_container{
   min-height: 100vh;
   display: grid;
@@ -66,7 +67,8 @@ body{
   justify-items: center;
   align-items: center;
   justify-content: center;
-}
+}*/
+/*
 .content_stage_head{
   align-self: end;
   margin-left: 5px;
@@ -79,3 +81,4 @@ body{
   visibility: visible;
   z-index:-1;
 }
+*/
