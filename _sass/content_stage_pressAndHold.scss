@@ -1,0 +1,92 @@
+#content_stage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#content_stage_pressAndHold-btn {
+  --scale-value: 1;
+  width: 200px;
+  height: 200px;
+  transform: scale3d(var(--scale-value), var(--scale-value), 1);
+  transition: transform cubic-bezier(1.175, 0.885, 0.32, 0.1275) .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#content_stage_pressAndHold-btn:active {
+  border-color: #003A75;
+  background-color: #F2F5EA;
+}
+#content_stage_pressAndHold-btn:hover {
+  cursor: pointer;
+}
+
+/* logo rotation */
+@-webkit-keyframes rotate_pressAndHold /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate_pressAndHold {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+#rotate_pressAndHold {
+  --rotate-value:60s;
+  -webkit-animation: rotate_logoType var(--rotate-value) linear infinite;
+  -moz-animation: rotate_logoType var(--rotate-value) linear infinite;
+  -ms-animation: rotate_logoType var(--rotate-value) linear infinite;
+  -o-animation: rotate_logoType var(--rotate-value) linear infinite;
+  animation: rotate_logoType var(--rotate-value) linear infinite;
+}
+
+/* fullscreen video */
+#stage_fullscreen-bg {
+  --clipPath-radius-value: 0px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+  clip-path: circle(var(--clipPath-radius-value) at center);
+}
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    //z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('/assets/videos/placeholder/placeholder.png') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+
+}

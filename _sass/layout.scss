@@ -35,6 +35,11 @@ body{
   visibility: hidden;
 }
 
+.layout_content_stage_pressAndHold{
+  width: auto;
+  height: auto;
+}
+
 .layout_ui_menu{
 
   //init flex
@@ -51,7 +56,8 @@ body{
 
 
 // content area
-.layout_ui_content{
+
+.content_stage_container{
   min-height: 100vh;
   display: grid;
   grid-template-areas: "header"
@@ -67,28 +73,9 @@ body{
   margin-right: 50px;
 }
 
-.layout_ui_home_mobile{
+.content_stage_body{
   width: auto;
   height: auto;
   visibility: visible;
   z-index:-1;
 }
-
-
-
-//to be removed
-/*
-.layout_comingSoon{
-  grid-column-start: 3;
-  grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 4;
-  align-self: center;
-  //init flex
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-self: center;
-  justify-self: center;
-}
-*/

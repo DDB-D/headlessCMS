@@ -29,4 +29,5 @@ assets:
      -assets/fonts
      -assets/javascript
      -assets/graphics
+     -assets/videos
      -node_modules

@@ -7,17 +7,17 @@
       flex-direction: row;
   }
 
-    .layout_ui_home{
-      //not visible on mobile
-      visibility: visible;
-      margin-left: 120px;
-      // keep above overlay
-      z-index: 2;
-    }
+  .layout_ui_home{
+    //not visible on mobile
+    visibility: visible;
+    margin-left: 120px;
+    // keep above overlay
+    z-index: 2;
+  }
 
-    .layout_ui_home_mobile{
-      //hide on tablet ++
-      visibility: hidden;
-    }
+  .content_stage_body{
+    //hide on tablet ++
+    visibility: hidden;
+  }
 
 }
