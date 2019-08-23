@@ -18,6 +18,15 @@ h1 {
   font-size: least-squares-fit($map);
 }
 
+h3 {
+  font-weight: 300;
+  color: $col_type;
+  $map: (576: 11, 768: 11, 992: 11);
+  font-size: least-squares-fit($map);
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+}
+
 .ui_type {
   font-weight: 500;
   color: $col_type;
