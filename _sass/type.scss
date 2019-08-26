@@ -18,6 +18,16 @@ h1 {
   font-size: least-squares-fit($map);
 }
 
+h2 {
+  font-family: 'Source Serif Pro', serif;
+  color: $col_type;
+  font-weight: 400;
+  $map: (576: 18, 768: 18, 992: 18);
+  font-size: least-squares-fit($map);
+  $map: (576: 26, 768: 26, 992: 26);
+  line-height: least-squares-fit($map);
+}
+
 h3 {
   font-weight: 500;
   color: $col_type;
@@ -35,4 +45,8 @@ h3 {
 
   letter-spacing: 0.5em;
   text-transform: uppercase;
+}
+
+.title_type{
+
 }

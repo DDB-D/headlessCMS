@@ -20,7 +20,6 @@ var oldBuzzword_3;
 var oldBuzzword_4;
 
 function buzzword(buzzword, content_stage_buzzword){
-  console.log(buzzword);
   content_stage_buzzword.setText(buzzword);
   content_stage_buzzword.start();
 }
