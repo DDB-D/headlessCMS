@@ -1,10 +1,10 @@
 # this file is *NOT* reloaded automatically when use 'bundle exec jekyll serve'.
 # If change this file, restart server process.
 
-title: Hartgeld Studio
-email: lorehartgeld@gmail.com
+title: HARTGELD · FORM · CODE · TYPE
+email: mail@holgerardelt.de
 description: >
-  Hartgeld · Form · Code · Type
+  concept art-direction motion ux ui prototype development
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.holgerardelt.de/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: hlgrrdlt
