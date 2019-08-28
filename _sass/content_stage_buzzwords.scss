@@ -24,3 +24,15 @@
   flex-direction: column;
   //margin: 10% 0;
 }
+
+.content_stage_scroll-line{
+  width: 50vw;
+  height: 10vh;
+
+  margin-top: -10vh;
+  border-right: thick solid $col_type;
+
+  border-width:1px;
+  //border-width: 1px;
+
+}
