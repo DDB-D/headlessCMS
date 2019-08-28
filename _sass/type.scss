@@ -22,7 +22,7 @@ h2 {
   //font-family: 'Source Serif Pro', serif;
   color: $col_type;
   font-weight: 300;
-  $map: (576: 15, 768: 15, 992: 15);
+  $map: (576: 14, 768: 14, 992: 14);
   font-size: least-squares-fit($map);
   $map: (576: 23, 768: 23, 992: 23);
   line-height: least-squares-fit($map);
