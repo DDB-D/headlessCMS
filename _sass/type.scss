@@ -24,7 +24,7 @@ h2 {
   font-weight: 400;
   $map: (576: 18, 768: 18, 992: 18);
   font-size: least-squares-fit($map);
-  $map: (576: 26, 768: 26, 992: 26);
+  $map: (576: 28, 768: 28, 992: 28);
   line-height: least-squares-fit($map);
 }
 
@@ -48,5 +48,7 @@ h3 {
 }
 
 .title_type{
+  text-align: center;
+  letter-spacing: 0.1em;
 
 }

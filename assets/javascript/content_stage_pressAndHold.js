@@ -1,6 +1,6 @@
 // The item (or items) to press and hold on
 var item = document.querySelector("#content_stage_pressAndHold-btn");
-var container = document.querySelector("#content_stage");
+var container = document.querySelector("#content_stage_pressAndHold");
 var rotate_LogoType = document.querySelector("#rotate_pressAndHold");
 var stage_fullscreenBg = document.querySelector("#stage_fullscreen-bg");
 
