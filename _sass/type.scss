@@ -22,10 +22,11 @@ h2 {
   font-family: 'Source Serif Pro', serif;
   color: $col_type;
   font-weight: 400;
-  $map: (576: 18, 768: 18, 992: 18);
+  $map: (576: 16, 768: 16, 992: 16);
   font-size: least-squares-fit($map);
-  $map: (576: 28, 768: 28, 992: 28);
+  $map: (576: 26, 768: 26, 992: 26);
   line-height: least-squares-fit($map);
+  letter-spacing: 0.05em;
 }
 
 h3 {
@@ -49,6 +50,4 @@ h3 {
 
 .title_type{
   text-align: center;
-  letter-spacing: 0.1em;
-
 }
