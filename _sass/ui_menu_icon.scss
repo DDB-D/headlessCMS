@@ -2,7 +2,7 @@
 /* ui menu icon */
 ///////////////
 .ui_menu_icon{
-  width: 15px;
+  width: 12px;
   height: 20px;
   position: relative;
   //margin: 0px auto;
@@ -51,7 +51,8 @@
 }
 
 .ui_menu_icon.open_menuIcon span:nth-child(1) {
-  top: 5px;
+  top: 4px;
+  width: 14px;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   -o-transform: rotate(135deg);
@@ -66,7 +67,8 @@
 }
 
 .ui_menu_icon.open_menuIcon span:nth-child(3) {
-  top: 5px;
+  top: 4px;
+  width: 14px;
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
