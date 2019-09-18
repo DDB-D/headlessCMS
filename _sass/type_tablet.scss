@@ -1,0 +1,22 @@
+@media only screen and (min-width: 1023px) {
+
+  h3 {
+    font-weight: 500;
+    color: $col_type;
+    $map: (576: 13, 768: 13, 992: 13);
+    font-size: least-squares-fit($map);
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    color: $col_type;
+    font-weight: 300;
+    $map: (576: 27, 768: 27, 992: 27);
+    font-size: least-squares-fit($map);
+    $map: (576: 41, 768: 41, 992: 41);
+    line-height: least-squares-fit($map);
+    letter-spacing: 0.05em;
+  }
+
+}

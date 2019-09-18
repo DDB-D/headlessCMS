@@ -1,0 +1,21 @@
+@media only screen and (min-width: 1023px) {
+  .content_stage_titles_buzzwords{
+    display: flex;
+    align-items: flex-end;
+    margin-left: 25vw;
+    margin-top: 25vh;
+    width: 75vw;
+    height: 25vh;
+  }
+
+  .content_stage_title{
+    width: 100vw;
+    height: 50vh;
+    margin-left: 25vw;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+}

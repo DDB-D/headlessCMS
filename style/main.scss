@@ -15,6 +15,7 @@
 @import "type_loadFonts";
 @import "type_calcSize";  // type: calculate type size – sass script using vw/vh
 @import "type";
+@import "type_tablet";
 
 // UI-Elements
 @import "ui_menu_type";
@@ -24,7 +25,7 @@
 
 // content stage: press and hold
 @import "content_stage_pressAndHold";
-// content stage: buzzwords
-@import "content_stage_titles_buzzwords";
 // content stage: titles
 @import "content_stage_titles";
+// content stage: buzzwords
+@import "content_stage_titles_tablet";
