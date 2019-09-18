@@ -1,3 +1,25 @@
+#ui_home{
+  margin-left: 50px;
+}
+
+#ui_home_btn {
+  --scale-value_home-btn: 1;
+  width: 160px;
+  //height: auto;
+  transform: scale3d(var(--scale-value_home-btn), var(--scale-value_home-btn), 1);
+  transition: transform cubic-bezier(1.175, 0.885, 0.32, 0.1275) .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ui_home_btn:active {
+  border-color: #003A75;
+  background-color: #F2F5EA;
+}
+#ui_home_btn:hover {
+  cursor: pointer;  
+}
 // rotate logoType
 @-webkit-keyframes rotate_logoType /* Safari and Chrome */ {
   from {
@@ -27,10 +49,11 @@
     transform: rotate(360deg);
   }
 }
-.rotate_logoType {
-  -webkit-animation: rotate_logoType 60s linear infinite;
-  -moz-animation: rotate_logoType 60s linear infinite;
-  -ms-animation: rotate_logoType 60s linear infinite;
-  -o-animation: rotate_logoType 60s linear infinite;
-  animation: rotate_logoType 60s linear infinite;
+#rotate_logoType {
+  --rotate-value_uiHome:60s;
+  -webkit-animation: rotate_logoType var(--rotate-value_uiHome) linear infinite;
+  -moz-animation: rotate_logoType var(--rotate-value_uiHome) linear infinite;
+  -ms-animation: rotate_logoType var(--rotate-value_uiHome) linear infinite;
+  -o-animation: rotate_logoType var(--rotate-value_uiHome) linear infinite;
+  animation: rotate_logoType var(--rotate-value_uiHome) linear infinite;
 }

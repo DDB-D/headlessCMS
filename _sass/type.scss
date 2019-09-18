@@ -22,9 +22,9 @@ h2 {
   //font-family: 'Source Serif Pro', serif;
   color: $col_type;
   font-weight: 300;
-  $map: (576: 13, 768: 14, 992: 14);
+  $map: (576: 15, 768: 15, 992: 15);
   font-size: least-squares-fit($map);
-  $map: (576: 21, 768: 23, 992: 23);
+  $map: (576: 23, 768: 23, 992: 23);
   line-height: least-squares-fit($map);
   letter-spacing: 0.05em;
 }
