@@ -1,5 +1,5 @@
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1023px) {
 
   .ui_head{
       //margin-top: 50px;
@@ -13,11 +13,6 @@
     margin-left: 120px;
     // keep above overlay
     z-index: 2;
-  }
-
-  .content_stage_body{
-    //hide on tablet ++
-    visibility: hidden;
   }
 
 }

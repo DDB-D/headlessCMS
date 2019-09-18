@@ -1,0 +1,21 @@
+
+
+// Visible on mobile
+.deviceVisibility_mobile{
+  visibility: visible;
+  //display: block;
+}
+.deviceVisibility_tablet{
+  visibility: hidden;
+}
+
+// Visible on tablet
+@media only screen and (min-width: 1023px) {
+  .deviceVisibility_mobile{
+    visibility: hidden;
+    //display: none;
+  }
+  .deviceVisibility_tablet{
+    visibility: visible;
+  }
+}

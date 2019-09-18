@@ -32,8 +32,6 @@ body{
 .layout_ui_home{
   width: auto;
   height: auto;
-  //hide on moblie
-  visibility: hidden;
 }
 
 .layout_content_stage_pressAndHold{
@@ -54,31 +52,3 @@ body{
   //set menu button on top of overlay-menu
   z-index: 2;
 }
-
-
-// content area
-/*
-.content_stage_container{
-  min-height: 100vh;
-  display: grid;
-  grid-template-areas: "header"
-                       "body"
-                       "foot";
-  justify-items: center;
-  align-items: center;
-  justify-content: center;
-}*/
-/*
-.content_stage_head{
-  align-self: end;
-  margin-left: 5px;
-  margin-right: 50px;
-}
-
-.content_stage_body{
-  width: auto;
-  height: auto;
-  visibility: visible;
-  z-index:-1;
-}
-*/

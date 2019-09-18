@@ -43,7 +43,6 @@ h3 {
   color: $col_type;
   $map: (576: 13, 768: 13, 992: 13);
   font-size: least-squares-fit($map);
-
   letter-spacing: 0.5em;
   text-transform: uppercase;
 }

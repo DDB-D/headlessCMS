@@ -2,7 +2,7 @@
 var item = document.querySelector("#content_stage_pressAndHold-btn");
 var container = document.querySelector("#content_stage_pressAndHold");
 var rotate_LogoType = document.querySelector("#rotate_pressAndHold");
-var stage_fullscreenBg = document.querySelector("#stage_fullscreen-bg");
+var stage_fullscreenBg = document.querySelector("#content_stage_fullscreen-bg");
 
 var maskSize = stage_fullscreenBg.style.getPropertyValue("-clipPath-radius-value");
 

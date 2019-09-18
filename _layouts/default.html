@@ -2,15 +2,17 @@
 <html lang="en">
   {% include head.html %}
   <body>
-
     <div class="ui_head">
-      {% include ui_home.html %}
+      <div class="deviceVisibility_tablet">
+        {% include ui_home.html %}
+      </div>
       {% include ui_menu.html %}
     </div>
-
-
+    <div class="deviceVisibility_mobile">
+      {% include content_stage_pressAndHold.html %}
+    </div>
+    {% include content_stage_titles.html %}
     {% include content.html %}
-
     {% include scripts_foot.html %}
   </body>
 </html>

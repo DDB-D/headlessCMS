@@ -5,6 +5,8 @@
 
 @import "variables";
 
+// device deviceVisibility
+@import "layout_deviceVisibility";
 // Layout / Grid
 @import "layout";
 @import "layout_tablet";
@@ -23,6 +25,6 @@
 // content stage: press and hold
 @import "content_stage_pressAndHold";
 // content stage: buzzwords
-@import "content_stage_buzzwords";
+@import "content_stage_titles_buzzwords";
 // content stage: titles
-@import "content_stage_title";
+@import "content_stage_titles";
