@@ -1,0 +1,11 @@
+#content_stage_bg-img{
+  display: none;
+}
+
+@media only screen and (min-width: 1023px) {
+  #content_stage_bg-img{
+    display: flex;
+    flex-direction: column;
+    margin-top: -100vh;
+  }
+}

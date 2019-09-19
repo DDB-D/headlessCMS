@@ -24,6 +24,8 @@ var fullscreenBg_video_uiHome = document.getElementById("fullscreen-bg_video_tab
 var timePressed_uiHome = 0;
 var press_uiHome = false;
 
+var screenWidth = $(window).width();
+
 // Listening for the mouse and touch events
 item_uiHome.addEventListener("mousedown", pressingDown_uiHome, false);
 item_uiHome.addEventListener("mouseup", notPressingDown_uiHome, false);
@@ -48,6 +50,7 @@ function counter_uiHome() {
 
       scaleMaskUp_uiHome();
       fullscreenBg_video_uiHome.play();
+
   } else {
 
       timePressed_uiHome = 0;
@@ -89,9 +92,9 @@ function resetRotation_uiHome(){
 }
 
 function scaleMaskUp_uiHome() {
-  var size = 35 * timePressed_uiHome;
-  if (size > 1024) {
-    size = 1024;
+  var size = 25 * timePressed_uiHome;
+  if (size > screenWidth) {
+    size = screenWidth;
   }
   stage_fullscreenBg_uiHome.style.transitionDuration = ".5s";
   stage_fullscreenBg_uiHome.style.setProperty("--clipPath-radius-value_tablet", size + "px");

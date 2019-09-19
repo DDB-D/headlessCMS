@@ -2,6 +2,12 @@
 /* Layout / Grid */
 ///////////////////
 
+
+
+html, body {
+  overflow-x:hidden
+}
+
 body{
   background-color: $col_background;
   margin: 0;
