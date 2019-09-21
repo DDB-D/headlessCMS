@@ -4,8 +4,30 @@
 
 @media only screen and (min-width: 1023px) {
   #content_stage_bg-img{
-    display: flex;
-    flex-direction: column;
-    margin-top: -100vh;
+    position: absolute;
+    top: -75vh;
+    bottom: 15vh;
+    left: 37.5vw;
+    right: 40px;
+    display: block;
+    background-color: $col_background_highlight;
+    overflow: hidden;
+    opacity: 0.65;
   }
+}
+
+#content_stage_bg-img > video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    //z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('/assets/videos/stage_bg-vid/stage_bg-vid.png') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+    opacity: 0.5;
 }
