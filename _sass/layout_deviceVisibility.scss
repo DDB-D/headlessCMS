@@ -3,6 +3,8 @@
 // Visible on mobile
 .deviceVisibility_mobile{
   visibility: visible;
+  position: relative;
+  z-index: 1;
   //display: block;
 }
 .deviceVisibility_tablet{
