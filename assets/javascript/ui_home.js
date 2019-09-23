@@ -80,7 +80,7 @@ function resetItem_uiHome() {
 
 
 function rotateItem_uiHome() {
-  var rotate = 60 - timePressed_uiHome;
+  var rotate = 60 - timePressed_uiHome*5;
   if (rotate < 1) {
     rotate = 1;
   }
