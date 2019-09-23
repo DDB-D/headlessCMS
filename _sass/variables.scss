@@ -1,10 +1,9 @@
-///////////////
-/* Variables */
-///////////////
+////////////////////
+/* Sass Variables */
+////////////////////
 
 /* Typography */
 $font-size-base: 27px;
-
 
 /* Colors */
 $col_type: #F7F7F7;
@@ -20,3 +19,11 @@ $color-link: blue;
 $color-active: red;
 
 // ?? $blockquote-font-size: $font-size-base;
+
+///////////////////
+/* CSS Variables */
+///////////////////
+
+:root {
+  //--var-h3: 15px;
+}

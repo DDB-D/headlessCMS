@@ -36,6 +36,8 @@ h3 {
   font-size: least-squares-fit($map);
   letter-spacing: 0.5em;
   text-transform: uppercase;
+
+  //--var-h3: #{$map};
 }
 
 .ui_type {
