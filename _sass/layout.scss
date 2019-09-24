@@ -31,21 +31,23 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-top: 30px;
     z-index: 2;
 }
 
 #ui_foot{
   position: absolute;
-  width: 100%;
+  width: 50vw;
   height: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 100vh;
-  z-index: 1;
+  //margin-top: 0;
+  //bottom: 5vh;
+  top: 40px;
+  z-index: 3;
 }
 
 .layout_ui_home{

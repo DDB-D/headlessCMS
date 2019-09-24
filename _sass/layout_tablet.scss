@@ -1,9 +1,23 @@
 
 @media only screen and (min-width: 1023px) {
 
-  .ui_head{
-      padding-top: -50px;
-      flex-direction: row;
+  #ui_head{
+      //padding-top: -50px;
+      //flex-direction: row;
+      justify-content: flex-start;
+  }
+
+  #ui_foot{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    //margin-top: 100vh;
+    bottom: -25px;
+    z-index: 1;
   }
 
   .layout_ui_home{
@@ -12,6 +26,12 @@
     //margin-left: 120px;
     // keep above overlay
     z-index: 2;
+  }
+
+  .layout_ui_menu{
+
+    //init flex
+    margin-left: auto;
   }
 
 }
