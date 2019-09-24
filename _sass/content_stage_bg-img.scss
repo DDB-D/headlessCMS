@@ -10,7 +10,7 @@
     left: 37.5vw;
     right: 15vw;
     display: block;
-    background-color: $col_background_highlight;
+    background-color: var(--color-highlight);
     overflow: hidden;
     opacity: 0.65;
   }

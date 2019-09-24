@@ -9,7 +9,7 @@ html, body {
 }
 
 body{
-  background-color: $col_background;
+  background-color: var(--color-bg);
   margin: 0;
 
 }

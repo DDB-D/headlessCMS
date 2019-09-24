@@ -37,8 +37,8 @@
 
 #content_stage_scroll_text{
   transform-origin: center center;
-  transform: rotate(90deg)
-  ;width: 10vh;
+  transform: rotate(90deg);
+  width: 10vh;
   height: auto;
   margin: 0;
   align-self: center;
@@ -54,8 +54,8 @@
     padding-right: 5vw;
     display: flex;
     width: 100vw;
-    height: 25vh;
-    margin-top: -25vh;
+    height: 35vh;
+    margin-top: -35vh;
     align-items: center;
     justify-content: flex-end;
     overflow: hidden;
@@ -64,9 +64,8 @@
   #content_stage_scroll_text{
 
     margin-right: 5vw;
-
-    $map: (576: 13, 768: 13, 992: 13);
+    $map: (576: 11, 768: 11, 992: 11);
     font-size: least-squares-fit($map);
-
+    //font-size: --var-type-h3;
   }
 }

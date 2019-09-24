@@ -1,6 +1,6 @@
 .overlay {
   position: fixed;
-  background: $col_background_highlight;
+  background: var(--color-highlight);
   top: 0;
   left: 0;
   width: 100%;

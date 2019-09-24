@@ -2,25 +2,28 @@
 /* Typography */
 ////////////////
 
-body { font-family: 'Inter', sans-serif; color: $col_type;}
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--color-type);
+}
 
 p {
   font-weight: 400;
-	color: $col_type;
+	color: var(--color-type);
   $map: (576: 24, 768: 24, 992: 34);
   font-size: least-squares-fit($map);
 }
 
 h1 {
   font-weight: 500;
-  color: $col_type;
+  color: var(--color-type);
   $map: (576: 24, 768: 24, 992: 34);
   font-size: least-squares-fit($map);
 }
 
 h2 {
   //font-family: 'Source Serif Pro', serif;
-  color: $col_type;
+  color: var(--color-type);
   font-weight: 300;
   $map: (576: 15, 768: 15, 992: 15);
   font-size: least-squares-fit($map);
@@ -31,18 +34,18 @@ h2 {
 
 h3 {
   font-weight: 500;
-  color: $col_type;
+  color: var(--color-type);
   $map: (576: 10, 768: 10, 992: 10);
   font-size: least-squares-fit($map);
   letter-spacing: 0.5em;
   text-transform: uppercase;
 
-  //--var-h3: #{$map};
+  //--var-h3 = var($map);
 }
 
 .ui_type {
   font-weight: 500;
-  color: $col_type;
+  color: var(--color-type);
   $map: (576: 13, 768: 13, 992: 13);
   font-size: least-squares-fit($map);
 

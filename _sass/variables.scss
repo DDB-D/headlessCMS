@@ -1,29 +1,33 @@
 ////////////////////
-/* Sass Variables */
+/* SASS Variables */
 ////////////////////
 
-/* Typography */
-$font-size-base: 27px;
-
-/* Colors */
-$col_type: #F7F7F7;
-$col_type_invert: #121212;
-
-$col_background: #121212;
-$col_background_invert: #F7F7F7;
-
-$col_background_highlight: #1D6B73;
-
-$color-link: blue;
-
-$color-active: red;
-
-// ?? $blockquote-font-size: $font-size-base;
 
 ///////////////////
 /* CSS Variables */
 ///////////////////
 
 :root {
-  //--var-h3: 15px;
+  /* Typography */
+  /* Color */
+  --color-type: #121212;
+  --color-bg: #F7F7F7;
+  --color-highlight: #E2948C;
 }
+
+[data-theme="dark"] {
+  --color-type: #F7F7F7;
+  --color-bg: #121212;
+  --color-highlight: #1D6B73;
+}
+
+// tablet
+/*
+@media only screen and (min-width: 1023px) {
+
+  //h3
+  $map: (576: 11, 768: 11, 992: 11);
+  --var-type-h3: least-squares-fit($map);
+
+}
+*/
