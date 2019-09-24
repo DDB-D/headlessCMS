@@ -9,6 +9,7 @@
 }
 .deviceVisibility_tablet{
   visibility: hidden;
+  display: none;
 }
 
 // Visible on tablet
@@ -19,5 +20,6 @@
   }
   .deviceVisibility_tablet{
     visibility: visible;
+    display: block;
   }
 }

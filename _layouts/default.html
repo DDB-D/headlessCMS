@@ -2,12 +2,14 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    <div class="ui_head">
+    <div id="ui_head">
       <div class="deviceVisibility_tablet">
         {% include ui_home.html %}
       </div>
-      {% include ui_darkMode.html %}
       {% include ui_menu.html %}
+    </div>
+    <div id="ui_foot">
+      {% include ui_darkMode.html %}
     </div>
     <div class="deviceVisibility_mobile">
       {% include content_stage_pressAndHold.html %}

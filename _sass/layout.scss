@@ -24,7 +24,7 @@ body{
 }
 
 // contains ui_home and ui_menu
-.ui_head{
+#ui_head{
     position: absolute;
     width: 100%;
     height: auto;
@@ -36,10 +36,21 @@ body{
     z-index: 2;
 }
 
+#ui_foot{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100vh;
+  z-index: 1;
+}
+
 .layout_ui_home{
   width: auto;
   height: auto;
-
 }
 
 .layout_content_stage_pressAndHold{

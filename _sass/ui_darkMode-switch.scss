@@ -1,57 +1,51 @@
-.theme-switch-wrapper {
-  display: flex;
-  align-items: center;
-
-  em {
-    margin-left: 10px;
-    font-size: 1rem;
-  }
-}
-.theme-switch {
-  display: inline-block;
-  height: 34px;
+#ui_darkMode {
   position: relative;
-  width: 60px;
+  display: flex;
+  //align-items: center;
+  margin-left: 8vw;
+  margin-top: -10px;
 }
 
-.theme-switch input {
+.ui_darkMode_switch {
+  display: inline-block;
+  height: auto;
+  position: relative;
+  width: auto;
+  cursor: pointer;
+}
+
+.ui_darkMode_switch input {
   display:none;
 }
 
-.slider {
-  background-color: #ccc;
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: .4s;
+#ui_darkMode_switch_icon{
+  font-size: 20px;
 }
 
-.slider:before {
-  background-color: #fff;
-  bottom: 4px;
-  content: "";
-  height: 26px;
-  left: 4px;
-  position: absolute;
-  transition: .4s;
-  width: 26px;
+#ui_darkMode-switch_txt{
+  display: none;
 }
 
-input:checked + .slider {
-  background-color: #66bb6a;
+.hide_ui_darkMode_switch_txt{
+  display: none;
 }
 
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
+@media only screen and (min-width: 1023px) {
+  .hide_ui_darkMode_switch_txt{
+    display: inline;
+  }
 
-.slider.round {
-  border-radius: 34px;
-}
+  .ui_darkMode {
+    display: none;
+  }
 
-.slider.round:before {
-  border-radius: 50%;
+  #ui_darkMode {
+    //display: flex;
+    position: absolute;
+    align-items: center;
+    margin-left: 8vw;
+    //margin-top: 150vh;
+    bottom: 10vh;
+
+  }
 }

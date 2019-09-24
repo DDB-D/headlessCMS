@@ -64,7 +64,7 @@
   #content_stage_scroll_text{
 
     margin-right: 5vw;
-    $map: (576: 11, 768: 11, 992: 11);
+    $map: (576: 13, 768: 13, 992: 13);
     font-size: least-squares-fit($map);
     //font-size: --var-type-h3;
   }
