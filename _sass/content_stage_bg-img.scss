@@ -12,7 +12,7 @@
     display: block;
     background-color: var(--color-highlight);
     overflow: hidden;
-    opacity: 0.65;
+    opacity: 0.45;
   }
 }
 
@@ -24,10 +24,9 @@
     min-height: 100%;
     width: auto;
     height: auto;
-    //z-index: -100;
     transform: translateX(-50%) translateY(-50%);
     background: url('/assets/videos/stage_bg-vid/stage_bg-vid.png') no-repeat;
     background-size: cover;
     transition: 1s opacity;
-    opacity: 0.5;
+    opacity: 0.55;
 }
