@@ -5,14 +5,21 @@
 @media only screen and (min-width: 1023px) {
   #content_stage_bg-img{
     position: absolute;
+    /*
     top: -75vh;
     bottom: 15vh;
     left: 37.5vw;
     right: 15vw;
+*/
+top: -100vh;
+bottom: 0vh;
+left: 0vw;
+right: 0vw;
+
     display: block;
-    background-color: var(--color-highlight);
+    background-color: var(--color-bg);
     overflow: hidden;
-    opacity: 0.45;
+    opacity: 1;
   }
 }
 
@@ -28,5 +35,8 @@
     background: url('/assets/videos/stage_bg-vid/stage_bg-vid.png') no-repeat;
     background-size: cover;
     transition: 1s opacity;
-    opacity: 0.55;
+    opacity: 0.5;
+}
+#content_stage_bg-img > canvas {
+  mix-blend-mode: normal;
 }
