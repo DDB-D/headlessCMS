@@ -27,21 +27,29 @@ const fragment = `
 
 			void main() {
 
-					// R and G values are velocity in the x and y direction
-					// B value is the velocity length
-					vec3 flow = texture2D(tFlow, vUv).rgb;
+        // R and G values are velocity in the x and y direction
+            // B value is the velocity length
+            vec3 flow = texture2D(tFlow, vUv).rgb;
 
-					vec2 uv = .5 * gl_FragCoord.xy / res.xy ;
-					vec2 myUV = (uv - vec2(0.5))*res.zw + vec2(0.5);
-					myUV -= flow.xy * (0.15 * 0.7);
+            vec2 uv = .5 * gl_FragCoord.xy / res.xy ;
 
-					vec3 tex = texture2D(tWater, myUV).rgb;
+            vec2 myUV = (uv - vec2(0.5))*res.zw + vec2(0.5);
+            myUV -= flow.xy * (0.15 * 0.5);
+            vec3 tex = texture2D(tWater, myUV).rgb;
 
-					gl_FragColor = vec4(tex.r, tex.g, tex.b, 1.0);
+            gl_FragColor.rgb = vec3(tex.r, tex.g, tex.b);
+            gl_FragColor.a = tex.r;
 			}
 	`;
 {
-  const renderer = new Renderer({ dpr: 2 });
+  //const renderer = new Renderer({ dpr: 2 });
+
+  const renderer = new Renderer({
+        dpr: 2,
+        alpha: true,
+        premultipliedAlpha: true
+      });
+
   const gl = renderer.gl;
 
   renderer.gl.enable(gl.BLEND);
@@ -84,7 +92,7 @@ const fragment = `
     renderer.setSize(targetDiv_width, targetDiv_height );
     aspect = targetDiv_width / targetDiv_height ;
   }
-  const flowmap = new Flowmap(gl);
+  const flowmap = new Flowmap(gl, { falloff: 0.2, dissipation: 0.9 });
   // Triangle that includes -1 to 1 range for 'position', and 0 to 1 range for 'uv'.
   const geometry = new Geometry(gl, {
     position: {
@@ -95,7 +103,8 @@ const fragment = `
   });
   const texture = new Texture(gl, {
     minFilter: gl.LINEAR,
-    magFilter: gl.LINEAR
+    magFilter: gl.LINEAR,
+    premultiplyAlpha: true
   });
   const img = new Image();
   img.onload = () => (texture.image = img);
