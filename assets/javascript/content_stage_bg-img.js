@@ -27,14 +27,13 @@ const fragment = `
 
 			void main() {
 
-        // R and G values are velocity in the x and y direction
+            // R and G values are velocity in the x and y direction
             // B value is the velocity length
             vec3 flow = texture2D(tFlow, vUv).rgb;
 
             vec2 uv = .5 * gl_FragCoord.xy / res.xy ;
-
             vec2 myUV = (uv - vec2(0.5))*res.zw + vec2(0.5);
-            myUV -= flow.xy * (0.15 * 0.5);
+            myUV -= flow.xy * (0.5 * 0.9);
             vec3 tex = texture2D(tWater, myUV).rgb;
 
             gl_FragColor.rgb = vec3(tex.r, tex.g, tex.b);
@@ -47,13 +46,13 @@ const fragment = `
   const renderer = new Renderer({
         dpr: 2,
         alpha: true,
-        premultipliedAlpha: true
+        premultipliedAlpha: false
       });
 
   const gl = renderer.gl;
 
-  renderer.gl.enable(gl.BLEND);
-  renderer.gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+  //renderer.gl.enable(gl.BLEND);
+  //renderer.gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
 
   // get targetDiv
   var targetDiv = document.getElementById("content_stage_bg-img");
@@ -199,7 +198,7 @@ const fragment = `
     flowmap.aspect = aspect;
     flowmap.mouse.copy(mouse);
     // Ease velocity input, slower when fading out
-    flowmap.velocity.lerp(velocity, velocity.len ? 0.15 : 0.1);
+    flowmap.velocity.lerp(velocity, velocity.len ? 0.5 : 0.1);
     flowmap.update();
     program.uniforms.uTime.value = t * 0.01;
     renderer.render({ scene: mesh });
