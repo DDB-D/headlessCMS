@@ -173,6 +173,16 @@ var sketch = function( p ) {
     p.fill(0);
     p.ellipse(this.x, this.y, options.particleRadius, options.particleRadius);
   };
+
+  p.mousePressed = function(){
+    /*p.forEachNested(this.nodes, function(pi, pj){
+      console.log("a node");
+    });*/
+    clusters.forEach(function(c){
+      console.log("a node");
+    });  }
+
+
 }
 
 myp5 = new p5(sketch, containerNode);
