@@ -8,10 +8,12 @@ body {
 }
 
 p {
-  font-weight: 400;
+  font-weight: 300;
 	color: var(--color-type);
-  $map: (576: 24, 768: 24, 992: 34);
+  $map: (576: 18, 768: 18, 992: 18);
   font-size: least-squares-fit($map);
+  $map: (576: 24, 768: 24, 992: 24);
+  line-height: least-squares-fit($map);
 }
 
 h1 {
@@ -29,7 +31,7 @@ h2 {
   font-size: least-squares-fit($map);
   $map: (576: 23, 768: 23, 992: 23);
   line-height: least-squares-fit($map);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.0015em;
 }
 
 h3 {
@@ -44,12 +46,12 @@ h3 {
 }
 
 .ui_type {
-  font-weight: 500;
+  font-weight: 800;
   color: var(--color-type);
-  $map: (576: 13, 768: 13, 992: 13);
+  $map: (576: 18, 768: 18, 992: 18);
   font-size: least-squares-fit($map);
 
-  letter-spacing: 0.5em;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
 }
 

@@ -1,9 +1,9 @@
 @media only screen and (min-width: 1023px) {
 
   h2 {
-    $map: (576: 27, 768: 27, 992: 27);
+    $map: (576: 28, 768: 28, 992: 28);
     font-size: least-squares-fit($map);
-    $map: (576: 41, 768: 41, 992: 41);
+    $map: (576: 40, 768: 40, 992: 40);
     line-height: least-squares-fit($map);
   }
 

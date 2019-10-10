@@ -10,20 +10,20 @@ $my_menuButton.on("click", function(){
   // menu overlay is active
   if ($my_menuButton.hasClass('isActive')) {
     // run text animation
-    ui_menu_text.setText("MENU");
-    ui_menu_text.start();
+    //ui_menu_text.setText("MENU");
+    //ui_menu_text.start();
     // run icon animation
-    $(".ui_menu_icon").toggleClass('open_menuIcon');
+    //$(".ui_menu_icon").toggleClass('open_menuIcon');
     // close modal
     $('.overlay').removeClass('open');
     // set modal to isActive=false
     $(this).toggleClass('isActive');
   } else {
     // run text animation
-    ui_menu_text.setText("CLOSE");
-    ui_menu_text.start();
+    //ui_menu_text.setText("CLOSE");
+    //ui_menu_text.start();
     // run icon animation
-    $(".ui_menu_icon").toggleClass('open_menuIcon');
+    //$(".ui_menu_icon").toggleClass('open_menuIcon');
     // open modal
     $('.overlay').addClass('open');
     // set modal to isActive=false
@@ -31,6 +31,7 @@ $my_menuButton.on("click", function(){
   }
 });
 // on hover
+/*
 $my_menuButton.on({
     mouseenter: function () {
       if ($my_menuButton.hasClass('isActive')) {
@@ -51,3 +52,4 @@ $my_menuButton.on({
       }
     }
 });
+*/

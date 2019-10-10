@@ -1,10 +1,4 @@
-#ui_darkMode {
-  position: relative;
-  display: flex;
-  //align-items: center;
-  margin-left: 8vw;
-  margin-top: -10px;
-}
+
 
 .ui_darkMode_switch {
   display: inline-block;
@@ -41,11 +35,17 @@
 
   #ui_darkMode {
     //display: flex;
+    display: flex;
     position: absolute;
     align-items: center;
-    margin-left: 8vw;
+    margin-left: 20px;
     //margin-top: 150vh;
     bottom: 10vh;
+
+    //align-items: center;
+    margin-top: -10px;
+    transform: rotate(-90deg);
+
 
   }
 }
