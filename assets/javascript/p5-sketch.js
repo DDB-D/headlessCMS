@@ -17,7 +17,7 @@ var VerletPhysics2D = toxi.physics2d.VerletPhysics2D,
 var sketch = function( p ) {
 
   var options = {
-    numClusters: 50,
+    numClusters: 20,
     particleRadius: 10,
     showPhysics: true,
     showParticles: true,
@@ -37,7 +37,7 @@ var sketch = function( p ) {
 
   var clusters,
       physics,
-      mouseAttractor
+      mouseAttractor,
       selected;
 
   //make particles draggable
@@ -54,8 +54,12 @@ var sketch = function( p ) {
 
     physics = new VerletPhysics2D();
     physics.setWorldBounds(new Rect(10, 10, p.width-20, p.height-20));
+    //physics.setDrag(0.005);
+    //physics.addBehavior(new GravityBehavior(new Vec2D(0, 0.15)));
 
-    //mouseAttractor = new AttractionBehavior();
+    mousePos = new Vec2D(p.mouseX, p.mouseY);
+    mouseAttractor = new AttractionBehavior(mousePos, 50, 1.5);
+    physics.addBehavior(mouseAttractor);
 
     p.makeGraph();
   }
@@ -74,7 +78,7 @@ var sketch = function( p ) {
                       ci.showConnections(cj);
         });
     }
-
+    mousePos.set(p.mouseX, p.mouseY);
 
   }
 
@@ -145,8 +149,8 @@ var sketch = function( p ) {
                 new VerletSpring2D(
                     pi,
                     pj,
-                    (selfDiam + other.diameter)*5.5,
-                    0.0001
+                    (selfDiam + other.diameter)*3.5,
+                    0.001
                 )
 
             );
@@ -170,7 +174,7 @@ var sketch = function( p ) {
             p.line(pi.x, pi.y, pj.x, pj.y);
         });
     } else {
-        p.stroke(0, 15);
+        p.stroke(0, 35);
         this.nodes.forEach(function(pi){
             other.nodes.forEach(function(pj){
                 p.line(pi.x, pi.y, pj.x, pj.y);
@@ -181,32 +185,41 @@ var sketch = function( p ) {
 
   p.Node = function(pos){
     VerletParticle2D.call(this, pos);
+    physics.addBehavior(new AttractionBehavior(this, 200, -1.2));
+    physics.addParticle(this);
+
   }
 
   p.Node.prototype = Object.create(VerletParticle2D.prototype);
 
   p.Node.prototype.display = function(){
+
     p.fill(0);
     p.ellipse(this.x, this.y, options.particleRadius, options.particleRadius);
+
+
+
   };
 
   p.mousePressed = function(){
 
-    mousePos = new Vec2D(p.mouseX, p.mouseY);
+
 
     clusters.forEach(function(c){
+
       c.nodes.forEach(function(n){
+
         if (n.distanceToSquared(mousePos)<snapDist) {
           selected=n;
           selected.lock();
           //p.break;
           return false;
+
         }
       });
     });
 
-    mouseAttractor = new AttractionBehavior(mousePos, 250, 0.9);
-    physics.addBehavior(mouseAttractor);
+
   }
 
   p.mouseDragged = function(){
@@ -221,7 +234,7 @@ var sketch = function( p ) {
       selected.unlock();
       selected=null;
     }
-    physics.removeBehavior(mouseAttractor);
+    //physics.removeBehavior(mouseAttractor);
   }
 }
 
