@@ -17,12 +17,12 @@ var VerletPhysics2D = toxi.physics2d.VerletPhysics2D,
 var sketch = function( p ) {
 
   var options = {
-    numClusters: 20,
-    particleRadius: 10,
+    numClusters: 15,
+    particleRadius: 8,
     showPhysics: true,
     showParticles: true,
-    springStrength: 0.01,
-    minDistanceSpringStrength: 0.05
+    springStrength: 0.001,
+    minDistanceSpringStrength: 0.00015
   };
 
 /*
@@ -53,12 +53,12 @@ var sketch = function( p ) {
     myp5GlobalSketchVar = p.createCanvas(containerWidth, containerHeight);
 
     physics = new VerletPhysics2D();
-    physics.setWorldBounds(new Rect(10, 10, p.width-20, p.height-20));
+    physics.setWorldBounds(new Rect(200, 10, p.width-200, p.height-20));
     //physics.setDrag(0.005);
     //physics.addBehavior(new GravityBehavior(new Vec2D(0, 0.15)));
 
     mousePos = new Vec2D(p.mouseX, p.mouseY);
-    mouseAttractor = new AttractionBehavior(mousePos, 50, 1.5);
+    mouseAttractor = new AttractionBehavior(mousePos, 75, 2.5);
     physics.addBehavior(mouseAttractor);
 
     p.makeGraph();
@@ -113,9 +113,13 @@ var sketch = function( p ) {
         );
     });
 
+
+
     p.forEachNested(clusters, function(ci, cj){
         ci.connect(cj);
     })
+
+
   }
 
 
@@ -159,7 +163,7 @@ var sketch = function( p ) {
                     pi,
                     pj,
                     (selfDiam + other.diameter)*5,
-                    0.9
+                    0.2
                 )
 
             );
@@ -185,9 +189,8 @@ var sketch = function( p ) {
 
   p.Node = function(pos){
     VerletParticle2D.call(this, pos);
-    physics.addBehavior(new AttractionBehavior(this, 200, -1.2));
-    physics.addParticle(this);
-
+    physics.addBehavior(new AttractionBehavior(this, 200, -0.2));
+    physics.addParticle(this.lock());
   }
 
   p.Node.prototype = Object.create(VerletParticle2D.prototype);
