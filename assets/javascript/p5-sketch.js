@@ -61,7 +61,7 @@ var sketch = function( p ) {
 
     physics = new VerletPhysics2D();
     physics.setWorldBounds(new Rect(200, 10, p.width-200, p.height-20));
-    //physics.setDrag(0.005);
+    physics.setDrag(0.005);
     //physics.addBehavior(new GravityBehavior(new Vec2D(0, 0.15)));
 
     mousePos = new Vec2D(p.mouseX, p.mouseY);
@@ -70,15 +70,6 @@ var sketch = function( p ) {
 
     p.makeGraph();
 
-    for(var i=1; i<clusters.length; i++){
-      //console.log("node");
-      var myCluster = clusters[0];
-
-      node_poi = myCluster[0];
-
-      //console.log("myCluster-pos: " + node_poi.x);
-
-    }
   }
 
   p.draw = function(){
@@ -88,12 +79,8 @@ var sketch = function( p ) {
         clusters.forEach(function(c){
             c.display();
         });
-        /*
-        clusters.forEach(function(c){
-          c.displayPOI();
-        });
-        */
         clusters[0].displayPOI();
+        clusters[14].lockNode();
     }
     if(options.showPhysics){
         p.forEachNested(clusters, function(ci, cj){
@@ -102,10 +89,6 @@ var sketch = function( p ) {
         });
     }
     mousePos.set(p.mouseX, p.mouseY);
-
-
-    //POI/Tooltip
-
   }
 
   p.times = function(n, fn){
@@ -128,35 +111,24 @@ var sketch = function( p ) {
   }
 
   p.makeGraph = function(){
-
     physics.clear();
-
     clusters = p.times(options.numClusters, function(){
         return new p.Cluster(
           1,
-
-            Math.floor(p.random(15, 45)),
-            new Vec2D((p.width/4)*3, p.height/2)
+          Math.floor(p.random(15, 45)),
+          new Vec2D((p.width/4)*3, p.height/2)
         );
     });
-
-
-
     p.forEachNested(clusters, function(ci, cj){
         ci.connect(cj);
     })
-
-
   }
-
-
 
   p.Cluster = function(n, d, center){
     this.diameter = d;
     this.nodes = p.times(n, function(){
         return new p.Node(center.add(Vec2D.randomVector()));
     });
-
     for(var i=1; i<this.nodes.length; i++){
         var pi = this.nodes[i];
         for(var j=0; j<i; j++){
@@ -173,11 +145,15 @@ var sketch = function( p ) {
   };
 
   p.Cluster.prototype.displayPOI = function(){
-
     this.nodes.forEach(function(n){
         n.displayPOI();
     });
+  };
 
+  p.Cluster.prototype.lockNode = function(){
+    this.nodes.forEach(function(n){
+        n.lockNode();
+    });
   };
 
   p.Cluster.prototype.connect = function(other){
@@ -200,7 +176,6 @@ var sketch = function( p ) {
                     (selfDiam + other.diameter)*5,
                     options.minDistanceSpringStrength
                 )
-
             );
         })
     });
@@ -248,36 +223,24 @@ var sketch = function( p ) {
       p.fill(255,0,0);
       p.noStroke();
       p.text("Zielgruppe", this.x + 10, this.y + 3);
-      //selected=n;
-      //selected.lock();
-      //p.break;
-      //return false;
-
-      console.log("rollo!!!");
     }
-
   };
 
+  p.Node.prototype.lockNode = function(){
+    this.lock();
+  }
 
   p.mousePressed = function(){
-
-
-
     clusters.forEach(function(c){
-
       c.nodes.forEach(function(n){
-
         if (n.distanceToSquared(mousePos)<snapDist) {
           selected=n;
           selected.lock();
           //p.break;
           return false;
-
         }
       });
     });
-
-
   }
 
   p.mouseDragged = function(){
@@ -289,10 +252,9 @@ var sketch = function( p ) {
 
   p.mouseReleased = function() {
     if (selected!=null) {
-      //selected.unlock();
-      //selected=null;
+      selected.unlock();
+      selected=null;
     }
-    //physics.removeBehavior(mouseAttractor);
   }
 }
 
