@@ -65,7 +65,7 @@ var sketch = function( p ) {
     //physics.addBehavior(new GravityBehavior(new Vec2D(0, 0.15)));
 
     mousePos = new Vec2D(p.mouseX, p.mouseY);
-    mouseAttractor = new AttractionBehavior(mousePos, 75, 0.5);
+    mouseAttractor = new AttractionBehavior(mousePos, 75, 0.85);
     physics.addBehavior(mouseAttractor);
 
     p.makeGraph();
