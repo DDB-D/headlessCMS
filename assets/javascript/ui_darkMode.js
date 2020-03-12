@@ -43,6 +43,7 @@ function switchTheme(e) {
         //on hover
         $ui_darkMode_switch.toggleClass('darkmodeActive');
     }
+    window.location.reload();
 }
 
 // on hover
