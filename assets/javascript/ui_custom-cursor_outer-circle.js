@@ -147,7 +147,7 @@ const initHovers = () => {
   };
 
   // add event listeners to all items
-  const linkItems = document.querySelectorAll(".layout_ui_menu");
+  const linkItems = document.querySelectorAll(".custom-cursor_hoverable");
   linkItems.forEach(item => {
     item.addEventListener("mouseenter", handleMouseEnter);
     item.addEventListener("mouseleave", handleMouseLeave);
