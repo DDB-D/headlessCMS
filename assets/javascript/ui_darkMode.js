@@ -20,7 +20,11 @@ ui_darkMode_switch_txt.start();
 
 // switch theme on clickBtn
 function switchTheme(e) {
+
+      //window.location.reload();
+
     if (e.target.checked) {
+
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark'); //add this
         //set text
@@ -31,8 +35,10 @@ function switchTheme(e) {
         //on hover
         $ui_darkMode_switch.toggleClass('darkmodeActive');
 
+
     }
     else {
+
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light'); //add this
         //set text
@@ -43,7 +49,10 @@ function switchTheme(e) {
         //on hover
         $ui_darkMode_switch.toggleClass('darkmodeActive');
     }
-    window.location.reload();
+
+    //setTimeout(location.reload.bind(location), 0);
+
+
 }
 
 // on hover
@@ -51,13 +60,13 @@ $ui_darkMode_switch.on({
     mouseenter: function () {
       if ($ui_darkMode_switch.hasClass('darkmodeActive')) {
         //set txt
-        ui_darkMode_switch_txt.setText("Step into the light");
+        ui_darkMode_switch_txt.setText("switch to light");
         ui_darkMode_switch_txt.start();
         //set ui_menu_icon
         ui_darkMode_switch_ico.innerHTML = "&#x263C";
       } else {
         //set txt
-        ui_darkMode_switch_txt.setText("Slippin' Into Darkness");
+        ui_darkMode_switch_txt.setText("switch to dark");
         ui_darkMode_switch_txt.start();
         //set ui_menu_icon
         ui_darkMode_switch_ico.innerHTML = "&#x2022";

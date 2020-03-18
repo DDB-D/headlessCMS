@@ -6,52 +6,54 @@ let showCursor = false;
 let group, stuckX, stuckY, fillOuterCursor;
 
 const initCanvas = () => {
-  const canvas = document.querySelector(".cursor--canvas");
-  const shapeBounds = {
-    width: 75,
-    height: 75
-  };
-  paper.setup(canvas);
-  //const strokeColor = "rgba(255, 0, 0, 0.5)";
+const canvas = document.querySelector(".cursor--canvas");
+const shapeBounds = {
+  width: 75,
+  height: 75
+};
+paper.setup(canvas);
 
+//const strokeColor = "rgba(255, 0, 0, 0.5)";
 const strokeColor_css = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
-console.log(strokeColor_css);
+const fillColor_css = getComputedStyle(document.documentElement).getPropertyValue("--color-highlight");
+
 const strokeColor = strokeColor_css;
-  const strokeWidth = 1;
-  const segments = 8;
-  const radius = 15;
+const strokeWidth = 1;
+const segments = 8;
+const radius = 15;
 
-  // we'll need these later for the noisy circle
-  const noiseScale = 150; // speed
-  const noiseRange = 25; // range of distortion
-  let isNoisy = true; // state
+// we'll need these later for the noisy circle
+const noiseScale = 150; // speed
+const noiseRange = 25; // range of distortion
+let isNoisy = true; // state
 
-  // the base shape for the noisy circle
-  const polygon = new paper.Path.RegularPolygon(
-    new paper.Point(0, 0),
-    segments,
-    radius
+// the base shape for the noisy circle
+const polygon = new paper.Path.RegularPolygon(
+  new paper.Point(0, 0),
+  segments,
+  radius
+);
+polygon.strokeColor = strokeColor;
+polygon.fillColor = fillColor_css;
+polygon.strokeWidth = strokeWidth;
+polygon.smooth();
+group = new paper.Group([polygon]);
+group.applyMatrix = false;
+
+const noiseObjects = polygon.segments.map(() => new SimplexNoise());
+let bigCoordinates = [];
+
+// function for linear interpolation of values
+const lerp = (a, b, n) => {
+  return (1 - n) * a + n * b;
+};
+
+// function to map a value from one range to another range
+const map = (value, in_min, in_max, out_min, out_max) => {
+  return (
+    ((value - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
   );
-  polygon.strokeColor = strokeColor;
-  polygon.strokeWidth = strokeWidth;
-  polygon.smooth();
-  group = new paper.Group([polygon]);
-  group.applyMatrix = false;
-
-  const noiseObjects = polygon.segments.map(() => new SimplexNoise());
-  let bigCoordinates = [];
-
-  // function for linear interpolation of values
-  const lerp = (a, b, n) => {
-    return (1 - n) * a + n * b;
-  };
-
-  // function to map a value from one range to another range
-  const map = (value, in_min, in_max, out_min, out_max) => {
-    return (
-      ((value - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
-    );
-  };
+};
 
   // the draw loop of Paper.js
   // (60fps with requestAnimationFrame under the hood)
@@ -61,6 +63,14 @@ paper.view.onFrame = event => {
   // using linear interpolation, the circle will move 0.2 (20%)
   // of the distance between its current position and the mouse
   // coordinates per Frame
+  if ($ui_darkMode_switch.hasClass('darkmodeActive')) {
+    const strokeColor_css_changed = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
+    polygon.strokeColor = strokeColor_css_changed;
+  } else {
+    const strokeColor_css_changed = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
+    polygon.strokeColor = strokeColor_css_changed;
+  }
+
   if (!isStuck) {
     // move circle around normally
     lastX = lerp(lastX, clientX, 0.2);

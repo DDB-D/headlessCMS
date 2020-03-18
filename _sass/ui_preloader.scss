@@ -7,10 +7,12 @@
   left: 0;
   position: fixed;
   top: 0;
-  transition: opacity 0.3s linear;
+//  transition: opacity 0s linear;
   width: 100%;
   z-index: 9999;
+}
 
+.preloader-rotate{
   -webkit-animation-name: spin;
     -webkit-animation-duration: 2000ms;
     -webkit-animation-iteration-count: infinite;
@@ -27,7 +29,7 @@
     animation-duration: 2000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-  }
+
 
   @-ms-keyframes spin {
     from {
@@ -64,3 +66,4 @@
       transform: rotate(360deg);
     }
   }
+}

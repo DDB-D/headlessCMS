@@ -15,5 +15,5 @@ p.forEach(function(element, index){
 })
 
 $(window).on('load', function(){
-  $("#preloader-fade").fadeOut("slow");
+  $("#preloader-fade").fadeOut(1000);
 });
