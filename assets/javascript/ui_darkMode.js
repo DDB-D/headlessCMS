@@ -49,7 +49,15 @@ function switchTheme(e) {
     for (let i = 0; i < ui_home_textSelect.length; i++) {
         ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
     }
+    var links = document.getElementsByTagName("link");
 
+      for (var x in links) {
+          var link = links[x];
+
+
+              link.href = link.href + "?id=" + new Date().getMilliseconds();
+        
+      }
 }
 
 // on hover

@@ -61,12 +61,11 @@ const map = (value, in_min, in_max, out_min, out_max) => {
 // (60fps with requestAnimationFrame under the hood)
 paper.view.onFrame = event => {
   // set color dark/light mode
+  const strokeColor_css_changed = getComputedStyle(document.documentElement).getPropertyValue("--color-highlight");
   if ($ui_darkMode_switch.hasClass('darkmodeActive')) {
-    const strokeColor_css_changed = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
-    polygon.strokeColor = strokeColor_css_changed;
+    polygon.fillColor = strokeColor_css_changed;
   } else {
-    const strokeColor_css_changed = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
-    polygon.strokeColor = strokeColor_css_changed;
+    polygon.fillColor = strokeColor_css_changed;
   }
   // using linear interpolation, the circle will move 0.2 (20%)
   // of the distance between its current position and the mouse
