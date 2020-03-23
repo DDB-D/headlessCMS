@@ -30,16 +30,34 @@ $my_menuButton.on("click", function(){
     $(this).toggleClass('isActive');
   }
 });
+
 // on hover
+var ui_menu_textSelect = document.getElementById('ui_menu_changeType');
+
+// variables on hover set icon to --color-bg & back
+var ui_menu_icon = document.getElementsByClassName('ui_menu_icon');
+var ui_menu_icon_spans = ui_menu_icon[0].getElementsByTagName('span');
+
+
 $my_menuButton.on({
     mouseenter: function () {
       if ($my_menuButton.hasClass('isActive')) {
         ui_menu_text.setText("CLOSE");
         ui_menu_text.start();
+
+        
       } else {
         ui_menu_text.setText("OPEN");
         ui_menu_text.start();
+
+        // on hover set text to --color-bg
+        ui_menu_textSelect.style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
+        // on hover set icon color to --color-bg
+        for (let i = 0; i < ui_menu_icon_spans.length; i++) {
+            ui_menu_icon_spans[i].style.background = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
+        }
       }
+
     },
     mouseleave: function () {
       if ($my_menuButton.hasClass('isActive')) {
@@ -48,6 +66,14 @@ $my_menuButton.on({
       } else {
         ui_menu_text.setText("MENU");
         ui_menu_text.start();
+
+        // on hover out set text back to --color-type
+        ui_menu_textSelect.style.color = getComputedStyle(document.documentElement).getPropertyValue("--type-bg");
+        // on hover out set icon color to --color-type
+        for (let i = 0; i < ui_menu_icon_spans.length; i++) {
+            ui_menu_icon_spans[i].style.background = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
+        }
       }
+
     }
 });

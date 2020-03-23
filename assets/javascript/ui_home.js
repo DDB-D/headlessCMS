@@ -98,12 +98,29 @@ function scaleMaskUp_uiHome() {
   }
   stage_fullscreenBg_uiHome.style.transitionDuration = ".5s";
   stage_fullscreenBg_uiHome.style.setProperty("--clipPath-radius-value_tablet", size + "px");
-  console.log("scaleMask");
-
-
 }
 
 function scaleMaskDown_uiHome() {
   stage_fullscreenBg_uiHome.style.transitionDuration = ".5s";
   stage_fullscreenBg_uiHome.style.setProperty("--clipPath-radius-value_tablet", 0 + "px");
 }
+
+// set text color on hover
+// get element to hover
+var ui_home = $("#ui_home");
+//get all text elements in div ui_darkMode
+var ui_home_textSelect = document.getElementById('ui_home').getElementsByClassName('ui_type');
+
+// on hover
+ui_home.on({
+    mouseenter: function () {
+      for (let i = 0; i < ui_home_textSelect.length; i++) {
+          ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
+      }
+    },
+    mouseleave: function () {
+      for (let i = 0; i < ui_home_textSelect.length; i++) {
+          ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
+      }
+    }
+});

@@ -39,8 +39,6 @@ h3 {
   font-size: least-squares-fit($map);
   letter-spacing: 0.5em;
   text-transform: uppercase;
-
-  //--var-h3 = var($map);
 }
 
 .ui_type {
@@ -48,12 +46,9 @@ h3 {
   color: var(--color-type);
   $map: (576: 13, 768: 13, 992: 13);
   font-size: least-squares-fit($map);
-
   letter-spacing: 0.5em;
   text-transform: uppercase;
 }
-
-
 
 .title_type{
   text-align: center;

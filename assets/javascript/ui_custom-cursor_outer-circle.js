@@ -18,7 +18,7 @@ const strokeColor_css = getComputedStyle(document.documentElement).getPropertyVa
 const fillColor_css = getComputedStyle(document.documentElement).getPropertyValue("--color-highlight");
 
 const strokeColor = strokeColor_css;
-const strokeWidth = 1;
+const strokeWidth = 0;
 const segments = 8;
 const radius = 15;
 
@@ -60,9 +60,7 @@ const map = (value, in_min, in_max, out_min, out_max) => {
   // the draw loop of Paper.js
 // (60fps with requestAnimationFrame under the hood)
 paper.view.onFrame = event => {
-  // using linear interpolation, the circle will move 0.2 (20%)
-  // of the distance between its current position and the mouse
-  // coordinates per Frame
+  // set color dark/light mode
   if ($ui_darkMode_switch.hasClass('darkmodeActive')) {
     const strokeColor_css_changed = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
     polygon.strokeColor = strokeColor_css_changed;
@@ -70,22 +68,25 @@ paper.view.onFrame = event => {
     const strokeColor_css_changed = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
     polygon.strokeColor = strokeColor_css_changed;
   }
+  // using linear interpolation, the circle will move 0.2 (20%)
+  // of the distance between its current position and the mouse
+  // coordinates per Frame
 
   if (!isStuck) {
     // move circle around normally
-    lastX = lerp(lastX, clientX, 0.2);
-    lastY = lerp(lastY, clientY, 0.2);
+    lastX = lerp(lastX, clientX, 0.6);
+    lastY = lerp(lastY, clientY, 0.6);
     group.position = new paper.Point(lastX, lastY);
   } else if (isStuck) {
     // fixed position on a nav item
-    lastX = lerp(lastX, stuckX, 0.2);
-    lastY = lerp(lastY, stuckY, 0.2);
+    lastX = lerp(lastX, stuckX, 0.6);
+    lastY = lerp(lastY, stuckY, 0.6);
     group.position = new paper.Point(lastX, lastY);
   }
 
   if (isStuck && polygon.bounds.width < shapeBounds.width) {
     // scale up the shape
-    polygon.scale(6.0);
+    polygon.scale(8.0);
   } else if (!isStuck && polygon.bounds.width > 30) {
     // remove noise
     if (isNoisy) {
@@ -96,7 +97,7 @@ paper.view.onFrame = event => {
       bigCoordinates = [];
     }
     // scale down the shape
-    const scaleDown = 0.92;
+    const scaleDown = 0.72;
     polygon.scale(scaleDown);
   }
 
