@@ -45,19 +45,15 @@ function switchTheme(e) {
         ui_darkMode_switch_ico.innerHTML = "&#x263C";
     }
 
-    // ui_home quickFix: wrong text-color
+    // ui_home quickFix: wrong text-color on darkmode switch
     for (let i = 0; i < ui_home_textSelect.length; i++) {
         ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
     }
-    var links = document.getElementsByTagName("link");
 
-      for (var x in links) {
-          var link = links[x];
-
-
-              link.href = link.href + "?id=" + new Date().getMilliseconds();
-        
-      }
+    //ui_menu_icon quickFix: wrong background-color on darkmode switch
+    for (let i = 0; i < ui_menu_icon_spans.length; i++) {
+        ui_menu_icon_spans[i].style.background = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
+    }
 }
 
 // on hover

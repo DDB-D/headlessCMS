@@ -11,6 +11,12 @@ const shapeBounds = {
   width: 75,
   height: 75
 };
+
+// switch curstom cursor color and set z-index if ui_menu is active
+var curser_zIndex =  document.getElementsByClassName('cursor--canvas');
+// set z-index for ui_type if ui_menu is active
+var menuType_zIndex =  document.getElementsByClassName('layout_ui_menu');
+
 paper.setup(canvas);
 
 //const strokeColor = "rgba(255, 0, 0, 0.5)";
@@ -55,6 +61,8 @@ const map = (value, in_min, in_max, out_min, out_max) => {
   );
 };
 
+
+
   // the draw loop of Paper.js
   // (60fps with requestAnimationFrame under the hood)
   // the draw loop of Paper.js
@@ -62,11 +70,33 @@ const map = (value, in_min, in_max, out_min, out_max) => {
 paper.view.onFrame = event => {
   // set color dark/light mode
   const strokeColor_css_changed = getComputedStyle(document.documentElement).getPropertyValue("--color-highlight");
+  const strokeColor_css_menuActive = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
+
   if ($ui_darkMode_switch.hasClass('darkmodeActive')) {
     polygon.fillColor = strokeColor_css_changed;
   } else {
     polygon.fillColor = strokeColor_css_changed;
   }
+  //change stuff if menu is active
+  if ($my_menuButton.hasClass('isActive')) {
+    //set custom cursor z-index to 3
+    for (let i = 0; i < curser_zIndex.length; i++) {
+      curser_zIndex[i].style.zIndex = 3;
+    }
+    //switch curstom cursor color if ui_menu is active
+    polygon.fillColor = strokeColor_css_menuActive;
+    //set menu ui_type z-index to 4
+    for (let i = 0; i < curser_zIndex.length; i++) {
+
+      //menuType_zIndex[i].style.zIndex = 1000;
+    }
+
+  } else { for (let i = 0; i < curser_zIndex.length; i++) {
+    // set cursor back to default z-index
+    curser_zIndex[i].style.zIndex = 1;
+  }
+}
+
   // using linear interpolation, the circle will move 0.2 (20%)
   // of the distance between its current position and the mouse
   // coordinates per Frame
