@@ -45,6 +45,11 @@ function switchTheme(e) {
         ui_darkMode_switch_ico.innerHTML = "&#x263C";
     }
 
+    //set fontcolor for all ui_type elements in darkMode_switch
+    for (let i = 0; i < ui_darkMode_textSelect.length; i++) {
+        ui_darkMode_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
+    }
+
     // ui_home quickFix: wrong text-color on darkmode switch
     for (let i = 0; i < ui_home_textSelect.length; i++) {
         ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-type");

@@ -16,6 +16,8 @@ const shapeBounds = {
 var curser_zIndex =  document.getElementsByClassName('cursor--canvas');
 // set z-index for ui_type if ui_menu is active
 var menuType_zIndex =  document.getElementsByClassName('layout_ui_menu');
+// switch ui_type color if menu is isActive
+var menuType_color_menuActive =  document.getElementById('ui_menu_changeType');
 
 paper.setup(canvas);
 
@@ -70,7 +72,7 @@ const map = (value, in_min, in_max, out_min, out_max) => {
 paper.view.onFrame = event => {
   // set color dark/light mode
   const strokeColor_css_changed = getComputedStyle(document.documentElement).getPropertyValue("--color-highlight");
-  const strokeColor_css_menuActive = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
+  const strokeColor_css_menuActive = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
 
   if ($ui_darkMode_switch.hasClass('darkmodeActive')) {
     polygon.fillColor = strokeColor_css_changed;
@@ -79,18 +81,14 @@ paper.view.onFrame = event => {
   }
   //change stuff if menu is active
   if ($my_menuButton.hasClass('isActive')) {
-    //set custom cursor z-index to 3
+    //set custom cursor z-index
     for (let i = 0; i < curser_zIndex.length; i++) {
-      curser_zIndex[i].style.zIndex = 3;
+      curser_zIndex[i].style.zIndex = 2;
     }
     //switch curstom cursor color if ui_menu is active
     polygon.fillColor = strokeColor_css_menuActive;
-    //set menu ui_type z-index to 4
-    for (let i = 0; i < curser_zIndex.length; i++) {
-
-      //menuType_zIndex[i].style.zIndex = 1000;
-    }
-
+    //switch menu:ui_type to color--bg
+    //menuType_color_menuActive.style.color = strokeColor_css_menuActive;
   } else { for (let i = 0; i < curser_zIndex.length; i++) {
     // set cursor back to default z-index
     curser_zIndex[i].style.zIndex = 1;
