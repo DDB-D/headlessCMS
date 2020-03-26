@@ -19,6 +19,11 @@ $my_menuButton.on("click", function(){
     for (let i = 0; i < ui_menu_icon_spans.length; i++) {
         ui_menu_icon_spans[i].style.background = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
     }
+    // on click set ui_home logo color back to default
+    for (let i = 0; i < ui_home_textSelect.length; i++) {
+        ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
+    }
+
     // run text animation
     ui_menu_text.setText("MENU");
     ui_menu_text.start();
@@ -34,6 +39,10 @@ $my_menuButton.on("click", function(){
     // on hover set icon color to --color-bg
     for (let i = 0; i < ui_menu_icon_spans.length; i++) {
         ui_menu_icon_spans[i].style.background = getComputedStyle(document.documentElement).getPropertyValue("--color-highlight");
+    }
+    // on click set ui_home logo color to menuIsActive color
+    for (let i = 0; i < ui_home_textSelect.length; i++) {
+        ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
     }
     // run text animation
     ui_menu_text.setText("CLOSE");

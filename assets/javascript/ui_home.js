@@ -111,16 +111,30 @@ var ui_home = $("#ui_home");
 //get all text elements in div ui_darkMode
 var ui_home_textSelect = document.getElementById('ui_home').getElementsByClassName('ui_type');
 
+var $ui_menu_checkActivity = $("#ui_menu_checkActivity");
 // on hover
 ui_home.on({
     mouseenter: function () {
-      for (let i = 0; i < ui_home_textSelect.length; i++) {
-          ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
+      if ($ui_menu_checkActivity.hasClass('isActive')) {
+        for (let i = 0; i < ui_home_textSelect.length; i++) {
+            ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-highlight");
+        }
+      } else {
+        for (let i = 0; i < ui_home_textSelect.length; i++) {
+            ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
+        }
       }
     },
     mouseleave: function () {
-      for (let i = 0; i < ui_home_textSelect.length; i++) {
+      if ($ui_menu_checkActivity.hasClass('isActive')) {
+        for (let i = 0; i < ui_home_textSelect.length; i++) {
+          ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
+        }
+      }
+      else {
+        for (let i = 0; i < ui_home_textSelect.length; i++) {
           ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
+        }
       }
     }
 });
