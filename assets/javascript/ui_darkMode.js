@@ -3,11 +3,18 @@ const toggleSwitch = document.querySelector('.ui_darkMode_switch input[type="che
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
 var $ui_darkMode_switch = $(".ui_darkMode_switch");
+//var $ui_foot_setZIndx = $("#ui_foot");
+var ui_foot_setZIndx =  document.getElementById('ui_foot');
+
 var ui_darkMode_switch_txt = new ShuffleText(document.querySelector('#ui_darkMode_switch_txt'));
 var ui_darkMode_switch_ico = document.getElementById("ui_darkMode_switch_icon");
 
 //get all text elements in div ui_darkMode
 var ui_darkMode_textSelect = document.getElementById('ui_darkMode').getElementsByClassName('ui_type');
+
+//get text elements in ui_menu text
+var ui_menu_text_switchCol = document.getElementById('ui_menu_changeType');
+
 
 // theme already set in browser cookies?
 if (currentTheme) {
@@ -19,6 +26,7 @@ if (currentTheme) {
         $ui_darkMode_switch.toggleClass('darkmodeActive');
     }
 }
+
 ui_darkMode_switch_txt.start();
 
 // switch theme on clickBtn
@@ -45,29 +53,68 @@ function switchTheme(e) {
         ui_darkMode_switch_ico.innerHTML = "&#x263C";
     }
 
-    //set fontcolor for all ui_type elements in darkMode_switch
-    for (let i = 0; i < ui_darkMode_textSelect.length; i++) {
-        ui_darkMode_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
+    if ($ui_menu_checkActivity.hasClass('isActive')) {
+
+      //set fontcolor for all ui_type elements in darkmode switch
+      for (let i = 0; i < ui_darkMode_textSelect.length; i++) {
+          ui_darkMode_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-highlight");
+      }
+      //set menu-text to color-bg
+      ui_menu_text_switchCol.style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
+      //set menu-icon to color-bg
+      //set icon color to --color-bg
+      for (let i = 0; i < ui_menu_icon_spans.length; i++) {
+          ui_menu_icon_spans[i].style.background = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
+      }
+      //set home-logo color to color-bg
+      for (let i = 0; i < ui_home_textSelect.length; i++) {
+          ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
+      }
+
+    } else {
+      //set fontcolor for all ui_type elements in darkmode
+      for (let i = 0; i < ui_darkMode_textSelect.length; i++) {
+          ui_darkMode_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
+      }
+      // set home-logo color to color-type
+      for (let i = 0; i < ui_home_textSelect.length; i++) {
+          ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
+      }
     }
 
     // ui_home quickFix: wrong text-color on darkmode switch
+/*
     for (let i = 0; i < ui_home_textSelect.length; i++) {
         ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
     }
-
+    */
+/*
     //ui_menu_icon quickFix: wrong background-color on darkmode switch
     for (let i = 0; i < ui_menu_icon_spans.length; i++) {
         ui_menu_icon_spans[i].style.background = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
     }
+    */
 }
 
 // on hover
 $ui_darkMode_switch.on({
     mouseenter: function () {
-      //set fontcolor for all ui_type elements
-      for (let i = 0; i < ui_darkMode_textSelect.length; i++) {
-          ui_darkMode_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
+
+      ui_foot_setZIndx.style.zIndex = 3;
+
+      if ($ui_menu_checkActivity.hasClass('isActive')) {
+        //set fontcolor for all ui_type elements
+        for (let i = 0; i < ui_darkMode_textSelect.length; i++) {
+            ui_darkMode_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-highlight");
+        }
+
+      } else {
+        //set fontcolor for all ui_type elements
+        for (let i = 0; i < ui_darkMode_textSelect.length; i++) {
+            ui_darkMode_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
+        }
       }
+
       if ($ui_darkMode_switch.hasClass('darkmodeActive')) {
         //set txt
         ui_darkMode_switch_txt.setText("switch to light");
@@ -86,6 +133,22 @@ $ui_darkMode_switch.on({
     },
     mouseleave: function () {
 
+      ui_foot_setZIndx.style.zIndex = 1;
+
+      if ($ui_menu_checkActivity.hasClass('isActive')) {
+        //set fontcolor for all ui_type elements
+        for (let i = 0; i < ui_darkMode_textSelect.length; i++) {
+            ui_darkMode_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
+        }
+
+      } else {
+        //set fontcolor for all ui_type elements
+        //set fontcolor for all ui_type elements back
+        for (let i = 0; i < ui_darkMode_textSelect.length; i++) {
+          ui_darkMode_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
+        }
+      }
+
       if ($ui_darkMode_switch.hasClass('darkmodeActive')) {
         //set type
         ui_darkMode_switch_txt.setText("dark");
@@ -98,10 +161,6 @@ $ui_darkMode_switch.on({
         ui_darkMode_switch_txt.start();
         //set ui_menu_icon
         ui_darkMode_switch_ico.innerHTML = "&#x263C";
-      }
-      //set fontcolor for all ui_type elements back
-      for (let i = 0; i < ui_darkMode_textSelect.length; i++) {
-        ui_darkMode_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
       }
     }
 });

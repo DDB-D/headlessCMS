@@ -7,7 +7,7 @@ var $my_menuButton = $(".layout_ui_menu");
 ui_menu_text.start();
 
 // if menu is active set ui
-
+var ui_darkMode_switchColorOnClick = document.getElementById('ui_darkMode').getElementsByClassName('ui_type');
 
 // on click execute overlay
 $my_menuButton.on("click", function(){
@@ -23,7 +23,10 @@ $my_menuButton.on("click", function(){
     for (let i = 0; i < ui_home_textSelect.length; i++) {
         ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
     }
-
+    // btn:darkmode-switch: switch color back to default on click menu-active
+    for (let i = 0; i < ui_darkMode_switchColorOnClick.length; i++) {
+      ui_darkMode_switchColorOnClick[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
+    }
     // run text animation
     ui_menu_text.setText("MENU");
     ui_menu_text.start();
@@ -44,6 +47,11 @@ $my_menuButton.on("click", function(){
     for (let i = 0; i < ui_home_textSelect.length; i++) {
         ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
     }
+    // btn:darkmode-switch: switch color on click menu-active
+    for (let i = 0; i < ui_darkMode_switchColorOnClick.length; i++) {
+      ui_darkMode_switchColorOnClick[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
+    }
+
     // run text animation
     ui_menu_text.setText("CLOSE");
     ui_menu_text.start();
