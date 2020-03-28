@@ -81,19 +81,6 @@ function switchTheme(e) {
           ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
       }
     }
-
-    // ui_home quickFix: wrong text-color on darkmode switch
-/*
-    for (let i = 0; i < ui_home_textSelect.length; i++) {
-        ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
-    }
-    */
-/*
-    //ui_menu_icon quickFix: wrong background-color on darkmode switch
-    for (let i = 0; i < ui_menu_icon_spans.length; i++) {
-        ui_menu_icon_spans[i].style.background = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
-    }
-    */
 }
 
 // on hover
@@ -142,13 +129,11 @@ $ui_darkMode_switch.on({
         }
 
       } else {
-        //set fontcolor for all ui_type elements
         //set fontcolor for all ui_type elements back
         for (let i = 0; i < ui_darkMode_textSelect.length; i++) {
           ui_darkMode_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
         }
       }
-
       if ($ui_darkMode_switch.hasClass('darkmodeActive')) {
         //set type
         ui_darkMode_switch_txt.setText("dark");

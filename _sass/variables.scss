@@ -12,12 +12,14 @@
   /* Color */
   --color-type: #121212;
   --color-bg: #F7F7F7;
+  --color-bg-graf: #FFFFFF;
   --color-highlight: #E2948C;
 }
 
 [data-theme="dark"] {
   --color-type: #F7F7F7;
   --color-bg: #121212;
+  --color-bg-graf: #000000;
   --color-highlight: #1D6B73;
 }
 
