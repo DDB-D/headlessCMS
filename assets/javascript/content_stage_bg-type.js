@@ -3,5 +3,4 @@ var content_stage_bg_type_elements = content_stage_bg_type.querySelectorAll("pat
 const content_stage_bg_type_color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg-graf");
 content_stage_bg_type_elements.forEach(function(element, index){
   element.setAttribute("fill", content_stage_bg_type_color);
-  console.log("fillit");
 })

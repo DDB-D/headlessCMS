@@ -15,6 +15,10 @@ var ui_darkMode_textSelect = document.getElementById('ui_darkMode').getElementsB
 //get text elements in ui_menu text
 var ui_menu_text_switchCol = document.getElementById('ui_menu_changeType');
 
+// get element content_stage_bg-type
+var content_stage_bg_type_themeSwitch = document.getElementById('content_stage_bg-type');
+var content_stage_bg_type_themeSwitch_elements = content_stage_bg_type_themeSwitch.querySelectorAll("path");
+
 
 // theme already set in browser cookies?
 if (currentTheme) {
@@ -80,6 +84,12 @@ function switchTheme(e) {
       for (let i = 0; i < ui_home_textSelect.length; i++) {
           ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
       }
+      var content_stage_bg_type_color_themeSwitch = getComputedStyle(document.documentElement).getPropertyValue("--color-bg-graf");
+
+      // set content_bg-type to color-bg-graf
+      content_stage_bg_type_themeSwitch_elements.forEach(function(element, index){
+        element.setAttribute("fill", content_stage_bg_type_color_themeSwitch);
+      })
     }
 }
 
