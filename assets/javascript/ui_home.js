@@ -1,7 +1,7 @@
 
 // transform text to circle – CircleType.js
 function ui_home_transformType(){
-  console.log( "document is ready" );
+  //console.log( "document is ready" );
   new CircleType(document.getElementById('ui_home_logoType'));
 }
 

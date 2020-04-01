@@ -61,7 +61,7 @@ const fragment = `
   var targetDiv_width = $("#content_stage_bg-img").width();
   var targetDiv_height = $("#content_stage_bg-img").height();
 
-  console.log("w: " + targetDiv_width + ": h: " + targetDiv_height);
+  //console.log("w: " + targetDiv_width + ": h: " + targetDiv_height);
 
   //append canvas to targetDiv
   targetDiv.appendChild(gl.canvas);

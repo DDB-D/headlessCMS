@@ -20,12 +20,12 @@ p.forEach(function(element, index){
 
 
   $(window).on('load', function(){
+    /*
     p.forEach(function(element, index){
       //animation start: blend in elements separate
         setTimeout(function(){
-          console.log("time");
           element.setAttribute("style","opacity:1.0; -moz-opacity:1.0; filter:alpha(opacity=100)");
         }, 5000);
-    })
+    })*/
     $("#preloader-fade").fadeOut(1000);
   });
