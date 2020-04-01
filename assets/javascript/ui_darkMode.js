@@ -84,13 +84,12 @@ function switchTheme(e) {
       for (let i = 0; i < ui_home_textSelect.length; i++) {
           ui_home_textSelect[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
       }
-      var content_stage_bg_type_color_themeSwitch = getComputedStyle(document.documentElement).getPropertyValue("--color-bg-graf");
-
-      // set content_bg-type to color-bg-graf
-      content_stage_bg_type_themeSwitch_elements.forEach(function(element, index){
-        element.setAttribute("fill", content_stage_bg_type_color_themeSwitch);
-      })
     }
+    // set content_bg-type to color-bg-graf
+    var content_stage_bg_type_color_themeSwitch = getComputedStyle(document.documentElement).getPropertyValue("--color-bg-graf");
+    content_stage_bg_type_themeSwitch_elements.forEach(function(element, index){
+      element.setAttribute("fill", content_stage_bg_type_color_themeSwitch);
+    })
 }
 
 // on hover
