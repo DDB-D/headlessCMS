@@ -19,7 +19,7 @@
   "dependencies": {
     "circletype": "^2.3.0",
     "flowtype-js": "^0.1.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "letteringjs": "^0.7.0",
     "normalize-scss": "^7.0.1",
     "shuffle-text": "^0.2.8",
