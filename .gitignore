@@ -2,3 +2,6 @@ _site
 .sass-cache
 .jekyll-metadata
 .OAuth-credentials
+
+# Local Netlify folder
+.netlify

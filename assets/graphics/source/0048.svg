@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="600px" height="1000px" viewBox="0 0 600 1000" enable-background="new 0 0 600 1000" xml:space="preserve">
+<polyline fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" points="500,200 500,500 500,600 500,800 300,800 
+	100,800 100,600 100,500 100,200 300,200 500,200 "/>
+<line fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" x1="300" y1="200" x2="300" y2="500"/>
+<line fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" x1="300" y1="600" x2="300" y2="800"/>
+<line fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" x1="300" y1="500" x2="500" y2="500"/>
+<line fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" x1="100" y1="500" x2="300" y2="500"/>
+<line fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" x1="300" y1="600" x2="500" y2="600"/>
+<line fill="none" stroke="#000000" stroke-width="20" stroke-miterlimit="10" x1="100" y1="600" x2="300" y2="600"/>
+</svg>

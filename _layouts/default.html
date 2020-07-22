@@ -3,23 +3,20 @@
   {% include head.html %}
   <body>
     {% include ui_preloader.html %}
-    {% include ui_custom-cursor.html %}
     <div id="ui_head">
       <div class="deviceVisibility_tablet">
         {% include ui_home.html %}
       </div>
-      {% include ui_menu.html %}
     </div>
-    {% include ui_menu_overlay.html %}
-    <div id="ui_foot">
-      {% include ui_darkMode.html %}
+
+    <div class="container navbar fixed flexcontainer" id="framerateToNav">
+      <input type="range" min="0.25" max=".75" value="0.5" step=".01" onchange="rangevalueX.value=value" id="mySliderSize" class="slider" /><!--orient="vertical"--><!--<output id="rangevalueX">Size</output>-->
+      <input type="range" min="0.000" max="1.000" value="0.01" step=".001" onchange="rangevalueX.value=value" id="mySliderStrength" class="slider" /><!--orient="vertical"-->
+      <input type="range" min="0.000" max="0.500" value="0.01" step=".001" onchange="rangevalueX.value=value" id="mySliderStrengthFixedPos" class="slider" />
+      <input type="range" min="0.000" max="1.0" value="0.0" step="0.01" onchange="rangevalueX.value=value" id="mySliderSplineTightness" class="slider" />
     </div>
-    <div class="deviceVisibility_mobile">
-      {% include content_stage_pressAndHold.html %}
-    </div>
-    {% include content_stage.html %}
-    {% include content_stage_pressAndHold_video.html %}
-    {% include content.html %}
+    <div class="container navbar">
+
     {% include scripts_foot.html %}
   </body>
 </html>

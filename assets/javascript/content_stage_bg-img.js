@@ -53,7 +53,6 @@ const fragment = `
 
   //renderer.gl.enable(gl.BLEND);
   //renderer.gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
-
   // get targetDiv
   var targetDiv = document.getElementById("content_stage_bg-img");
 
@@ -101,14 +100,31 @@ const fragment = `
     uv: { size: 2, data: new Float32Array([0, 0, 2, 0, 0, 2]) }
   });
   const texture = new Texture(gl, {
-    minFilter: gl.LINEAR,
-    magFilter: gl.LINEAR,
+    //minFilter: gl.LINEAR,
+    //magFilter: gl.LINEAR,
     premultiplyAlpha: true
   });
   const img = new Image();
   img.onload = () => (texture.image = img);
   img.crossOrigin = "Anonymous";
   img.src = "../../assets/videos/test_bg-img.png";
+
+
+  var imgDirectory = "../../assets/videos/";
+  var imgName = ["test_bg-img.png", "werner.jpg"];
+  var counter = 0;
+
+  setInterval(function(){
+
+      img.src = imgDirectory.concat(imgName[counter]);
+      console.log("switch image to: " + imgDirectory.concat(imgName[counter]));
+      if (counter < imgName.length){
+        counter = counter + 1;
+      } else {
+        counter = 0;
+      }
+
+  }, 4000);
 
   let a1, a2;
   var imageAspect = imgSize[1] / imgSize[0];
@@ -134,9 +150,13 @@ const fragment = `
       // This is because the class alternates this texture between two render targets
       // and updates the value property after each render.
       tFlow: flowmap.uniform
-    }
+    },
+    transparent: true
   });
   const mesh = new Mesh(gl, { geometry, program });
+
+
+
 
   window.addEventListener("resize", resize, false);
   resize();
@@ -200,6 +220,7 @@ const fragment = `
     // Ease velocity input, slower when fading out
     flowmap.velocity.lerp(velocity, velocity.len ? 0.5 : 0.1);
     flowmap.update();
+    //img.reload();
     program.uniforms.uTime.value = t * 0.01;
     renderer.render({ scene: mesh });
   }
