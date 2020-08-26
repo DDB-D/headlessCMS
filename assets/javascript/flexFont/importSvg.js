@@ -15,8 +15,8 @@ jQuery(document).ready(function(){
 		var letterName = letters[letterCount];
 		var myUrl = "/assets/graphics/source/" + letterName + ".svg";
 
-
 		$.ajax({
+
 	  	  type: "GET",
 		    url: myUrl,
 		    dataType: "xml",
@@ -100,7 +100,7 @@ jQuery(document).ready(function(){
 
 							p.setup = function() {
 
-								p.background(245,0,0);
+								//p.background(245,0,0);
 
 								myp5GlobalSketchVar = p.createCanvas(width*scaleFactor, height*scaleFactor);
 								p.background(0,255,255);
@@ -133,6 +133,9 @@ jQuery(document).ready(function(){
 									framerateContainer.appendChild(framerateText);
 									document.getElementById("framerateToNav").appendChild(framerateContainer)
 								}
+
+								canvasResize();
+
 							}
 
 
@@ -226,7 +229,6 @@ jQuery(document).ready(function(){
 										}
 									}
 								}
-
 							}
 
 
@@ -234,53 +236,52 @@ jQuery(document).ready(function(){
 
 								if(initLazyLoad == true){
 
-									p.background(245);
-			  						p.stroke(245);
-			  						p.fill(0,128,128);
-									p.strokeWeight(35*scaleFactor);
+									p.background(0,0,255);
+		  						p.stroke(255,0, 255);
+		  						p.fill(0,255,0);
+									p.strokeWeight(30*scaleFactor);
 
 									mousePos.x = p.mouseX;
 									mousePos.y = p.mouseY;
 
-				  					var sum = 0;
+			  					var sum = 0;
 									var average;
 
-				  					for(var i=0; i<freeParticles.length; i++){
-				  						var myFreeParticle = freeParticles[i];
-				  						var myFixedParticle = fixedParticles[i];
-				  						var v1 = p.createVector(myFreeParticle.x, myFreeParticle.y);
-					      				var v2 = p.createVector(myFixedParticle.x, myFixedParticle.y);
-					      				var distance = v1.dist(v2);
-					      				sum = sum + distance;
-				  					}
+			  					for(var i=0; i<freeParticles.length; i++){
+			  						var myFreeParticle = freeParticles[i];
+			  						var myFixedParticle = fixedParticles[i];
+			  						var v1 = p.createVector(myFreeParticle.x, myFreeParticle.y);
+				      				var v2 = p.createVector(myFixedParticle.x, myFixedParticle.y);
+				      				var distance = v1.dist(v2);
+				      				sum = sum + distance;
+			  					}
 
-				  					average = sum /freeParticles.length;
+			  					average = sum /freeParticles.length;
 
 									var myLetterSpline = new toxi.geom.Spline2D();
 									myLetterSpline.setTightness(average*0.01);
 
-				  					for(var i=0; i<mySplineParticles.length; i++){
+			  					for(var i=0; i<mySplineParticles.length; i++){
 										var mySplineParticle = mySplineParticles[i];
-				  						myLetterSpline.add(mySplineParticle);
-				  					}
+			  						myLetterSpline.add(mySplineParticle);
+			  					}
 
-				  					splinePoints= myLetterSpline.computeVertices(6);
+			  					splinePoints= myLetterSpline.computeVertices(6);
 
-			  						p.beginShape();
-			  						for (var j=0;j<splinePoints.length;j++){
-			  							var mySplinePoint = splinePoints[j];
-			  							p.vertex(mySplinePoint.x, mySplinePoint.y);
-			  						}
-			  						p.endShape(p.CLOSE);
+		  						p.beginShape();
+		  						for (var j=0;j<splinePoints.length;j++){
+		  							var mySplinePoint = splinePoints[j];
+		  							p.vertex(mySplinePoint.x, mySplinePoint.y);
+		  						}
+		  						p.endShape(p.CLOSE);
 
-					  				for (var i=0; i<innnerSprings.length; i++){
-					  					var s = innnerSprings[i];
-					  					p.noFill();
-										p.line(s.a.x,s.a.y,s.b.x,s.b.y);
-					  				}
+				  				for (var i=0; i<innnerSprings.length; i++){
+				  					var s = innnerSprings[i];
+				  					p.noFill();
+									p.line(s.a.x,s.a.y,s.b.x,s.b.y);
+				  				}
 
-
-					  				for (var i=0; i<springsInLetter.length; i++ ){
+					  			for (var i=0; i<springsInLetter.length; i++ ){
 										var s = springsInLetter[i];
 										if(s.getRestLength()>5){
 											s.setStrength(mySliderStrength.value);
@@ -296,7 +297,8 @@ jQuery(document).ready(function(){
 								}
 
 								else{
-									p.background(245);
+									p.background(0,0,255);
+
 								}
 
 								// run action only on 1st letter display framerate as html

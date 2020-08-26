@@ -7,15 +7,18 @@
       <div class="deviceVisibility_tablet">
         {% include ui_home.html %}
       </div>
+
+      <div class="container navbar flexcontainer" id="framerateToNav">
+        <input type="range" min="0.25" max=".75" value="0.5" step=".01" onchange="rangevalueX.value=value" id="mySliderSize" class="slider" />
+        <input type="range" min="0.000" max="1.000" value="0.01" step=".001" onchange="rangevalueX.value=value" id="mySliderStrength" class="slider" />
+        <input type="range" min="0.000" max="0.500" value="0.01" step=".001" onchange="rangevalueX.value=value" id="mySliderStrengthFixedPos" class="slider" />
+        <input type="range" min="0.000" max="1.0" value="0.0" step="0.01" onchange="rangevalueX.value=value" id="mySliderSplineTightness" class="slider" />
+      </div>
+
+      <!--<div class="container navbar">-->
     </div>
 
-    <div class="container navbar fixed flexcontainer" id="framerateToNav">
-      <input type="range" min="0.25" max=".75" value="0.5" step=".01" onchange="rangevalueX.value=value" id="mySliderSize" class="slider" /><!--orient="vertical"--><!--<output id="rangevalueX">Size</output>-->
-      <input type="range" min="0.000" max="1.000" value="0.01" step=".001" onchange="rangevalueX.value=value" id="mySliderStrength" class="slider" /><!--orient="vertical"-->
-      <input type="range" min="0.000" max="0.500" value="0.01" step=".001" onchange="rangevalueX.value=value" id="mySliderStrengthFixedPos" class="slider" />
-      <input type="range" min="0.000" max="1.0" value="0.0" step="0.01" onchange="rangevalueX.value=value" id="mySliderSplineTightness" class="slider" />
-    </div>
-    <div class="container navbar">
+
 
     {% include scripts_foot.html %}
   </body>
