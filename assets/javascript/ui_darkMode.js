@@ -96,7 +96,7 @@ function switchTheme(e) {
 $ui_darkMode_switch.on({
     mouseenter: function () {
 
-      ui_foot_setZIndx.style.zIndex = 3;
+      //ui_foot_setZIndx.style.zIndex = 3;
 
       if ($ui_menu_checkActivity.hasClass('isActive')) {
         //set fontcolor for all ui_type elements
@@ -129,7 +129,7 @@ $ui_darkMode_switch.on({
     },
     mouseleave: function () {
 
-      ui_foot_setZIndx.style.zIndex = 1;
+      //ui_foot_setZIndx.style.zIndex = 1;
 
       if ($ui_menu_checkActivity.hasClass('isActive')) {
         //set fontcolor for all ui_type elements

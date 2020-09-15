@@ -34,6 +34,7 @@ $my_menuButton.on("click", function(){
     $(".ui_menu_icon").toggleClass('open_menuIcon');
     // close modal
     $('.overlay').removeClass('open');
+    $('.ui_menu_index-table').removeClass('open');
     // set modal to isActive=false
     $(this).toggleClass('isActive');
   } else {
@@ -59,6 +60,7 @@ $my_menuButton.on("click", function(){
     $(".ui_menu_icon").toggleClass('open_menuIcon');
     // open modal
     $('.overlay').addClass('open');
+    $('.ui_menu_index-table').addClass('open');
     // set modal to isActive=false
     $(this).toggleClass('isActive');
   }

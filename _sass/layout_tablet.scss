@@ -5,10 +5,11 @@
       //padding-top: -50px;
       //flex-direction: row;
       justify-content: flex-start;
+      visibility: hidden;
   }
 
   #ui_foot{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: auto;
     display: flex;
@@ -17,7 +18,8 @@
     justify-content: space-between;
     //margin-top: 100vh;
     bottom: 0;
-    z-index: 1;
+    z-index: 3;
+    visibility: hidden;
   }
 
   .layout_ui_home{
@@ -25,13 +27,14 @@
     visibility: visible;
     //margin-left: 120px;
     // keep above overlay
-    z-index: 2;
+    z-index: 3;
   }
 
   .layout_ui_menu{
 
     //init flex
     margin-left: auto;
+    visibility: visible;
   }
 
 }
