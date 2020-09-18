@@ -1,5 +1,52 @@
 
+<div class="content">
+  <div class="content_gallery_img">
+    {% for post in site.posts %}
+      <figure class="content_gallery_item">
 
-<div class="ui_content">
-  {{ content }}
+        {% assign foundImage = 0 %}
+        {% assign images = post.content | split:"<img " %}
+        {% for image in images %}
+          {% if image contains 'src' %}
+
+              {% if foundImage == 0 %}
+                  {% assign html = image | split:"/>" | first %}
+
+                  <img class="content_gallery_item_img" {{ html }} />
+
+                  {% assign foundImage = 1 %}
+              {% endif %}
+          {% endif %}
+        {% endfor %}
+
+      </figure>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="content">
+  <div class="content_gallery_type" style="  ">
+    {% for post in site.posts %}
+      <figure class="content_gallery_item">
+
+        <a class="content_gallery_link custom-cursor_hoverable" href="{{ post.url }}">{{ post.title }}</a>
+
+        {% assign foundImage = 0 %}
+        {% assign images = post.content | split:"<img " %}
+        {% for image in images %}
+          {% if image contains 'src' %}
+
+              {% if foundImage == 0 %}
+                  {% assign html = image | split:"/>" | first %}
+
+                  <img class="content_gallery_item_img_hidden" style="" {{ html }} />
+
+                  {% assign foundImage = 1 %}
+              {% endif %}
+          {% endif %}
+        {% endfor %}
+
+      </figure>
+    {% endfor %}
+  </div>
 </div>

@@ -1,7 +1,11 @@
+/*
+  const foobar = document.getElementsByClassName("overlay");;
+  console.log("hello motherfucker: " + foobar.length);
 
-
-  var $foobar = $(".layout_ui_menu");
-  console.log("hello motherfucker");
-  if ($my_menuButton.hasClass('isActive')) {
-    console.log("menu is active");
+  for (i = 0; i < foobar.length; i++) {
+    console.log("hello motherfucker: " + foobar[i]);
+    if (foobar[i].classList.contains('open')) {
+      console.log("menu is active");
+    }
   }
+*/

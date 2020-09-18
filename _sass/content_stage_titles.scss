@@ -1,4 +1,6 @@
 
+.content{}
+
 .content_stage_titles{
   position: absolute;
   display: flex;
@@ -58,7 +60,7 @@
     margin-top: -35vh;
     align-items: center;
     justify-content: flex-end;
-    overflow: hidden;
+    overflow: visible;
   }
 
   #content_stage_scroll_text{
