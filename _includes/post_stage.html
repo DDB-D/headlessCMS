@@ -1,7 +1,21 @@
-<div class="content_stage">
+<div class="post_stage">
 
 
-  <div id="content_stage_bg-img">
+  <div id="post_stage_hero-img">
+    {% assign foundImage = 0 %}
+    {% assign images = post.content | split:"<img " %}
+    {% for image in images %}
+      {% if image contains 'src' %}
+
+          {% if foundImage == 0 %}
+              {% assign html = image | split:"/>" | first %}
+
+              <img class="content_gallery_item_img" {{ html }} />
+
+              {% assign foundImage = 1 %}
+          {% endif %}
+      {% endif %}
+    {% endfor %}
   </div>
 
   <div id="content_stage_bg-type">
@@ -30,16 +44,7 @@
     <!-- title -->
     <div class="content_stage_title title_type">
      <h2>
-       <!--
-       <br>
-        Another privileged white male<br>
-        pretending to be successfull<br>
-        is craving for your attention.
-        -->
-        This is not another portfolio.<br>
-        Its a place to play and learn.<br>
-        Call it a personal playground<br>
-        or a digital sketchbook.
+       post post post
      </h2>
     </div>
 

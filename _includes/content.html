@@ -1,5 +1,5 @@
 
-<div class="content">
+<div id="content">
   <div class="content_gallery_img">
     {% for post in site.posts %}
       <figure class="content_gallery_item">
@@ -22,14 +22,14 @@
       </figure>
     {% endfor %}
   </div>
-</div>
 
-<div class="content">
   <div class="content_gallery_type" style="  ">
     {% for post in site.posts %}
       <figure class="content_gallery_item">
 
-        <a class="content_gallery_link custom-cursor_hoverable" href="{{ post.url }}">{{ post.title }}</a>
+        <a class="content_gallery_link" href="{{ post.url }}">
+          <span class="content_gallery_link_text custom-cursor_hoverable"> {{ post.title }}</span>
+        </a>
 
         {% assign foundImage = 0 %}
         {% assign images = post.content | split:"<img " %}

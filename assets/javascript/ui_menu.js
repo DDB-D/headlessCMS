@@ -3,6 +3,10 @@
 var ui_menu_text = new ShuffleText(document.querySelector('#ui_menu_changeType'));
 //ui_menu_text animation
 var $my_menuButton = $(".layout_ui_menu");
+// hide content if menu is isActive
+var content_display = document.getElementById("content");
+
+
 /* first animation on page load */
 ui_menu_text.start();
 
@@ -27,6 +31,10 @@ $my_menuButton.on("click", function(){
     for (let i = 0; i < ui_darkMode_switchColorOnClick.length; i++) {
       ui_darkMode_switchColorOnClick[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
     }
+
+      content_display.style.display = "block";
+
+
     // run text animation
     ui_menu_text.setText("MENU");
     ui_menu_text.start();
@@ -52,6 +60,9 @@ $my_menuButton.on("click", function(){
     for (let i = 0; i < ui_darkMode_switchColorOnClick.length; i++) {
       ui_darkMode_switchColorOnClick[i].style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
     }
+
+    content_display.style.display = "none";
+
 
     // run text animation
     ui_menu_text.setText("CLOSE");

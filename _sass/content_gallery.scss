@@ -52,12 +52,14 @@
 
   font-weight: 500;
   color: var(--color-type);
-  $map: (576: 13, 768: 13, 992: 13);
+  $map: (576: 15, 768: 15, 992: 15);
   font-size: least-squares-fit($map);
   letter-spacing: 0.5em;
   text-transform: uppercase;
+
+  text-decoration:none;
 }
 
-.content_gallery_link:hover{
+.content_gallery_link_text:hover{
   color: var(--color-bg);
 }
