@@ -1,61 +1,9 @@
 <div class="post_stage">
-
-
-  <div id="post_stage_hero-img">
-    {% assign foundImage = 0 %}
-    {% assign images = post.content | split:"<img " %}
-    {% for image in images %}
-      {% if image contains 'src' %}
-
-          {% if foundImage == 0 %}
-              {% assign html = image | split:"/>" | first %}
-
-              <img class="content_gallery_item_img" {{ html }} />
-
-              {% assign foundImage = 1 %}
-          {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-
-  <div id="content_stage_bg-type">
-    {% include svg_hartgeld.html %}
-  </div>
-
-  <!-- titles -->
-  <div class="content_stage_titles">
-    <!-- buzzwordz -->
-    <div class="content_stage_titles_buzzwords">
-      <h3>
-        <span id="buzzwords_changeType_1">
-          concept
-        </span>
-        <span id="buzzwords_changeType_2">
-          art-direction
-        </span>
-        <span id="buzzwords_changeType_3">
-          prototype
-        </span>
-        <span id="buzzwords_changeType_4">
-          ui ux
-        </span>
-      </h3>
+  <img class="post_stage_hero-img" src="{{ @page.image }}"/>
+  <div id="content">
+    <div class="post_content">
+      <h2 class="post_content_type_background">{{ page.title }}</h2>
+      <p class="post_content_type_background">{{ page.content | strip_html  }}</p>
     </div>
-    <!-- title -->
-    <div class="content_stage_title title_type">
-     <h2>
-       post post post
-     </h2>
-    </div>
-
-    <div class="content_stage_scroll">
-      <span class="ui_type" id="content_stage_scroll_text">
-        scrollllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
-      </span>
-    </div>
-
   </div>
-
-
-
 </div>

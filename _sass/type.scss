@@ -10,7 +10,7 @@ body {
 p {
   font-weight: 400;
 	color: var(--color-type);
-  $map: (576: 24, 768: 24, 992: 34);
+  $map: (576: 13, 768: 13, 992: 15);
   font-size: least-squares-fit($map);
 }
 
