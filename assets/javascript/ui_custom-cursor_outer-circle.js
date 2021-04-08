@@ -15,9 +15,9 @@ const shapeBounds = {
 // switch curstom cursor color and set z-index if ui_menu is active
 var curser_zIndex =  document.getElementsByClassName('cursor--canvas');
 // set z-index for ui_type if ui_menu is active
-var menuType_zIndex =  document.getElementsByClassName('layout_ui_menu');
+// var menuType_zIndex =  document.getElementsByClassName('layout_ui_menu');
 // switch ui_type color if menu is isActive
-var menuType_color_menuActive =  document.getElementById('ui_menu_changeType');
+// var menuType_color_menuActive =  document.getElementById('ui_menu_changeType');
 
 paper.setup(canvas);
 
@@ -74,12 +74,15 @@ paper.view.onFrame = event => {
   const strokeColor_css_changed = getComputedStyle(document.documentElement).getPropertyValue("--color-highlight");
   const strokeColor_css_menuActive = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
 
+/*
   if ($ui_darkMode_switch.hasClass('darkmodeActive')) {
     polygon.fillColor = strokeColor_css_changed;
   } else {
     polygon.fillColor = strokeColor_css_changed;
   }
+  */
   //change stuff if menu is active
+  /*
   if ($my_menuButton.hasClass('isActive')) {
     //set custom cursor z-index
     for (let i = 0; i < curser_zIndex.length; i++) {
@@ -93,6 +96,7 @@ paper.view.onFrame = event => {
     // set cursor back to default z-index
     curser_zIndex[i].style.zIndex = 1;
   }
+  */
 }
 
   // using linear interpolation, the circle will move 0.2 (20%)
@@ -162,7 +166,7 @@ paper.view.onFrame = event => {
   polygon.smooth();
 };
 
-}
+
 
 initCanvas();
 
