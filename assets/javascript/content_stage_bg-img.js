@@ -36,8 +36,10 @@ const fragment = `
             myUV -= flow.xy * (0.5 * 0.9);
             vec3 tex = texture2D(tWater, myUV).rgb;
 
+            //gl_FragColor = texture2D(tWater, uv);
             gl_FragColor.rgb = vec3(tex.r, tex.g, tex.b);
-            gl_FragColor.a = tex.r;
+            gl_FragColor.a = tex.b + tex.g + tex.r;
+            //gl_FragColor.rgb = vec3(tWater.r, tWater.g, tWater.b);
 			}
 	`;
 {
@@ -108,7 +110,7 @@ const fragment = `
   const img = new Image();
   img.onload = () => (texture.image = img);
   img.crossOrigin = "Anonymous";
-  img.src = "../../assets/videos/test_bg-img.png";
+  img.src = "../../assets/graphics/bg-img_ardelt-veredelts.png";
 
   let a1, a2;
   var imageAspect = imgSize[1] / imgSize[0];
@@ -134,7 +136,8 @@ const fragment = `
       // This is because the class alternates this texture between two render targets
       // and updates the value property after each render.
       tFlow: flowmap.uniform
-    }
+    },
+    transparent: true
   });
   const mesh = new Mesh(gl, { geometry, program });
 
@@ -202,5 +205,6 @@ const fragment = `
     flowmap.update();
     program.uniforms.uTime.value = t * 0.01;
     renderer.render({ scene: mesh });
+    gl.clearColor(0, 0, 0, 0);
   }
 }

@@ -4,7 +4,7 @@ console.log(preloader_logo);
 preloader_logo.setAttribute("fill" "red");
 */
 
-const fillColor_css = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
+const fillColor_css = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
 
 var doc = document.getElementById('preloader-fade');
 var p = doc.querySelectorAll("path");

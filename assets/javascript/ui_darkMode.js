@@ -86,7 +86,7 @@ function switchTheme(e) {
       }
     }
     // set content_bg-type to color-bg-graf
-    var content_stage_bg_type_color_themeSwitch = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
+    var content_stage_bg_type_color_themeSwitch = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
     content_stage_bg_type_themeSwitch_elements.forEach(function(element, index){
       element.setAttribute("fill", content_stage_bg_type_color_themeSwitch);
     })
