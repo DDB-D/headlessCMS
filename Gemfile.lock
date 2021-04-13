@@ -56,7 +56,8 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
 
 PLATFORMS
-  ruby 
+  ruby
+  unknown
 
 DEPENDENCIES
   jekyll (= 3.6.3)
