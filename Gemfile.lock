@@ -57,6 +57,7 @@ GEM
 
 PLATFORMS
   ruby
+  unknown
 
 DEPENDENCIES
   jekyll (= 3.6.3)
