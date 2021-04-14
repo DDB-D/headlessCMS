@@ -3,7 +3,7 @@ backend:
  # name: git-gateway
  repo: DDB-D/headlessCMS
  # branch: master
- branch: staging
+ branch: master
  site_domain: silly-lalande-b4d4b4.netlify.com
 # enable Editorial Workflow – adds an interface for drafting, reviewing and approving posts.
 publish_mode: editorial_workflow
