@@ -1,0 +1,27 @@
+.content_about{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 60vh;
+  width: 50vw;
+  padding-left: 25vw;
+  padding-right: 25vw;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+
+  text-align: left;
+
+}
+
+.content_about_txt{
+
+  font-weight: 500;
+  color: var(--color-type);
+
+  $map: (576: 28, 768: 30, 992: 32);
+  font-size: least-squares-fit($map)!important;
+  $map: (576: 38, 768: 40, 992: 42);
+  line-height: least-squares-fit($map);
+}

@@ -1,0 +1,35 @@
+////////////////////
+/* SASS Variables */
+////////////////////
+
+
+///////////////////
+/* CSS Variables */
+///////////////////
+
+:root {
+  /* Typography */
+  /* Color */
+  --color-type: #2158bb;
+  --color-bg: #f2f2f2;
+  --color-bg-graf: #f2f2f2;
+  --color-highlight: #2158bb;
+}
+
+[data-theme="dark"] {
+  --color-type: #d90f4c;
+  --color-bg: #222222;
+  --color-bg-graf: #222222;
+  --color-highlight: #d90f4c;
+}
+
+// tablet
+/*
+@media only screen and (min-width: 1023px) {
+
+  //h3
+  $map: (576: 11, 768: 11, 992: 11);
+  --var-type-h3: least-squares-fit($map);
+
+}
+*/

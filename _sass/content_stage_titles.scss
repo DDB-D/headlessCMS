@@ -1,5 +1,5 @@
 
-.content{}
+
 
 .content_stage_titles{
   position: absolute;
@@ -34,7 +34,7 @@
   margin-top: -10vh;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: hidden!important;
 }
 
 #content_stage_scroll_text{
@@ -44,6 +44,8 @@
   height: auto;
   margin: 0;
   align-self: center;
+  overflow: visible;
+
 
   $map: (576: 10, 768: 10, 992: 10);
   font-size: least-squares-fit($map);
@@ -56,11 +58,11 @@
     padding-right: 5vw;
     display: flex;
     width: 100vw;
-    height: 35vh;
+    height: 55vh;
     margin-top: -35vh;
     align-items: center;
     justify-content: flex-end;
-    overflow: visible;
+    overflow: hidden!important;
   }
 
   #content_stage_scroll_text{

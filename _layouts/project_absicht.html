@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include ui_preloader.html %}
+    {% include ui_custom-cursor.html %}
+    <div id="ui_head">
+      <div class="deviceVisibility_tablet">
+        {% include ui_home_post.html %}
+      </div>
+      {% include ui_menu.html %}
+    </div>
+    <div id="ui_foot">
+      {% include ui_darkMode.html %}
+    </div>
+    {% include ui_menu_overlay.html %}
+
+    <div id="content">
+      {% include project_absicht_stage.html %}
+    </div>
+
+    {% include scripts_foot_post.html %}
+  </body>
+</html>

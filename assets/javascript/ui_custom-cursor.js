@@ -26,4 +26,6 @@ const initCursor = () => {
   requestAnimationFrame(render);
 };
 
-initCursor();
+if (window.innerWidth >= 1023) {
+  initCursor();
+}

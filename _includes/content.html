@@ -1,52 +1,68 @@
 
 <div id="content">
-  <div class="content_gallery_img">
-    {% for post in site.posts %}
-      <figure class="content_gallery_item">
 
-        {% assign foundImage = 0 %}
-        {% assign images = post.content | split:"<img " %}
-        {% for image in images %}
-          {% if image contains 'src' %}
+  {% include content_about.html %}
+  {% include content_projects.html %}
+  {% include content_project_absicht.html %}
+  {% include content_project_dieHaeftlinge.html %}
 
-              {% if foundImage == 0 %}
-                  {% assign html = image | split:"/>" | first %}
+  <!-- miele project here  -->
+  {% include content_project_miele.html %}
 
-                  <img class="content_gallery_item_img" {{ html }} />
 
-                  {% assign foundImage = 1 %}
-              {% endif %}
-          {% endif %}
-        {% endfor %}
 
-      </figure>
-    {% endfor %}
-  </div>
-
-  <div class="content_gallery_type" style="  ">
-    {% for post in site.posts %}
-      <figure class="content_gallery_item">
-
-        <a class="content_gallery_link" href="{{ post.url }}">
-          <span class="content_gallery_link_text custom-cursor_hoverable"> {{ post.title }}</span>
-        </a>
-
-        {% assign foundImage = 0 %}
-        {% assign images = post.content | split:"<img " %}
-        {% for image in images %}
-          {% if image contains 'src' %}
-
-              {% if foundImage == 0 %}
-                  {% assign html = image | split:"/>" | first %}
-
-                  <img class="content_gallery_item_img_hidden" style="" {{ html }} />
-
-                  {% assign foundImage = 1 %}
-              {% endif %}
-          {% endif %}
-        {% endfor %}
-
-      </figure>
-    {% endfor %}
-  </div>
 </div>
+
+
+<!--
+<div class="content_gallery_img">
+  {% for post in site.posts %}
+    <figure class="content_gallery_item">
+
+      {% assign foundImage = 0 %}
+      {% assign images = post.content | split:"<img " %}
+      {% for image in images %}
+        {% if image contains 'src' %}
+
+            {% if foundImage == 0 %}
+                {% assign html = image | split:"/>" | first %}
+
+                <img class="content_gallery_item_img" {{ html }} />
+
+                {% assign foundImage = 1 %}
+            {% endif %}
+        {% endif %}
+      {% endfor %}
+
+    </figure>
+  {% endfor %}
+</div>
+
+
+<div class="content_gallery_type" style="  ">
+  {% for post in site.posts %}
+    <figure class="content_gallery_item">
+
+      <a class="content_gallery_link" href="{{ post.url }}">
+        <span class="content_gallery_link_text custom-cursor_hoverable"> {{ post.title }}</span>
+      </a>
+
+      {% assign foundImage = 0 %}
+      {% assign images = post.content | split:"<img " %}
+      {% for image in images %}
+        {% if image contains 'src' %}
+
+            {% if foundImage == 0 %}
+                {% assign html = image | split:"/>" | first %}
+
+                <img class="content_gallery_item_img_hidden" style="" {{ html }} />
+
+                {% assign foundImage = 1 %}
+            {% endif %}
+        {% endif %}
+      {% endfor %}
+
+    </figure>
+  {% endfor %}
+</div>
+-->

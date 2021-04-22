@@ -1,0 +1,25 @@
+
+.project_dieHaeftlinge_title{
+  position: relative;
+  height: auto;
+  width: 40vw;
+  padding-left: 30vw;
+  padding-right: 30vw;
+  padding-top: 20vh;
+  padding-bottom: 0vh;
+}
+
+.project_dieHaeftlinge_title_type{
+  text-align: left;
+  margin: 0;
+  $map: (576: 24, 768: 24, 992: 34);
+  margin-bottom: least-squares-fit($map);
+}
+
+.project_dieHaeftlinge_subtitle_type{
+  text-align: left;
+  margin: 0;
+
+  $map: (576: 20, 768: 20, 992: 20);
+  margin-bottom: least-squares-fit($map);
+}

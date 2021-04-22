@@ -19,6 +19,10 @@ var ui_menu_text_switchCol = document.getElementById('ui_menu_changeType');
 var content_stage_bg_type_themeSwitch = document.getElementById('content_stage_bg-type');
 var content_stage_bg_type_themeSwitch_elements = content_stage_bg_type_themeSwitch.querySelectorAll("path");
 
+//get element content_projects bg-typefaces
+var projects_bg_type_themeSwitch = document.getElementById('content_projects_bg-img');
+var projects_bg_type_themeSwitch_elements = projects_bg_type_themeSwitch.querySelectorAll("path");
+
 
 // theme already set in browser cookies?
 if (currentTheme) {
@@ -90,6 +94,13 @@ function switchTheme(e) {
     content_stage_bg_type_themeSwitch_elements.forEach(function(element, index){
       element.setAttribute("fill", content_stage_bg_type_color_themeSwitch);
     })
+    // set content_bg-type to color-bg-graf
+    var projects_bg_type_color_themeSwitch = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
+    projects_bg_type_themeSwitch_elements.forEach(function(element, index){
+      element.setAttribute("fill", projects_bg_type_color_themeSwitch);
+    })
+
+
 }
 
 // on hover

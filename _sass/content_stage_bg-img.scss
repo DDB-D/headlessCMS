@@ -4,14 +4,14 @@
 
 @media only screen and (min-width: 1023px) {
   #content_stage_bg-img{
-    position: absolute;
+    position: fixed;
     /*
     top: -75vh;
     bottom: 15vh;
     left: 37.5vw;
     right: 15vw;
     */
-    top: -100vh;
+    top: 0vh;
     bottom: 0vh;
     left: 0vw;
     right: 0vw;

@@ -31,7 +31,7 @@ const fragment = `
             // B value is the velocity length
             vec3 flow = texture2D(tFlow, vUv).rgb;
 
-            vec2 uv = .5 * gl_FragCoord.xy / res.xy ;
+            vec2 uv = .65 * gl_FragCoord.xy / res.xy ;         // was .5 * gl_FragCoord.xy ...
             vec2 myUV = (uv - vec2(0.5))*res.zw + vec2(0.5);
             myUV -= flow.xy * (0.5 * 0.9);
             vec3 tex = texture2D(tWater, myUV).rgb;

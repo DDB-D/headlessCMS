@@ -1,0 +1,9 @@
+
+<!--   {{page.title}} -->
+  <div class="content_about">
+    {% for page in site.pages %}
+      {% if page.layout == 'about' %}
+        {{page.content}}
+      {% endif %}
+    {% endfor %}
+    </div

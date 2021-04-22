@@ -2,7 +2,7 @@
   margin-top: 250px;
   width: 100%;
   border-collapse: collapse;
-  position: absolute;
+  position: fixed;
   z-index: 2;
   display: none;
 }
@@ -60,6 +60,8 @@ color: var(--color-bg);
   opacity: 1;
   visibility: visible;
   height: 100%;
+  position: fixed;
+
 }
 // animation
 

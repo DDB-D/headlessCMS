@@ -163,9 +163,9 @@ paper.view.onFrame = event => {
 };
 
 }
-
-initCanvas();
-
+if (window.innerWidth >= 1023) {
+  initCanvas();
+}
 
 const initHovers = () => {
 
@@ -191,5 +191,6 @@ const initHovers = () => {
     item.addEventListener("mouseleave", handleMouseLeave);
   });
 };
-
-initHovers();
+if (window.innerWidth >= 1023) {
+  initHovers();
+}

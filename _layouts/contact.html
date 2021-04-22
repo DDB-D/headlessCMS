@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  {% include head_contact.html %}
+  <body>
+    {% include ui_preloader.html %}
+    {% include ui_custom-cursor.html %}
+    <div id="ui_head">
+      <div class="deviceVisibility_tablet">
+        {% include ui_home_post.html %}
+      </div>
+      {% include ui_menu.html %}
+    </div>
+    <div id="ui_foot">
+      {% include ui_darkMode.html %}
+    </div>
+    {% include ui_menu_overlay.html %}
+
+    <div id="content">
+      <div id="contact_svg-container">
+        {% include contact_svg.html %}
+      </div>
+    </div>
+
+    {% include scripts_foot_contact.html %}
+  </body>
+</html>

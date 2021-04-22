@@ -1,0 +1,13 @@
+#content_projects_bg-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+
+  text-align: center;
+  background-image: url('/assets/graphics/publicSculp.png');
+  background-size: cover;
+  background-position: center;
+}

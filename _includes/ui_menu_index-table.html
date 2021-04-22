@@ -1,19 +1,35 @@
 <!--<nav style="position: relative;">-->
+<div>
   <table class="ui_menu_index-table">
+
     <thead class="ui_menu_index-table_head">
       <tr>
         <th class="ui_menu_head ui_type">index
         </th>
       </tr>
     </thead>
+
     <tbody>
-      {% for post in site.posts %}
+
       <tr>
-        <td >
-          <a class="ui_menu_index-item custom-cursor_hoverable" href="{{ post.url }}">{{ post.title }}</a>
+        <td>
+          <a class="ui_menu_index-item custom-cursor_hoverable" href="{{ site.url }}">Home</a>
         </td>
       </tr>
-      {% endfor %}
+
+      <tr>
+        <td>
+          <a class="ui_menu_index-item custom-cursor_hoverable" href="{{ site.url }}/contact">Contact</a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <a class="ui_menu_index-item custom-cursor_hoverable" href="{{ site.url }}/blog">Blog</a>
+        </td>
+      </tr>
+
     </tbody>
   </table>
+  </div>
 <!--</nav>-->

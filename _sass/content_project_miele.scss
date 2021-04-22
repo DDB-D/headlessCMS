@@ -1,0 +1,51 @@
+.content_project_miele{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+
+  text-align: center;
+
+  background-image: url('/assets/graphics/project_miele.png');
+  background-size: cover;
+  background-position: left;
+}
+
+
+.content_project_miele_txt{
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: -100vh;
+  height: 50vh;
+  width: 40vw;
+  padding-left: 15vw;
+  padding-right: 45vw;
+  padding-top: 30vh;
+  padding-bottom: 20vh;
+
+  text-align: left;
+}
+
+.content_project_miele_txt_title{
+  font-weight: 500;
+  color: var(--color-type);
+
+  $map: (576: 28, 768: 30, 992: 32);
+  font-size: least-squares-fit($map)!important;
+  $map: (576: 38, 768: 40, 992: 42);
+  line-height: least-squares-fit($map);
+
+  margin-bottom: least-squares-fit($map);
+
+  white-space: nowrap;
+
+
+}

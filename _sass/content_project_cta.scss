@@ -1,0 +1,41 @@
+.content_project_cta{
+  align-self: flex-end;
+  z-index: 2;
+}
+
+.content_project_cta_type{
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100%;
+
+  font-weight: 500;
+  color: var(--color-type);
+  $map: (576: 13, 768: 13, 992: 13);
+  font-size: least-squares-fit($map);
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+
+  text-decoration:none;
+}
+
+.content_project_cta_type:hover{
+}
+
+.content_project_cta_arrow{
+  $map: (576: 30, 768: 30, 992: 30);
+  font-size: least-squares-fit($map);
+}
+
+.content_project_cta_type_container{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  z-index: 2;
+
+}
+.content_project_cta_type_container:hover{
+  color: var(--color-bg);
+
+}

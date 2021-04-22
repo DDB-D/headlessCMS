@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include ui_preloader.html %}
+    {% include ui_custom-cursor.html %}
+    <div id="ui_head">
+      <div class="deviceVisibility_tablet">
+        {% include ui_home_post.html %}
+      </div>
+      {% include ui_menu.html %}
+    </div>
+    <div id="ui_foot">
+      {% include ui_darkMode.html %}
+    </div>
+    {% include ui_menu_overlay.html %}
+
+<div id=content>
+    <!--
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        </li>
+      {% endfor %}
+    </ul>
+  -->
+  </div>
+
+    {% include scripts_foot_post.html %}
+  </body>
+</html>
+
+
+<!--
+      <ul>
+        {% for post in site.posts %}
+          <li>
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <table class="ui_menu_index-table">
+
+        <thead class="ui_menu_index-table_head">
+          <tr>
+            <th class="ui_menu_head ui_type">index
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for post in site.posts %}
+          <tr>
+            <td>
+              <a class="ui_menu_index-item custom-cursor_hoverable" href="{{ post.url }}">
+                {{ post.title }}
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+-->
