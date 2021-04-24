@@ -5,7 +5,7 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  margin-top: -100vh;
+  margin-top: 0vh;
 }
 
 .content_stage_titles_buzzwords{
@@ -13,7 +13,7 @@
   align-items: center;
   margin-left: 10px;
   width: 75vw;
-  height: 50vh;
+  height: auto;
 }
 
 
@@ -58,8 +58,8 @@
     padding-right: 5vw;
     display: flex;
     width: 100vw;
-    height: 55vh;
-    margin-top: -35vh;
+    height: 100vh;
+    margin-top: -60vh;
     align-items: center;
     justify-content: flex-end;
     overflow: hidden!important;

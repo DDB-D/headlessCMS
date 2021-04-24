@@ -2,17 +2,19 @@
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
-  height: 60vh;
+  height: auto;
   width: 50vw;
   padding-left: 25vw;
   padding-right: 25vw;
-  padding-top: 20vh;
+  //padding-top: 0vh;
   padding-bottom: 20vh;
 
   text-align: left;
 
+  $map: (576: 24, 768: 24, 992: 34);
+  margin-top: least-squares-fit($map);
 }
 
 .content_about_txt{

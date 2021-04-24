@@ -1,9 +1,15 @@
+
 <div class="post_stage">
-  <img class="post_stage_hero-img" src="{{ @page.image }}"/>
+  <!---->
   <div id="content">
-    <div class="post_content">
-      <h2 class="post_content_type_background">{{ page.title }}</h2>
-      <p class="post_content_type_background">{{ page.content | strip_html  }}</p>
+    <div class="blog_post_title">
+      <!--<h3 class="project_dieHaeftlinge_subtitle_type">{{ page.subtitle }}</h3>-->
+      <h1 class="blog_post_title_type"> {{ page.title }}</h1>
     </div>
+    <div class="blog_post_img">
+      <img class="blog_post_img_fit" src="{{ @page.image }}"/>
+    </div>
+    <p>{{ page.content | strip_html }}</p>
+
   </div>
 </div>
