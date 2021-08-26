@@ -16,7 +16,7 @@ find_executable: checking for pkg-config... -------------------- yes
 
 assert_has_dev_libs!: checking for outdated ImageMagick version (<= 6.7.7)... -------------------- no
 
-Detected ImageMagick version: 7.0.11
+Detected ImageMagick version: 7.1.0
 --------------------
 
 find_executable: checking for gcc... -------------------- yes
@@ -228,8 +228,8 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/home/hartgeld/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/x86_64-linux -I/home/hartgeld/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/backward -I/home/hartgeld/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0 -I.  -I/usr/include/ImageMagick-7 -fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16   -I/usr/include/ImageMagick-7 -fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16  -std=gnu99 conftest.c  -L. -L/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib -Wl,-rpath,/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib  -lMagickCore-7.Q16HDRI     -lMagickCore-7.Q16HDRI   -Wl,-rpath,/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib -L/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib -lruby  -lm   -lc"
-/usr/bin/ld: /tmp/cch3VRtk.o: in function `t':
-conftest.c:(.text+0x68): undefined reference to `malloc_size'
+/usr/bin/ld: /tmp/ccndzft6.o: in function `t':
+conftest.c:(.text+0x6b): undefined reference to `malloc_size'
 collect2: error: ld returned 1 exit status
 checked program was:
 /* begin */
@@ -297,8 +297,8 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/home/hartgeld/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/x86_64-linux -I/home/hartgeld/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/backward -I/home/hartgeld/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0 -I.  -I/usr/include/ImageMagick-7 -fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16   -I/usr/include/ImageMagick-7 -fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16  -std=gnu99 conftest.c  -L. -L/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib -Wl,-rpath,/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib  -lMagickCore-7.Q16HDRI     -lMagickCore-7.Q16HDRI   -Wl,-rpath,/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib -L/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib -lruby  -lm   -lc"
-/usr/bin/ld: /tmp/cc1jqijL.o: in function `t':
-conftest.c:(.text+0x68): undefined reference to `_aligned_msize'
+/usr/bin/ld: /tmp/ccWJMVgE.o: in function `t':
+conftest.c:(.text+0x6b): undefined reference to `_aligned_msize'
 collect2: error: ld returned 1 exit status
 checked program was:
 /* begin */
@@ -367,8 +367,8 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/home/hartgeld/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/x86_64-linux -I/home/hartgeld/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/backward -I/home/hartgeld/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0 -I.  -I/usr/include/ImageMagick-7 -fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16   -I/usr/include/ImageMagick-7 -fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16  -std=gnu99 conftest.c  -L. -L/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib -Wl,-rpath,/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib  -lMagickCore-7.Q16HDRI     -lMagickCore-7.Q16HDRI   -Wl,-rpath,/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib -L/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib -lruby  -lm   -lc"
-/usr/bin/ld: /tmp/ccHfEhzD.o: in function `t':
-conftest.c:(.text+0x68): undefined reference to `GetImageChannelEntropy'
+/usr/bin/ld: /tmp/ccMUPzlZ.o: in function `t':
+conftest.c:(.text+0x6b): undefined reference to `GetImageChannelEntropy'
 collect2: error: ld returned 1 exit status
 checked program was:
 /* begin */
@@ -499,10 +499,10 @@ extconf.h is:
 /* end */
 
 ======================================================================
-Thu 08 Apr 21 18:24:48
+Thu 26 Aug 21 19:09:37
 This installation of RMagick 4.2.2 is configured for
-Ruby 2.7.0 (x86_64-linux) and ImageMagick 7.0.11
+Ruby 2.7.0 (x86_64-linux) and ImageMagick 7.1.0
 ======================================================================
 
 
-Configured compile options: {:magick_version=>"7.0.11", :local_libs=>" -lMagickCore-7.Q16HDRI ", :cflags=>" -I/usr/include/ImageMagick-7 -fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16  -std=gnu99", :cppflags=>" -I/usr/include/ImageMagick-7 -fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16 ", :ldflags=>" -lMagickCore-7.Q16HDRI ", :defs=>[], :config_h=>"Makefile"}
+Configured compile options: {:magick_version=>"7.1.0", :local_libs=>" -lMagickCore-7.Q16HDRI ", :cflags=>" -I/usr/include/ImageMagick-7 -fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16  -std=gnu99", :cppflags=>" -I/usr/include/ImageMagick-7 -fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16 ", :ldflags=>" -lMagickCore-7.Q16HDRI ", :defs=>[], :config_h=>"Makefile"}
