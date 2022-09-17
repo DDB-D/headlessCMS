@@ -13,4 +13,6 @@ It took years of research by Volker Mall, Harald Roth und Johannes Kuhn to
 reconstruct the pathes of suffering. This book tries to restore the names
 and the dignity of the dead and the survivors through pieces of evidence,
 biographical research and photos.
-The book will be released in spring 2021.
+<br>
+<a href="https://www.bod.de/buchshop/die-haeftlinge-des-kz-aussenlagers-hailfingentailfingen-volker-mall-9783752684094">Discover More
+</a>

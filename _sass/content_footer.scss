@@ -1,0 +1,25 @@
+.content_footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50vw;
+  padding-left: 25vw;
+  padding-right: 25vw;
+  text-align: center;
+}
+
+.content_footer_link{
+
+  font-weight: 500;
+  color: var(--color-highlight);
+
+  $map: (576: 28, 768: 30, 992: 32);
+  font-size: least-squares-fit($map)!important;
+  $map: (576: 38, 768: 40, 992: 42);
+  line-height: least-squares-fit($map);
+}
+
+.content_footer_titles_buzzwords{
+
+}

@@ -31,8 +31,8 @@ th{
 
 .ui_menu_index-item{
   font-weight: 500;
-  $map: (576: 36, 768: 48, 992: 52);
-  font-size: least-squares-fit($map);
+  $map: (576: 38, 768: 40, 992: 42);
+  font-size: least-squares-fit($map)!important;
 }
 
 .ui_menu_index-item:link{

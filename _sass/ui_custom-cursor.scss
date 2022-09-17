@@ -1,25 +1,32 @@
-
-html * {cursor:none}
-
-.cursor {
-  position: fixed;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-}
-.cursor--small {
-  width: 5px;
-  height: 5px;
-  left: -2.5px;
-  top: -2.5px;
-  border-radius: 50%;
-  z-index: 11000;
-  background: var(--color-bg);
-}
-.cursor--canvas {
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
+.ui_custom-cursor{
+  display: none;
 }
 
-.custom-cursor_hoverable{}
+@media only screen and (min-width: 1023px) {
+  html * {cursor:none}
+
+  .cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+  }
+  .cursor--small {
+    width: 5px;
+    height: 5px;
+    left: -2.5px;
+    top: -2.5px;
+    border-radius: 50%;
+    z-index: 11000;
+    background: var(--color-bg);
+  }
+  .cursor--canvas {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+  }
+
+  .ui_custom-cursor{
+    display: block;
+  }
+}

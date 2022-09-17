@@ -12,6 +12,8 @@ github_username:  hartgeld
 
 # Build settings
 markdown: kramdown
+kramdown: 
+  parse_block_html: true
 theme: minima
 plugins:
   - jekyll-feed
@@ -32,7 +34,7 @@ assets:
      -assets/graphics
      -assets/videos
      -node_modules
-
+     
 responsive_image:
   # [Required]
   # Path to the image template.

@@ -4,22 +4,23 @@
 
 @media only screen and (min-width: 1023px) {
   #content_stage_bg-img{
-    position: fixed;
+    position: relative;
     /*
     top: -75vh;
     bottom: 15vh;
     left: 37.5vw;
     right: 15vw;
     */
-    top: 0vh;
+    top: -100vh;
     bottom: 0vh;
     left: 0vw;
     right: 0vw;
-
-    display: block;
+    height: 100vh;
+    display: flex;
     background-color: var(--color-bg);
     overflow: hidden;
     opacity: 1;
+
   }
 }
 
@@ -37,3 +38,13 @@
     transition: 1s opacity;
     opacity: 0.5;
 }
+
+.target_stage_bg-img{
+  position: absolute; 
+  top: -100vh; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  pointer-events: none; 
+}
+

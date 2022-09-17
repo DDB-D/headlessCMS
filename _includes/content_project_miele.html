@@ -1,6 +1,6 @@
 <!-- project miele-->
-  <div class="content_project_miele">
-    <div class="content_project_miele_txt">
+  <div class="content_project_miele" data-scroll-section>
+    <div class="content_project_miele_txt" data-scroll data-scroll-repeat data-scroll-speed="6">
       {% for page in site.pages %}
         {% if page.layout == 'project_miele' %}
 
@@ -15,7 +15,7 @@
 
             <div class="content_project_cta">
               <a class="content_project_cta_type" href="{{ page.permalink }}">
-                <div class="content_project_cta_type_container custom-cursor_hoverable">
+                <div class="content_project_cta_type_container ">
                   <div class = "content_project_cta_arrow">
                     &#10149;
                   </div>

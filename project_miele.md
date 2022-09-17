@@ -13,4 +13,5 @@ the design of the website, but also coordinating and instructing
 the team, as well as communicating directly with the client.
 The website celebrates the market launch of the G7000
 dishwasher with inspirational content and unique imagery.
-Visit [g7000.miele.com](g7000.miele.com) to learn more.
+<br>
+<a href="https://g7000.miele.com">g7000.miele.com</a>

@@ -1,3 +1,13 @@
 #content{
+  //top: 0vh;
   position: relative;
+}
+
+#content_contact{
+  position: relative;
+}
+@media only screen and (min-width: 1023px) {
+  .content_position{
+    top: -100vh;
+  }
 }

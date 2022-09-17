@@ -8,4 +8,5 @@ image_stage: /assets/graphics/project_absicht.gif
 ---
   Commissioned by ‚Absicht Werbeagentur‘ for the relaunch of their website
   I developed the creative concept, ux, art direction copywriting and the coding of canvas animations in close collaboration with the Absicht team.<br>
-  Visit [absicht.ag](https://www.absicht.ag/)
+<br>
+<a href="https://www.absicht.ag/">absicht.ag</a>

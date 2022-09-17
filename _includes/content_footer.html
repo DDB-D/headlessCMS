@@ -1,0 +1,29 @@
+
+<section data-scroll-section id="section_footer" class="content_footer">
+  <div class="section-inner" data-scroll data-scroll-repeat data-scroll-call="testEvent1" class="content_about_txt" >
+      <!-- buzzwordz 
+      <div class="content_footer_titles_buzzwords" data-scroll data-scroll-repeat data-scroll-speed="6">
+        <h3 >
+          <span id="buzzwords_changeType_1">
+            form
+          </span>
+          <span id="buzzwords_changeType_2">
+            code
+          </span>
+          <span id="buzzwords_changeType_3">
+            type
+          </span>
+        </h3>
+      </div>
+  -->
+      <div  >
+        <div data-scroll data-scroll-repeat data-scroll-speed="6">
+          {% for page in site.pages %}
+            {% if page.layout == 'footer' %}
+              {{page.content | markdownify }}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+  </div>
+</section>
