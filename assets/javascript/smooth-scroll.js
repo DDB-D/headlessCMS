@@ -27,6 +27,7 @@ locoScroll.on('call', func => {
     "transition": "opacity 1s", 
     "opacity": "0",  
   });
+
   if (checkVisible($('#section_about'))) {
       //do something when myID1 is in view
       $("#content_stage_bg-img").css({
@@ -46,6 +47,7 @@ locoScroll.on('call', func => {
   }
 });
 
+/*
 setTimeout(() => {  
   locoScroll.destroy();
 }, 0);
@@ -55,7 +57,7 @@ setTimeout(() => {
 setTimeout(() => {  
   locoScroll.update();
 }, 1000);
-
+*/
 
 /*
 // tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
