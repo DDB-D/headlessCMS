@@ -155,7 +155,7 @@ const fragment = `
   let lastTime;
   const lastMouse = new Vec2();
   function updateMouse(e) {
-    e.preventDefault();
+    //e.preventDefault();
     if (e.changedTouches && e.changedTouches.length) {
       e.x = e.changedTouches[0].pageX;
       e.y = e.changedTouches[0].pageY;
