@@ -15,8 +15,11 @@ var ui_darkMode_switchColorOnClick = document.getElementById('ui_darkMode').getE
 
 // on click execute overlay
 $my_menuButton.on("click", function(){
+  console.log("menu clicked");
+
   // menu overlay is active onClick to inactive
   if ($my_menuButton.hasClass('isActive')) {
+    
     // on click set text to --color-type
     ui_menu_textSelect.style.color = getComputedStyle(document.documentElement).getPropertyValue("--color-bg");
     // on click set icon color to --color-type
