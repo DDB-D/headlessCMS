@@ -29,6 +29,7 @@ sass:
 exclude: [vendor]
 assets:
    sources:
+     -assets/favicon
      -assets/fonts
      -assets/javascript
      -assets/graphics
