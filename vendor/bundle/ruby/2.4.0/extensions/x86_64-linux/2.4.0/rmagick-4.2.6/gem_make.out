@@ -1,0 +1,261 @@
+current directory: /run/media/hartgeld/5dfe4964-a512-4c80-9869-ff341ed24d79/hartgeld/Projects/Hartgeld-web/headlessCMS/vendor/bundle/ruby/2.4.0/gems/rmagick-4.2.6/ext/RMagick
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/bin/ruby -I /home/hartgeld/.rvm/rubies/ruby-2.4.0/lib/ruby/site_ruby/2.4.0 -r ./siteconf20230601-93414-161j58m.rb extconf.rb
+checking for brew... no
+checking for pacman... yes
+checking for Ruby version >= 2.3.0... yes
+checking for pkg-config... yes
+checking for outdated ImageMagick version (<= 6.7.7)... no
+checking for gcc... yes
+checking for __GNUC__... yes
+checking for MagickCore/MagickCore.h... yes
+checking for rb_gc_adjust_memory_usage() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... yes
+checking for posix_memalign() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... yes
+checking for malloc_usable_size() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... yes
+checking for malloc_size() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... no
+checking for _aligned_msize() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... no
+checking for GetImageChannelEntropy() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... no
+checking for SetImageGray() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... yes
+checking for SetMagickAlignedMemoryMethods() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... yes
+checking for malloc.h... yes
+creating extconf.h
+creating Makefile
+======================================================================
+Thu 01 Jun 23 18:56:57
+This installation of RMagick 4.2.6 is configured for
+Ruby 2.4.0 (x86_64-linux) and ImageMagick 7.1.1
+======================================================================
+
+
+Configured compile options: {:magick_version=>"7.1.1", :local_libs=>" -lMagickCore-7.Q16HDRI ", :cppflags=>" -I/usr/include/ImageMagick-7 -fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16  -std=gnu99", :ldflags=>" -lMagickCore-7.Q16HDRI  ", :defs=>[], :config_h=>"Makefile"}
+
+current directory: /run/media/hartgeld/5dfe4964-a512-4c80-9869-ff341ed24d79/hartgeld/Projects/Hartgeld-web/headlessCMS/vendor/bundle/ruby/2.4.0/gems/rmagick-4.2.6/ext/RMagick
+make "DESTDIR=" clean
+
+current directory: /run/media/hartgeld/5dfe4964-a512-4c80-9869-ff341ed24d79/hartgeld/Projects/Hartgeld-web/headlessCMS/vendor/bundle/ruby/2.4.0/gems/rmagick-4.2.6/ext/RMagick
+make "DESTDIR="
+compiling rmagick.c
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby.h:33,
+                 from rmagick.h:25,
+                 from rmagick.c:13:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:631:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  631 | CONSTFUNC(void rb_secure_update(VALUE));
+      | ^~~~~~~~~
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:2005:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:257:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  257 | CONSTFUNC(void rb_error_untrusted(VALUE));
+      | ^~~~~~~~~
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:259:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  259 | CONSTFUNC(void rb_check_trusted(VALUE));
+      | ^~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+compiling rmdraw.c
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby.h:33,
+                 from rmagick.h:25,
+                 from rmdraw.c:13:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:631:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  631 | CONSTFUNC(void rb_secure_update(VALUE));
+      | ^~~~~~~~~
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:2005:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:257:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  257 | CONSTFUNC(void rb_error_untrusted(VALUE));
+      | ^~~~~~~~~
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:259:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  259 | CONSTFUNC(void rb_check_trusted(VALUE));
+      | ^~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+compiling rmenum.c
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby.h:33,
+                 from rmagick.h:25,
+                 from rmenum.c:13:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:631:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  631 | CONSTFUNC(void rb_secure_update(VALUE));
+      | ^~~~~~~~~
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:2005:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:257:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  257 | CONSTFUNC(void rb_error_untrusted(VALUE));
+      | ^~~~~~~~~
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:259:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  259 | CONSTFUNC(void rb_check_trusted(VALUE));
+      | ^~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+compiling rmfill.c
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby.h:33,
+                 from rmagick.h:25,
+                 from rmfill.c:13:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:631:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  631 | CONSTFUNC(void rb_secure_update(VALUE));
+      | ^~~~~~~~~
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:2005:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:257:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  257 | CONSTFUNC(void rb_error_untrusted(VALUE));
+      | ^~~~~~~~~
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:259:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  259 | CONSTFUNC(void rb_check_trusted(VALUE));
+      | ^~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+compiling rmilist.c
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby.h:33,
+                 from rmagick.h:25,
+                 from rmilist.c:13:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:631:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  631 | CONSTFUNC(void rb_secure_update(VALUE));
+      | ^~~~~~~~~
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:2005:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:257:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  257 | CONSTFUNC(void rb_error_untrusted(VALUE));
+      | ^~~~~~~~~
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:259:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  259 | CONSTFUNC(void rb_check_trusted(VALUE));
+      | ^~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+compiling rmimage.c
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby.h:33,
+                 from rmagick.h:25,
+                 from rmimage.c:13:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:631:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  631 | CONSTFUNC(void rb_secure_update(VALUE));
+      | ^~~~~~~~~
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:2005:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:257:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  257 | CONSTFUNC(void rb_error_untrusted(VALUE));
+      | ^~~~~~~~~
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:259:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  259 | CONSTFUNC(void rb_check_trusted(VALUE));
+      | ^~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+compiling rminfo.c
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby.h:33,
+                 from rmagick.h:25,
+                 from rminfo.c:13:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:631:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  631 | CONSTFUNC(void rb_secure_update(VALUE));
+      | ^~~~~~~~~
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:2005:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:257:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  257 | CONSTFUNC(void rb_error_untrusted(VALUE));
+      | ^~~~~~~~~
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:259:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  259 | CONSTFUNC(void rb_check_trusted(VALUE));
+      | ^~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+compiling rmkinfo.c
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby.h:33,
+                 from rmagick.h:25,
+                 from rmkinfo.c:11:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:631:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  631 | CONSTFUNC(void rb_secure_update(VALUE));
+      | ^~~~~~~~~
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:2005:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:257:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  257 | CONSTFUNC(void rb_error_untrusted(VALUE));
+      | ^~~~~~~~~
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:259:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  259 | CONSTFUNC(void rb_check_trusted(VALUE));
+      | ^~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+compiling rmmain.c
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby.h:33,
+                 from rmagick.h:25,
+                 from rmmain.c:15:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:631:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  631 | CONSTFUNC(void rb_secure_update(VALUE));
+      | ^~~~~~~~~
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:2005:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:257:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  257 | CONSTFUNC(void rb_error_untrusted(VALUE));
+      | ^~~~~~~~~
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:259:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  259 | CONSTFUNC(void rb_check_trusted(VALUE));
+      | ^~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+compiling rmmontage.c
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby.h:33,
+                 from rmagick.h:25,
+                 from rmmontage.c:13:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:631:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  631 | CONSTFUNC(void rb_secure_update(VALUE));
+      | ^~~~~~~~~
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:2005:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:257:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  257 | CONSTFUNC(void rb_error_untrusted(VALUE));
+      | ^~~~~~~~~
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:259:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  259 | CONSTFUNC(void rb_check_trusted(VALUE));
+      | ^~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+compiling rmpixel.c
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby.h:33,
+                 from rmagick.h:25,
+                 from rmpixel.c:13:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:631:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  631 | CONSTFUNC(void rb_secure_update(VALUE));
+      | ^~~~~~~~~
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:2005:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:257:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  257 | CONSTFUNC(void rb_error_untrusted(VALUE));
+      | ^~~~~~~~~
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:259:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  259 | CONSTFUNC(void rb_check_trusted(VALUE));
+      | ^~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+compiling rmstruct.c
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby.h:33,
+                 from rmagick.h:25,
+                 from rmstruct.c:13:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:631:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  631 | CONSTFUNC(void rb_secure_update(VALUE));
+      | ^~~~~~~~~
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:2005:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:257:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  257 | CONSTFUNC(void rb_error_untrusted(VALUE));
+      | ^~~~~~~~~
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:259:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  259 | CONSTFUNC(void rb_check_trusted(VALUE));
+      | ^~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+compiling rmutil.c
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby.h:33,
+                 from rmagick.h:25,
+                 from rmutil.c:13:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:631:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  631 | CONSTFUNC(void rb_secure_update(VALUE));
+      | ^~~~~~~~~
+In file included from /home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:2005:
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:257:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  257 | CONSTFUNC(void rb_error_untrusted(VALUE));
+      | ^~~~~~~~~
+/home/hartgeld/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/intern.h:259:1: warning: ‘const’ attribute on function returning ‘void’ [-Wattributes]
+  259 | CONSTFUNC(void rb_check_trusted(VALUE));
+      | ^~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+linking shared-object RMagick2.so
+
+current directory: /run/media/hartgeld/5dfe4964-a512-4c80-9869-ff341ed24d79/hartgeld/Projects/Hartgeld-web/headlessCMS/vendor/bundle/ruby/2.4.0/gems/rmagick-4.2.6/ext/RMagick
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 RMagick2.so ./.gem.20230601-93414-1joo9ko
