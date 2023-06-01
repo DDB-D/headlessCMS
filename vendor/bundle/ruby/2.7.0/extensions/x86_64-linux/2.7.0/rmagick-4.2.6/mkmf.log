@@ -16,7 +16,7 @@ find_executable: checking for pkg-config... -------------------- yes
 
 assert_has_dev_libs!: checking for outdated ImageMagick version (<= 6.7.7)... -------------------- no
 
-Detected ImageMagick version: 7.1.0
+Detected ImageMagick version: 7.1.1
 --------------------
 
 find_executable: checking for gcc... -------------------- yes
@@ -244,7 +244,7 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/home/hartgeld/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/x86_64-linux -I/home/hartgeld/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/backward -I/home/hartgeld/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0 -I.  -I/usr/include/ImageMagick-7 -fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16  -std=gnu99 -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC conftest.c  -L. -L/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib -Wl,-rpath,/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib  -lMagickCore-7.Q16HDRI      -lMagickCore-7.Q16HDRI   -Wl,-rpath,/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib -L/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib -lruby  -lm   -lc"
-/usr/bin/ld: /tmp/cceHolrO.o: in function `t':
+/usr/bin/ld: /tmp/ccTGR7qB.o: in function `t':
 /run/media/hartgeld/5dfe4964-a512-4c80-9869-ff341ed24d79/hartgeld/Projects/Hartgeld-web/headlessCMS/vendor/bundle/ruby/2.7.0/gems/rmagick-4.2.6/ext/RMagick/conftest.c:24: undefined reference to `malloc_size'
 collect2: error: ld returned 1 exit status
 checked program was:
@@ -317,7 +317,7 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/home/hartgeld/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/x86_64-linux -I/home/hartgeld/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/backward -I/home/hartgeld/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0 -I.  -I/usr/include/ImageMagick-7 -fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16  -std=gnu99 -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC conftest.c  -L. -L/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib -Wl,-rpath,/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib  -lMagickCore-7.Q16HDRI      -lMagickCore-7.Q16HDRI   -Wl,-rpath,/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib -L/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib -lruby  -lm   -lc"
-/usr/bin/ld: /tmp/ccWEK7aF.o: in function `t':
+/usr/bin/ld: /tmp/ccvKiSzW.o: in function `t':
 /run/media/hartgeld/5dfe4964-a512-4c80-9869-ff341ed24d79/hartgeld/Projects/Hartgeld-web/headlessCMS/vendor/bundle/ruby/2.7.0/gems/rmagick-4.2.6/ext/RMagick/conftest.c:24: undefined reference to `_aligned_msize'
 collect2: error: ld returned 1 exit status
 checked program was:
@@ -391,7 +391,7 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/home/hartgeld/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/x86_64-linux -I/home/hartgeld/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/backward -I/home/hartgeld/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0 -I.  -I/usr/include/ImageMagick-7 -fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16  -std=gnu99 -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC conftest.c  -L. -L/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib -Wl,-rpath,/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib  -lMagickCore-7.Q16HDRI      -lMagickCore-7.Q16HDRI   -Wl,-rpath,/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib -L/home/hartgeld/.rvm/rubies/ruby-2.7.0/lib -lruby  -lm   -lc"
-/usr/bin/ld: /tmp/ccgul6TA.o: in function `t':
+/usr/bin/ld: /tmp/cciN2aKW.o: in function `t':
 /run/media/hartgeld/5dfe4964-a512-4c80-9869-ff341ed24d79/hartgeld/Projects/Hartgeld-web/headlessCMS/vendor/bundle/ruby/2.7.0/gems/rmagick-4.2.6/ext/RMagick/conftest.c:24: undefined reference to `GetImageChannelEntropy'
 collect2: error: ld returned 1 exit status
 checked program was:
@@ -523,10 +523,10 @@ extconf.h is:
 /* end */
 
 ======================================================================
-Thu 18 Aug 22 16:06:05
+Thu 01 Jun 23 17:11:49
 This installation of RMagick 4.2.6 is configured for
-Ruby 2.7.0 (x86_64-linux) and ImageMagick 7.1.0
+Ruby 2.7.0 (x86_64-linux) and ImageMagick 7.1.1
 ======================================================================
 
 
-Configured compile options: {:magick_version=>"7.1.0", :local_libs=>" -lMagickCore-7.Q16HDRI ", :cppflags=>" -I/usr/include/ImageMagick-7 -fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16  -std=gnu99", :ldflags=>" -lMagickCore-7.Q16HDRI  ", :defs=>[], :config_h=>"Makefile"}
+Configured compile options: {:magick_version=>"7.1.1", :local_libs=>" -lMagickCore-7.Q16HDRI ", :cppflags=>" -I/usr/include/ImageMagick-7 -fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16  -std=gnu99", :ldflags=>" -lMagickCore-7.Q16HDRI  ", :defs=>[], :config_h=>"Makefile"}

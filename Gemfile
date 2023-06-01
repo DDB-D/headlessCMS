@@ -24,3 +24,5 @@ group :jekyll_plugins do
    gem "jekyll-responsive-image"
    gem 'jekyll-auto-image'
 end
+
+gem "webrick", "~> 1.8"

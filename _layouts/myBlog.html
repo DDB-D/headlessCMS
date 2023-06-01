@@ -18,6 +18,15 @@
 
 
 <div id="content_blog">
+  <div class="blog_img-grid">
+    {% for post in site.posts %}
+      {% if post.image %}
+        <img src="{{ post.image }}" alt="{{ post.title }}"">
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+  <!--
   <table class="blog_index-table">
 
     <thead class="blog_index-table_head">
@@ -30,7 +39,7 @@
       {% for post in site.posts %}
       <tr>
         <td>
-          <a class="blog_index_item custom-cursor_hoverable" href="{{ post.url }}">
+          <a class="blog_index_item" href="{{ post.url }}">
             {{ post.title }}
           </a>
         </td>
@@ -38,6 +47,7 @@
       {% endfor %}
     </tbody>
   </table>
+  -->
 </div>
 
     {% include scripts_foot_blog.html %}

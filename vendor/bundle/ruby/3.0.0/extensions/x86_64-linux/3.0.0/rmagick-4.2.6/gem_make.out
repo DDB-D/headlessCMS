@@ -1,0 +1,60 @@
+current directory: /run/media/hartgeld/5dfe4964-a512-4c80-9869-ff341ed24d79/hartgeld/Projects/Hartgeld-web/headlessCMS/vendor/bundle/ruby/3.0.0/gems/rmagick-4.2.6/ext/RMagick
+/usr/bin/ruby -I /usr/lib/ruby/3.0.0 extconf.rb
+checking for brew... no
+checking for pacman... yes
+checking for Ruby version >= 2.3.0... yes
+checking for pkg-config... yes
+checking for outdated ImageMagick version (<= 6.7.7)... no
+checking for gcc... yes
+
+Warning: Found a partial ImageMagick installation. Your operating
+system likely has some built-in ImageMagick libraries but not all of
+ImageMagick. This will most likely cause problems at both compile and
+runtime.
+Found partial installation at: /usr
+
+checking for __GNUC__... yes
+checking for MagickCore/MagickCore.h... yes
+checking for rb_gc_adjust_memory_usage() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... yes
+checking for posix_memalign() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... yes
+checking for malloc_usable_size() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... yes
+checking for malloc_size() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... no
+checking for _aligned_msize() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... no
+checking for GetImageChannelEntropy() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... no
+checking for SetImageGray() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... yes
+checking for SetMagickAlignedMemoryMethods() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... yes
+checking for malloc.h... yes
+creating extconf.h
+creating Makefile
+======================================================================
+Thu 01 Jun 23 16:31:15
+This installation of RMagick 4.2.6 is configured for
+Ruby 3.0.5 (x86_64-linux) and ImageMagick 7.1.1
+======================================================================
+
+
+Configured compile options: {:magick_version=>"7.1.1", :local_libs=>" -lMagickCore-7.Q16HDRI ", :cppflags=>" -I/usr/include/ImageMagick-7 -fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16  -std=gnu99", :ldflags=>" -lMagickCore-7.Q16HDRI  ", :defs=>[], :config_h=>"Makefile"}
+
+current directory: /run/media/hartgeld/5dfe4964-a512-4c80-9869-ff341ed24d79/hartgeld/Projects/Hartgeld-web/headlessCMS/vendor/bundle/ruby/3.0.0/gems/rmagick-4.2.6/ext/RMagick
+make DESTDIR\= sitearchdir\=./.gem.20230601-70593-x2qxgk sitelibdir\=./.gem.20230601-70593-x2qxgk clean
+
+current directory: /run/media/hartgeld/5dfe4964-a512-4c80-9869-ff341ed24d79/hartgeld/Projects/Hartgeld-web/headlessCMS/vendor/bundle/ruby/3.0.0/gems/rmagick-4.2.6/ext/RMagick
+make DESTDIR\= sitearchdir\=./.gem.20230601-70593-x2qxgk sitelibdir\=./.gem.20230601-70593-x2qxgk
+compiling rmagick.c
+compiling rmdraw.c
+compiling rmenum.c
+compiling rmfill.c
+compiling rmilist.c
+compiling rmimage.c
+compiling rminfo.c
+compiling rmkinfo.c
+compiling rmmain.c
+compiling rmmontage.c
+compiling rmpixel.c
+compiling rmstruct.c
+compiling rmutil.c
+linking shared-object RMagick2.so
+
+current directory: /run/media/hartgeld/5dfe4964-a512-4c80-9869-ff341ed24d79/hartgeld/Projects/Hartgeld-web/headlessCMS/vendor/bundle/ruby/3.0.0/gems/rmagick-4.2.6/ext/RMagick
+make DESTDIR\= sitearchdir\=./.gem.20230601-70593-x2qxgk sitelibdir\=./.gem.20230601-70593-x2qxgk install
+/usr/bin/install -c -m 0755 RMagick2.so ./.gem.20230601-70593-x2qxgk
