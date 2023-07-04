@@ -1,6 +1,6 @@
 ---
 layout: project_menschenZweiterKlasse
-title: Wir waren Menschen zweiter Klasse von Iason Chandrinos und Volker Mall
+title: Wir waren Menschen zweiter Klasse
 subtitle: Book&emsp;Layout&emsp;Art-Direction
 permalink: /project/menschenZweiterKlasse/
 excerpt: Wir waren <br>Menschen <br>zweiter Klasse
@@ -10,5 +10,5 @@ image_stage: /assets/graphics/project_absicht.gif
 382 Zwangsarbeiter aus diesem Transport kamen auf den Nachtjägerflugplatz Hailfingen und von dort auf andere Militärflugplätze. Eine Gruppe von etwa 200 kam in das Untertageprojekt Hecht/Rubin in Geislingen an der Steige, andere sollten im Raum Mannheim Anlagen der Reichsbahn in Stand halten und reparieren.
 Die Verfasser haben vier Tagebücher griechischer Zwangsarbeiter ausfindig gemacht und ausgewertet. Sie enthalten eine ausführliche Beschreibung der Lebens- und Arbeitsbedingungen in diesen NS-Projekten und informieren - durch aufwendige Recherchen ergänzt - über die Geschichte der griechischen Zwangsarbeiter, einer nationalen Gruppe, die weitgehend unerforscht ist.
 <br>
-<a href="https://www.bod.de/buchshop/wir-waren-menschen-zweiter-klasse-iason-chandrinos-9783756298150">Mehr erfahren</a>
+<a href="https://www.amazon.de/Wir-waren-Menschen-zweiter-Klasse/dp/3756204863">Mehr erfahren</a>
 

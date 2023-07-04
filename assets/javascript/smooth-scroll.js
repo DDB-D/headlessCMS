@@ -22,6 +22,31 @@ function checkVisible( elm, eval ) {
   if (eval == "above") return ((y < (viewportHeight + scrolltop)));
 }
 
+
+locoScroll.on('call', func => {
+  $("#content_stage_bg-img").css({
+    "transition": "opacity 1s", 
+    "opacity": "0",  
+  });
+
+  if (checkVisible($('#content_stage_bg-type'))) {
+      //do something when myID1 is in view
+      $("#content_stage_bg-img").css({
+        "transition": "opacity 1s", 
+        "opacity": "1",  
+      });
+      console.log("1");
+  } else {
+    $("#content_stage_bg-img").css({
+      "transition": "opacity 1s", 
+      "opacity": "0",  
+    });
+    console.log("0");
+  }
+  });
+
+
+/*
 locoScroll.on('call', func => {
   $("#content_stage_bg-img").css({
     "transition": "opacity 1s", 
@@ -34,19 +59,22 @@ locoScroll.on('call', func => {
         "transition": "opacity 1s", 
         "opacity": "0",  
       });
-  } else if (checkVisible($('#content_stage_bg-type'))) {
+      console.log("0");
+  } else if (checkVisible($('#content_stage_bg-img'))) {
       $("#content_stage_bg-img").css({
         "transition": "opacity 1s", 
         "opacity": "1",
       });
+      console.log("1");
   } else {
     $("#content_stage_bg-img").css({
       "transition": "opacity 1s", 
       "opacity": "0",  
     });
+    console.log("?");
   }
-});
-
+  });
+*/
 /*
 setTimeout(() => {  
   locoScroll.destroy();

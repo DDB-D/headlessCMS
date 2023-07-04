@@ -11,9 +11,9 @@
 
   text-align: center;
 
-  background-image: url('/assets/graphics/project_miele.png');
-  background-size: cover;
-  background-position: left;
+  //background-image: url('/assets/graphics/project_miele.png');
+  //background-size: cover;
+  //background-position: left;
 }
 
 
@@ -22,18 +22,17 @@
   position: relative;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
 
-  height: 100vh;
-  width: 40vw;
-  padding-left: 15vw;
-  padding-right: 45vw;
-  padding-top: 0;
+  height: 85vh;
+  width: 80vw;
+  padding-left: 20vw;
+  padding-top: 15vh;
   padding-bottom: 0;
 
   text-align: left;
-  //margin-top: -100vh;
+
   z-index: 2;
 }
 

@@ -1,23 +1,17 @@
-<!-- project absicht -->
-<div data-scroll-section>
+{% for page in site.pages %}
+{% if page.layout == 'project_absicht' %}
 
-  <div class="content_project_absicht" id="content_project_absicht_bg-img">
+<div data-scroll-section >
+  <div class="content_project_absicht" >
     {% include content_project_absicht_wortmarke_dropShadow.html %}
   </div>
-
-
-  <div class="content_project_absicht_txt" id="content_project_absicht_getPosition" data-scroll data-scroll-repeat data-scroll-speed="6">
-
-    {% for page in site.pages %}
-      {% if page.layout == 'project_absicht' %}
-
+  <div class="content_project_txt project_absicht_title" data-scroll data-scroll-repeat data-scroll-speed="6">
         <div>
-
-          <div class="content_project_dieHaeftlinge_txt_subtitle">
+          <div class="content_project_txt_subtitle">
             {{page.subtitle}}
           </div>
 
-          <div class="content_project_absicht_txt_title">
+          <div class="content_project_txt_title">
             {{page.excerpt}}
           </div>
 
@@ -31,11 +25,9 @@
               </div>
             </a>
           </div>
-
         </div>
-
-      {% endif %}
-    {% endfor %}
-
   </div>
 </div>
+
+{% endif %}
+{% endfor %}

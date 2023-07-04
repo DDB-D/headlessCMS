@@ -1,39 +1,31 @@
-<!-- project: die Haeftlinge -->
-<div id="content_project_dieHaeftlinge" data-scroll-section>
 
-  <div id="content_project_dieHaeftlinge_txt"  data-scroll data-scroll-repeat data-scroll-speed="6">
+{% for page in site.pages %}
+{% if page.layout == 'project_dieHaeftlinge' %}
 
-    {% for page in site.pages %}
-      {% if page.layout == 'project_dieHaeftlinge' %}
-
+<div class="content_project project_haeftlinge_bg-img" data-scroll-section >
+  <div class="content_project_txt" data-scroll data-scroll-repeat data-scroll-speed="6">
         <div>
-
-          <div class="content_project_dieHaeftlinge_txt_subtitle">
+          <div class="content_project_txt_subtitle">
             {{page.subtitle}}
           </div>
 
-          <div class="content_project_dieHaeftlinge_txt_title">
-            {{page.title}}
+          <div class="content_project_txt_title">
+            {{page.excerpt}}
           </div>
 
-          <div class="content_project_dieHaeftlinge_cta">
-            <a class=" content_project_cta_type" href="{{ page.permalink }}">
+          <div class="content_project_cta">
+            <a class="content_project_cta_type" href="{{ page.permalink }}">
               <div class="content_project_cta_type_container ">
-                <div class = "content_project_cta_arrow">&#10149;</div>
+                <div class = "content_project_cta_arrow">
+                  &#10149;
+                </div>
                 <div>MORE</div>
               </div>
             </a>
           </div>
-
         </div>
-
-      {% endif %}
-    {% endfor %}
-
   </div>
-
-  <div id="content_project_dieHaeftlinge_img">
-    <img src="{{ site.baseurl }}/assets/graphics/kz-gedenk-hailfingen-tailfingen_cover.png">
-  </div>
-
 </div>
+
+{% endif %}
+{% endfor %}

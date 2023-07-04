@@ -1,20 +1,17 @@
 .content_about{
-
+/*
   display: flex;
   justify-content: center;
   align-items: flex-start;
-
-  height: auto;
-  width: 50vw;
-  padding-left: 25vw;
-  padding-right: 25vw;
-  //padding-top: 0vh;
-  padding-bottom: 20vh;
+*/
+  height: 85vh;
+  width: 60vw;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  padding-top: 15vh;
+  padding-bottom: 0vh;
 
   text-align: left;
-
-  $map: (576: 24, 768: 24, 992: 34);
-  margin-top: least-squares-fit($map);
 }
 
 .content_about_txt{

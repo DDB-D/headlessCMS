@@ -1,9 +1,9 @@
 ---
 layout: project_dieHaeftlinge
-title: Die Häftlinge des<br>KZ-Außenlagers<br>Hailfingen·Tailfingen
+title: Die Häftlinge des KZ-Außenlagers Hailfingen·Tailfingen
 subtitle: Book Design&emsp;Layout&emsp;Art Direction
 permalink: /project/dieHaeftlinge/
-excerpt: Commissioned by „KZ Gedenkstätte Hailfingen · Tailfingen e.V.“
+excerpt: Die Häftlinge des<br>KZ-Außenlagers<br>Hailfingen·Tailfingen
 image_stage: /assets/graphics/kz-gedenk-hailfingen-tailfingen_cover.png
 ---
 600 jewish prisoners where deported from KZ Stutthof near Danzig to the

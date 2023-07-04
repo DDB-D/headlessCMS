@@ -1,50 +1,4 @@
-
-.project_stage_title{
-  position: relative;
-  height: auto;
-  width: 60vw;
-  padding-left: 20vw;
-  padding-right: 20vw;
-  padding-top: 10vh;
-  padding-bottom: 0vh;
-}
-
-/* fullscreen video */
-#project_stage_video {
-  position: relative;
-  height: auto;
-  width: 60vw;
-  padding-left: 20vw;
-  padding-right: 20vw;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-}
-
-#project_stage_video > video {
-
-    width: 60vw;
-    height: auto;
-    //z-index: -100;
-    //transform: translateX(-50%) translateY(-50%);
-    //background: url('/assets/videos/placeholder/placeholder.png') no-repeat;
-    object-fit: contain;
-    //transition: 1s opacity;
-    border: 1px solid var(--color-type);
-
-}
-
-.project_stage_title_type{
-  letter-spacing: 0.5em;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0;
-}
-
-.project_stage_subtitle_type{
-  text-align: center;
-  margin: 0;
-}
-
+/* layout*/
 .project_content{
   position: relative;
   height: auto;
@@ -55,16 +9,72 @@
   padding-bottom: 0vh;
 }
 
-.project_img_fullscreen {
+.project_stage{
   position: relative;
-  height: auto;
-  width: 100vw;
-  margin-left: 0vw;
-  margin-right: 0vw;
-  margin-top: 10vh;
-  margin-bottom: 0vh;
+  height: 70vh;
+  width: 50vw;
+  padding-left: 20vw;
+  padding-right: 30vw;
+  padding-top: 30vh;
+  padding-bottom: 0vh;
 }
 
-.project_img_fullscreen > img{
-  width: 100vw;
+.project_copy{
+  position: relative;
+  height: auto;
+  width: 50vw;
+  padding-left: 20vw;
+  padding-right: 30vw;
+  padding-top: 25vh;
+  padding-bottom: 0vh;
+}
+
+/* video */
+#project_video {
+  position: relative;
+  height: auto;
+  width: 90vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+#project_video > video {
+    width: 90vw;
+    height: auto;
+    object-fit: contain;
+    border: 1px solid var(--color-type);
+}
+
+/* img */
+.project_img {
+  position: relative;
+  min-height: 100vh;
+  width: 90vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 5vh;
+  padding-top: 5vh;
+}
+
+.project_img > img{
+  width: 90vw;
+  height: auto;
+}
+
+/* type def */
+.project_title{
+  height: auto;
+  text-align: left;
+  margin: 0;
+  $map: (576: 24, 768: 24, 992: 34);
+  margin-bottom: least-squares-fit($map);
+}
+
+.project_subtitle{
+  text-align: left;
+  margin: 0;
+  $map: (576: 20, 768: 20, 992: 20);
+  margin-bottom: least-squares-fit($map);
 }

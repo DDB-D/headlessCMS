@@ -16,20 +16,21 @@
     {% include ui_menu_overlay.html %}
     <div data-scroll-container id="myDataScrollContainer">
       <div id="content" >
-        <div class="project_dieHaeftlinge_title">
-          <h3 class="project_dieHaeftlinge_subtitle_type">{{ page.subtitle }}</h3>
-          <h1 class="project_dieHaeftlinge_title_type"> {{ page.title }}</h1>
-          <p>{{ page.content }}</p>
+        <div class="project_stage project_kzghz-fest_bg-img">
+          <h3 class="project_subtitle">{{ page.subtitle }}</h3>
+          <h1 class="project_title"> {{ page.excerpt }}</h1>
         </div>
-        <div id="project_stage_video">
-          <!--<img class="project_stage_hero-img" src="{{ site.baseurl }}{{ page.image_stage }}"/>-->
+        <div class="project_copy">
+        <p>{{ page.content }}</p>
+        </div>
+        <div id="project_video">
           <video loop muted autoplay >
             <source src="{{ site.baseurl }}/assets/videos/festschrift-2022.webm" type="video/webm">
             <source src="{{ site.baseurl }}/assets/videos/festschrift-2022.mp4" type="video/mp4">
             <source src="{{ site.baseurl }}/assets/videos/festschrift-2022.ogg" type="video/ogg">
           </video>
         </div>
-        <div class="project_img_fullscreen">
+        <div class="project_img">
           <img src="{{ site.baseurl }}/assets/graphics/kzgHT_fest_overview.png">
         </div>
       </div>
