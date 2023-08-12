@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+      {% include ui_preloader_blank.html %}
+      {% include ui_custom-cursor.html %}
+      <div id="ui_head">
+        <div class="deviceVisibility_tablet">
+          {% include ui_home_post.html %}
+        </div>
+        {% include ui_menu.html %}
+      </div>
+      <div id="ui_foot">
+        {% include ui_darkMode.html %}
+      </div>
+      {% include ui_menu_overlay.html %}
+      <div id="content" class="scroll_snap">
+        <div id="content-height">
+          {% include ui_scroll.html %}
+          {% include content_projects.html %}
+          <section class="blog-post_content_height" >
+            <div class="project_content about_txt_title" >
+              {{ page.title }}
+            </div>
+            <div class="project_content project_txt" >
+              <p>
+              {{ page.content }}
+              </p>
+            </div>
+          </section>
+          {% include content_footer_small.html %}
+        </div>
+      </div>
+
+    {% include scripts_foot_about.html %}
+  </body>
+</html>

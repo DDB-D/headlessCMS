@@ -20,6 +20,7 @@
     "circletype": "^2.3.0",
     "flowtype-js": "^0.1.1",
     "jquery": "^3.6.0",
+    "lazysizes": "^5.3.2",
     "letteringjs": "^0.7.0",
     "locomotive-scroll": "^4.1.1",
     "normalize-scss": "^7.0.1",

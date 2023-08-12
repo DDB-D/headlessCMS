@@ -20,8 +20,8 @@ var ui_menu_text_switchCol = document.getElementById('ui_menu_changeType');
 //var content_stage_bg_type_themeSwitch_elements = content_stage_bg_type_themeSwitch.querySelectorAll("path");
 
 //get element about svg
-var contact_svg_themeSwitch = document.getElementById('contact_svg-container');
-var contact_svg_themeSwitch_elements = contact_svg_themeSwitch.querySelectorAll("path");
+//var contact_svg_themeSwitch = document.getElementById('contact_svg-container');
+//var contact_svg_themeSwitch_elements = contact_svg_themeSwitch.querySelectorAll("path");
 
 // theme already set in browser cookies?
 if (currentTheme) {
@@ -90,10 +90,11 @@ function switchTheme(e) {
     }
 
     // set about_svg to color-bg-graf
+    /*
     var contact_svg_themeSwitch_color = getComputedStyle(document.documentElement).getPropertyValue("--color-highlight");
     contact_svg_themeSwitch_elements.forEach(function(element, index){
       element.setAttribute("fill", contact_svg_themeSwitch_color);
-    })
+    })*/
 
 }
 
@@ -118,14 +119,14 @@ $ui_darkMode_switch.on({
 
       if ($ui_darkMode_switch.hasClass('darkmodeActive')) {
         //set txt
-        ui_darkMode_switch_txt.setText("switch to light");
+        ui_darkMode_switch_txt.setText("light");
         ui_darkMode_switch_txt.start();
         //set ui_menu_icon
         ui_darkMode_switch_ico.innerHTML = "&#x263C";
 
       } else {
         //set txt
-        ui_darkMode_switch_txt.setText("switch to dark");
+        ui_darkMode_switch_txt.setText("dark");
         ui_darkMode_switch_txt.start();
         //set ui_menu_icon
         ui_darkMode_switch_ico.innerHTML = "&#x2022";

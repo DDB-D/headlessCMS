@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include ui_preloader_blank.html %}
+    {% include ui_custom-cursor.html %}
+    <div id="ui_head">
+      <div class="deviceVisibility_tablet">
+        {% include ui_home_post.html %}
+      </div>
+      {% include ui_menu.html %}
+    </div>
+    <div id="ui_foot">
+      {% include ui_darkMode.html %}
+    </div>
+    {% include ui_menu_overlay.html %}
+    <div data-scroll-container id="myDataScrollContainer">
+      <div id="content">
+        <div class="project_stage project_animal-society_bg-img">
+          <h3 class="project_subtitle_">{{ page.subtitle }}</h3>
+          <h1 class="project_title"> {{ page.excerpt }}</h1>
+        </div>
+        <div class="project_copy">
+          <p>{{ page.content }}</p>
+        </div>
+        <div id="project_video">
+          <video loop muted autoplay >
+            <source src="{{ site.baseurl }}/assets/videos/desktop.webm" type="video/webm">
+            <source src="{{ site.baseurl }}/assets/videos/desktop.mp4" type="video/mp4">
+            <source src="{{ site.baseurl }}/assets/videos/desktop.ogg" type="video/ogg">
+          </video>
+        </div>
+        <div class="project_img">
+          <img src="{{ site.baseurl }}/assets/graphics/animalSociety_overview.png">
+        </div>
+      </div>
+    </div>
+    {% include scripts_foot_post.html %}
+  </body>
+</html>

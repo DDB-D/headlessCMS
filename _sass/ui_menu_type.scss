@@ -6,7 +6,8 @@
 }
 
 // ui_menu.js script selector
-.ui_menu_changeType{
+#ui_menu_changeType{
+  pointer-events: none;
   white-space: nowrap;
   overflow: hidden;
 }

@@ -7,30 +7,30 @@
 
 .project_leadLab_bg-img{
     background-image: url("/assets/graphics/wm_leadLab_kv.png");
-    background-position: right;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 .project_hockney_bg-img{
     background-image: url("/assets/graphics/hockney_tease.png");
-    background-position: left;
+    background-position: left bottom;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .project_menschen_bg-img{
     background-image: url("/assets/graphics/Haitingen_7118-2.png");
-    background-position: right;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 .project_lima_bg-img{
     background-image: url("/assets/graphics/liMa_integration.png");
-    background-position: right;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 .project_kzghz-fest_bg-img{
@@ -38,23 +38,24 @@
     background-position: left;
     background-repeat: no-repeat;
     //background-size: cover;
-    background-size: 145vw;
+    background-size: auto 145vh;
 }
 
 .project_ki-nrw_bg-img{
-    background-image: url('/assets/graphics/kiNRW_integration.png');
-    background-size: contain;
-    background-position: right;
+    background-image: url('/assets/graphics/ki-nrw_tease.gif');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 65% auto;
+        //background-size: 65% auto;
+    //background-size:  75vw auto;
 }
 
 .project_animal-society_bg-img{
     background-image: url('/assets/graphics/animalSociety_teaser.png');
     background-size: contain;
-    background-position: right;
+    background-position: right bottom;
     background-repeat: no-repeat;
-    background-size: 65% auto;
+    background-size:  65vw auto;
 }
 
 .project_absicht_title{
@@ -66,9 +67,9 @@
 
 .project_haeftlinge_bg-img{
     background-image: url('/assets/graphics/kz-gedenk-hailfingen-tailfingen_cover.png');
-    background-position: right;
+    background-position: left bottom;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 .project_miele_bg-img{
@@ -76,6 +77,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url('/assets/graphics/project_miele.png');
-    background-position: left;
-    background-size: auto 100%;
+    background-position: left bottom;
+    background-size: 135% auto ;
 }

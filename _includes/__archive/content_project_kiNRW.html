@@ -1,0 +1,26 @@
+
+{% for page in site.pages %}
+{% if page.layout == 'project_kiNRW' %}
+
+<div class="content_project project_ki-nrw_bg-img" data-scroll-section >
+  <div class="content_project_txt" data-scroll data-scroll-repeat data-scroll-speed="6">
+        <div>
+          <div class="content_project_txt_subtitle">
+            {{page.subtitle}}
+          </div>
+
+          <div class="content_project_txt_title">
+            {{page.title}}
+          </div>
+
+          <div class="content_project_txt_excerpt">
+            {{page.excerpt}}
+          </div>
+
+          {% include content_project_cta.html %}
+        </div>
+  </div>
+</div>
+
+{% endif %}
+{% endfor %}

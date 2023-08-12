@@ -1,0 +1,38 @@
+
+#ui_scroll{
+  z-index: 3;
+
+  position: absolute;
+  left:97vw;
+  top: 45vh;
+
+  overflow: hidden!important;
+
+  transform-origin: left ;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+#ui_scroll_text{
+  
+  transform-origin: center center;
+  
+  margin: 0;
+  align-self: left;
+  overflow: visible;
+  $map: (576: 13, 768: 13, 992: 13);
+  font-size: least-squares-fit($map);
+  white-space:nowrap;
+}
+
+@media only screen and (min-width: 1023px) {
+
+  #ui_scroll{
+  }
+
+  #ui_scroll_text{
+
+  }
+}

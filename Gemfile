@@ -23,6 +23,7 @@ group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
    gem "jekyll-responsive-image"
    gem 'jekyll-auto-image'
+   gem 'jekyll-email-protect'
 end
 
 gem "webrick", "~> 1.8"

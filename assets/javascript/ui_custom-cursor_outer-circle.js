@@ -101,13 +101,13 @@ paper.view.onFrame = event => {
 
   if (!isStuck) {
     // move circle around normally
-    lastX = lerp(lastX, clientX, 0.6);
-    lastY = lerp(lastY, clientY, 0.6);
+    lastX = lerp(lastX, clientX, 0.2);
+    lastY = lerp(lastY, clientY, 0.2);
     group.position = new paper.Point(lastX, lastY);
   } else if (isStuck) {
     // fixed position on a nav item
-    lastX = lerp(lastX, stuckX, 0.6);
-    lastY = lerp(lastY, stuckY, 0.6);
+    lastX = lerp(lastX, stuckX, 0.2);
+    lastY = lerp(lastY, stuckY, 0.2);
     group.position = new paper.Point(lastX, lastY);
   }
 

@@ -1,25 +1,88 @@
 <!doctype html>
 <html lang="en">
-  {% include head_contact.html %}
+  {% include head.html %}
   <body>
-    {% include ui_preloader.html %}
-    {% include ui_custom-cursor.html %}
-    <div id="ui_head">
-      <div class="deviceVisibility_tablet">
-        {% include ui_home_blog.html %}
+      {% include ui_preloader_blank.html %}
+      {% include ui_custom-cursor.html %}
+      <div id="ui_head">
+        <div class="deviceVisibility_tablet">
+          {% include ui_home_post.html %}
+        </div>
+        {% include ui_menu.html %}
       </div>
-      {% include ui_menu.html %}
-    </div>
-    <div id="ui_foot">
-      {% include ui_darkMode.html %}
-    </div>
-    {% include ui_menu_overlay.html %}
+      <div id="ui_foot">
+        {% include ui_darkMode.html %}
+      </div>
+      {% include ui_menu_overlay.html %}
+      <div id="content" class="scroll_snap">
+        <div id="content-height">
+          {% include ui_scroll.html %}
+          {% include content_projects.html %}
+          <section class="blog-post_content_height">
+            <div class="content_contact ">
+                <table class="contact_table" cellpadding="0" cellspacing="0">
+                    <thead>
+                      <tr>
+                        <th>contact</th>
+                        <td></td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <th>
+                                    <a href="mailto:{{ site.email | encode_email }}" rel="me">
+                                        <span class="content_project_index_table_link">
+                                            mail@holgerardelt.de
+                                        </span>
+                                    </a>
+                                </th>
+                                <td>
+                                    <a href="{{ site.url }}/{{item.permalink}}">
+                                        E-Mail
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                              <th>
+                                  <a href="https://mastodon.social/@hartgeld">
+                                      <span class="content_project_index_table_link">
+                                        mastodon.social/@hartgeld
+                                      </span>
+                                  </a>
+                              </th>
+                              <td>
+                                  <a href="{{ site.url }}/{{item.permalink}}">
+                                      Mastodon
+                                  </a>
+                              </td>
+                          </tr>
+                          
+                        <tr>
+                          <th>
+                              <a href="https://github.com/hartgeld">
+                                  <span class="content_project_index_table_link">
+                                    github.com/hartgeld
+                                  </span>
+                              </a>
+                          </th>
+                          <td>
+                            <a href="https://github.com/hartgeld">
+                              Github
+                            </a>
+                          </td>
+                      </tr>
+                    </tbody>    
+                </table>
+            </div>
+          </section>
+          {% include content_footer_small.html %}
+        </div>
+      </div>
 
-    <div id="content" class="content_contact_position">
-      <div id="contact_svg-container">
-        {% include contact_svg.html %}
-      </div>
-    </div>
+      
+
+
+
 
     {% include scripts_foot_contact.html %}
   </body>

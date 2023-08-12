@@ -1,0 +1,23 @@
+
+{% for project in site.projects %}
+{% if project.layout == 'project_b-rex' %}
+
+<div class="content_project project_b-rex_bg-img" >
+  <div class="content_project_txt">
+        <div>
+          <div class="content_project_txt_subtitle">
+            {{project.subtitle}}
+          </div>
+          <div class="content_project_txt_title">
+            {{project.title}}
+          </div>
+          <div class="content_project_txt_excerpt">
+            {{project.excerpt}}
+          </div>
+          {% include content_project_cta.html %}
+        </div>
+  </div>
+</div>
+
+{% endif %}
+{% endfor %}

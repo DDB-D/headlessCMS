@@ -125,14 +125,14 @@ $ui_darkMode_switch.on({
 
       if ($ui_darkMode_switch.hasClass('darkmodeActive')) {
         //set txt
-        ui_darkMode_switch_txt.setText("switch to light");
+        ui_darkMode_switch_txt.setText("light");
         ui_darkMode_switch_txt.start();
         //set ui_menu_icon
         ui_darkMode_switch_ico.innerHTML = "&#x263C";
 
       } else {
         //set txt
-        ui_darkMode_switch_txt.setText("switch to dark");
+        ui_darkMode_switch_txt.setText("dark");
         ui_darkMode_switch_txt.start();
         //set ui_menu_icon
         ui_darkMode_switch_ico.innerHTML = "&#x2022";

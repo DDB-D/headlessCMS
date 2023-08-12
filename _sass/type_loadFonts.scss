@@ -2,56 +2,7 @@
 /* Load Fonts */
 ////////////////
 
-
-/* source-serif-pro-regular - latin */
-@font-face {
-  font-family: 'Source Serif Pro';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Source Serif Pro'), local('SourceSerifPro-Regular'),
-       url('../assets/fonts/SourceSerifPro-Light.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../assets/fonts/SourceSerifPro-Light.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* source-serif-pro-600 - latin
-@font-face {
-  font-family: 'Source Serif Pro';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Source Serif Pro Semibold'), local('SourceSerifPro-Semibold'),
-       url('../assets/fonts/source-serif-pro-v7-latin-600.woff2') format('woff2'),
-       url('../assets/fonts/source-serif-pro-v7-latin-600.woff') format('woff');
-}
-*/
-/* source-serif-pro-700 - latin
-@font-face {
-  font-family: 'Source Serif Pro';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Source Serif Pro Bold'), local('SourceSerifPro-Bold'),
-       url('../assets/fonts/source-serif-pro-v7-latin-700.woff2') format('woff2'),
-       url('../assets/fonts/source-serif-pro-v7-latin-700.woff') format('woff');
-}
- */
-
-/*
-@font-face {
-    font-family: 'Inter';
-    src: local('Inter Thin'), local('Inter-Thin'),
-        url('/assets/fonts/Inter-Thin-BETA.woff2') format('woff2'),
-        url('/assets/fonts/Inter-Thin-BETA.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-}*/
-/*
-@font-face {
-    font-family: 'Inter';
-    src: local('Inter ThinItalic'), local('Inter-ThinItalic'),
-        url('/assets/fonts/Inter-ThinItalic-BETA.woff2') format('woff2'),
-        url('/assets/fonts/Inter-ThinItalic-BETA.woff') format('woff');
-    font-weight: 100;
-    font-style: italic;
-}*/
+/* Inter */
 
 @font-face {
     font-family: 'Inter';
@@ -61,15 +12,7 @@
     font-weight: 300;
     font-style: normal;
 }
-/*
-@font-face {
-    font-family: 'Inter';
-    src: local('Inter LightItalic'), local('Inter-LightItalic'),
-        url('/assets/fonts/Inter-LightItalic-BETA.woff2') format('woff2'),
-        url('/assets/fonts/Inter-LightItalic-BETA.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-}*/
+
 
 @font-face {
     font-family: 'Inter';
@@ -79,15 +22,7 @@
     font-weight: 400;
     font-style: normal;
 }
-/*
-@font-face {
-    font-family: 'Inter';
-    src: local('Inter Italic'), local('Inter-Italic'),
-        url('/assets/fonts/Inter-Italic.woff2') format('woff2'),
-        url('/assets/fonts/Inter-Italic.woff') format('woff');
-    font-weight: 400;
-    font-style: italic;
-}*/
+
 
 @font-face {
     font-family: 'Inter';
@@ -97,16 +32,7 @@
     font-weight: 700;
     font-style: normal;
 }
-/*
-@font-face {
-    font-family: 'Inter';
-    src: local('Inter Bold Italic'), local('Inter-BoldItalic'),
-        url('/assets/fonts/Inter-BoldItalic.woff2') format('woff2'),
-        url('/assets/fonts/Inter-BoldItalic.woff') format('woff');
-    font-weight: 700;
-    font-style: italic;
-}
-*/
+
 @font-face {
     font-family: 'Inter';
     src: local('Inter Medium'), local('Inter-Medium'),
@@ -115,31 +41,20 @@
     font-weight: 500;
     font-style: normal;
 }
-/*
+
+/* Cardo */
 @font-face {
-    font-family: 'Inter';
-    src: local('Inter Medium Italic'), local('Inter-MediumItalic'),
-        url('/assets/fonts/Inter-MediumItalic.woff2') format('woff2'),
-        url('/assets/fonts/Inter-MediumItalic.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-}*/
-/*
+    font-family: 'Cardo', serif;
+    src: local('Cardo Regular'), local('Cardo-Regular'),
+        url('/assets/fonts/Cardo/Cardo-Regular.ttf') format('ttf'),
+        //url('/assets/fonts/Inter-Medium.woff') format('woff');
+}
+
+/* GenA-Koburi-Mincho 
 @font-face {
-    font-family: 'Inter';
-    src: local('Inter Black'), local('Inter-Black'),
-        url('/assets/fonts/Inter-Black.woff2') format('woff2'),
-        url('/assets/fonts/Inter-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-}*/
-/*
-@font-face {
-    font-family: 'Inter';
-    src: local('Inter Black Italic'), local('Inter-BlackItalic'),
-        url('/assets/fonts/Inter-BlackItalic.woff2') format('woff2'),
-        url('/assets/fonts/Inter-BlackItalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
+    font-family: 'GenAKoburiMinchoHorizontal-Regular', serif;
+    src: local('GenAKoburiMinchoHorizontal Regular'), local('GenAKoburiMinchoHorizontal-Regular'),
+        url('/assets/fonts/GenA-Koburi-Mincho-main/Horizontal/GenAKoburiMinchoHorizontal-Regular.ttf') format('ttf'),
+        //url('/assets/fonts/Inter-Medium.woff') format('woff');
 }
 */

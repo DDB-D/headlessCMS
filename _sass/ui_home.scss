@@ -58,3 +58,33 @@
   -o-animation: rotate_logoType var(--rotate-value_uiHome) linear infinite;
   animation: rotate_logoType var(--rotate-value_uiHome) linear infinite;
 }
+
+#ui_home_changeType{
+  /*
+  position: absolute;
+  top:48%;
+  left:150px;
+  */
+  width: auto;
+  height: auto;
+  //margin-top: -115px;
+  //margin: 0 auto;
+  //padding: 10px;
+  position: relative;
+  top: -105px;
+  text-align: center;
+  pointer-events: none;
+}
+
+#ui_home_changeType_home{
+  width: 160px;
+  height: 160px;
+  position: relative;
+  //top: -105px;
+  display: flex;
+  align-items: center;
+  margin-left: -160px;
+
+  text-align: center;
+  pointer-events: none;
+}

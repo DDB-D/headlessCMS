@@ -1,0 +1,24 @@
+#ui_home_post_changeType{
+  /*
+  position: absolute;
+  top:48%;
+  left:150px;
+  */
+  width: auto;
+  height: auto;
+  //margin-top: -115px;
+  //margin: 0 auto;
+  //padding: 10px;
+  position: relative;
+  left: -110px;
+  right: -110px;
+  text-align: center;
+  pointer-events: none;
+
+}
+
+.ui_home_center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -8,11 +8,16 @@ body {
 }
 
 p {
+
+  font-family: 'Cardo', serif;;
+  font-style: normal;
+  font-variant-ligatures: normal;  
+
   font-weight: 400;
 	color: var(--color-type);
-  $map: (576: 13, 768: 13, 992: 15);
+  $map: (576: 20, 768: 22, 992: 22);
   font-size: least-squares-fit($map);
-  $map: (576: 23, 768: 23, 992: 26);
+  $map: (576: 32, 768: 38, 992: 38);
   line-height: least-squares-fit($map);
 }
 
@@ -24,7 +29,7 @@ h1 {
 }
 
 h2 {
-  //font-family: 'Source Serif Pro', serif;
+
   font-weight: 500;
   color: var(--color-type);
 
@@ -37,10 +42,18 @@ h2 {
 h3 {
   font-weight: 500;
   color: var(--color-type);
+  $map: (576: 13, 768: 13, 992: 13);
+  font-size: least-squares-fit($map);
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  /*
+ font-weight: 500;
+  color: var(--color-type);
   $map: (576: 10, 768: 10, 992: 10);
   font-size: least-squares-fit($map);
   letter-spacing: 0.5em;
   text-transform: uppercase;
+  */
 }
 
 .ui_type {
@@ -56,11 +69,16 @@ h3 {
   text-align: center;
 }
 
+
 a {
+  color: var(--color-highlight);
+  //text-decoration: none;
+
+/*
   font-weight: 400;
-	color: var(--color-highlight);
   $map: (576: 13, 768: 13, 992: 15);
   font-size: least-squares-fit($map);
   $map: (576: 23, 768: 23, 992: 26);
   line-height: least-squares-fit($map);
+  */
 }

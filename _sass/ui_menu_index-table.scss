@@ -1,38 +1,169 @@
-.ui_menu_index-table{
-  margin-top: 250px;
-  width: 100%;
-  border-collapse: collapse;
+#ui_menu_index{
+
   position: fixed;
   z-index: 2;
-  display: none;
+
+ display: none;
+
+  width: 80vw;
+  height: auto;
+  min-height: 75vh;
+
+  margin-left: 20vw;
+  padding-top: 25vh;  
+
+  border-collapse: separate; 
+  border-spacing: 0px; 
+
+}
+
+table.ui_menu_index_table{
+  display: block;
+  width: 100%;
+  text-align: left;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0;
+}
+
+table.ui_menu_index_table { 
+  & th a { 
+      text-decoration: none; 
+      display: block;
+   } 
+  & td a { 
+      text-decoration: none;
+      display: block; 
+   }
+  & thead{
+
+      font-family: 'Inter', sans;
+      font-weight: 500;
+      color: var(--color-bg);
+      $map: (576: 13, 768: 13, 992: 13);
+      font-size: least-squares-fit($map);
+      $map: (576: 28, 768: 28, 992: 28);
+      line-height: least-squares-fit($map);
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--color-bg);
+      & th {
+          width: 80vw;
+          padding-left: 1vw;
+          padding-bottom: 1em;          
+          font-weight: 500!important;
+      }
+      & td {
+          width: 0vw;
+          padding-bottom: 1em;          
+
+      }
+  }
+  & tbody{
+
+      & tr {
+          & th a {
+              transition: color 0.5s;
+              color: var(--color-bg);
+
+          }
+          & td a {
+              transition: color 0.5s;
+              color: var(--color-bg);
+
+          }
+          & th {
+              transition: background-color 0.5s;
+          }
+          & td {
+              transition: background-color 0.5s;
+          }
+          &:hover {
+              & th {
+                  background-color: var(--color-bg);
+              }
+              & th a {
+                  color: var(--color-type);
+              }
+              & td {
+                  background-color: var(--color-bg);
+              }
+              & td a {
+                  color: var(--color-type);
+              }
+          }
+      }
+      & th {
+          font-family: 'Cardo', serif;
+          font-weight: 400;
+          font-style: normal;
+          font-variant-ligatures: normal;  
+          color: var(--color-bg);
+          $map: (576: 28, 768: 30, 992: 32);
+          font-size: least-squares-fit($map)!important;
+          $map: (576: 62, 768: 66, 992: 70);
+          line-height: least-squares-fit($map);
+          border-bottom: 1px solid var(--color-bg);
+          padding-left: 1vw;  
+          max-width: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;    
+      }
+      & td {
+          font-family: 'Inter', sans;
+          font-weight: 500;
+          font-style: normal;
+          font-variant-ligatures: normal;  
+          color: var(--color-bg);
+          $map: (576: 18, 768: 18, 992: 18);
+          font-size: least-squares-fit($map)!important;
+          $map: (576: 32, 768: 32, 992: 32);
+          line-height: least-squares-fit($map);
+          border-bottom: 1px solid var(--color-bg);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+      }
+  }
 }
 
 
 
-.ui_menu_index-table_head{
-}
 
-td {
-  padding: 15px;
-  padding-left: 35%;
+/*
+table.ui_menu_index-table td {
+  //padding: 15px;
+  padding-left: 25vw;
   text-align: left;
   border-bottom: 1px solid var(--color-bg);
   width: 100vw;
 }
 
-th{
-  padding: 15px;
-  padding-left: 35%;
-  padding-bottom: 20px;
+table.ui_menu_index-table th{
+  //padding: 15px;
+  padding-left: 25vw;
+  padding-bottom: 1em;
   text-align: left;
   border-bottom: 1px solid var(--color-bg);
   width: 100vw;
 }
 
 .ui_menu_index-item{
-  font-weight: 500;
-  $map: (576: 38, 768: 40, 992: 42);
-  font-size: least-squares-fit($map)!important;
+
+    font-weight: 500;
+    color: var(--color-type);
+  
+    $map: (576: 56, 768: 68, 992: 68);
+    font-size: least-squares-fit($map)!important;
+    $map: (576: 74, 768: 92, 992: 92);
+    line-height: least-squares-fit($map);
+  
+    margin-bottom: least-squares-fit($map);
+  
+    white-space: nowrap;
+  
 }
 
 .ui_menu_index-item:link{
@@ -89,3 +220,4 @@ color: var(--color-bg);
     left: 0;
   }
 }
+*/

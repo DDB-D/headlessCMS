@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+      {% include ui_preloader_projects.html %}
+      {% include ui_custom-cursor.html %}
+      <div id="ui_head">
+        <div class="deviceVisibility_tablet">
+          {% include ui_home_post.html %}
+        </div>
+        {% include ui_menu.html %}
+      </div>
+      <div id="ui_foot">
+        {% include ui_darkMode.html %}
+      </div>
+      {% include ui_menu_overlay.html %}
+      <div id="content" class="scroll_snap">
+        <div id="content-height">
+          {% include ui_scroll.html %}
+          {% include project_stage.html %}
+          {% include project_content.html %}
+          {% include content_footer.html %}
+        </div>
+      </div>   
+    {% include scripts_foot_project.html %}
+  </body>
+</html>

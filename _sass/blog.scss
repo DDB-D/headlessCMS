@@ -1,3 +1,148 @@
+.blog-post_img{
+
+  & p {
+
+    & img {
+      width: 60vw;
+      height: auto;
+    }
+  }
+}
+
+.blog-post_content_height{
+  min-height: 80vh;
+}
+
+.blog-post_content_txt_title{
+  margin-left: 20vw;
+}
+
+.blog-post_content_txt_meta{
+  width: 80vw;
+}
+
+.content_blog-overview{
+  position: relative;
+  z-index: 2;
+  min-height: 55vh;
+  height: auto;
+  width: 80vw;
+  display: flex;
+  justify-content: left;
+  margin-left: 20vw;
+  padding-top: 25vh;
+  text-align: left;
+}
+
+table.blog-overview_table{
+  display: block;
+  width: 100%;
+  text-align: left;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0;
+}
+
+table.blog-overview_table{ 
+  & th a { 
+      text-decoration: none; 
+      display: block;
+   } 
+  & td a { 
+      text-decoration: none;
+      display: block; 
+   }
+  & thead{
+      //$map: (576: 28, 768: 28, 992: 28);
+      //height: least-squares-fit($map);
+      font-family: 'Inter', sans;
+      font-weight: 500;
+      color: var(--color-type);
+      $map: (576: 13, 768: 13, 992: 13);
+      font-size: least-squares-fit($map);
+      $map: (576: 28, 768: 28, 992: 28);
+      line-height: least-squares-fit($map);
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--color-type);
+      & th {
+          width: 60vw;
+          padding-left: 1vw;       
+          padding-bottom: 1em;
+          font-weight: 500!important;
+      }
+      & td {
+          width: 20vw;
+      }
+  }
+  & tbody{
+      & tr {
+          & th a {
+              transition: color 0.5s;
+          }
+          & td a {
+              transition: color 0.5s;
+          }
+          & th {
+              transition: background-color 0.5s;
+          }
+          & td {
+              transition: background-color 0.5s;
+          }
+          &:hover {
+              & th {
+                  background-color: var(--color-type);
+              }
+              & th a {
+                  color: var(--color-bg);
+              }
+              & td {
+                  background-color: var(--color-type);
+              }
+              & td a {
+                  color: var(--color-bg);
+              }
+          }
+      }
+      & th {
+          font-family: 'Cardo', serif;
+          font-weight: 400;
+          font-style: normal;
+          font-variant-ligatures: normal;  
+          color: var(--color-type);
+          $map: (576: 28, 768: 30, 992: 32);
+          font-size: least-squares-fit($map)!important;
+          $map: (576: 62, 768: 66, 992: 70);
+          line-height: least-squares-fit($map);
+          border-bottom: 1px solid var(--color-type);
+          padding-left: 1vw;  
+          max-width: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;    
+      }
+      & td {
+          font-family: 'Inter', sans;
+          font-weight: 500;
+          font-style: normal;
+          font-variant-ligatures: normal;  
+          color: var(--color-type);
+          $map: (576: 18, 768: 18, 992: 18);
+          font-size: least-squares-fit($map)!important;
+          $map: (576: 32, 768: 32, 992: 32);
+          line-height: least-squares-fit($map);
+          border-bottom: 1px solid var(--color-type);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+      }
+  }
+}
+
+
+
+/*
 .blog_index-table{
   margin-top: 250px;
   width: 100%;
@@ -43,7 +188,6 @@
 }
 
 .blog_index_item:hover{
-  //color: var(--color-highlight);
   color: var(--color-highlight);
 }
 
@@ -58,13 +202,7 @@
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   
-  //display: grid;
-  //grid-template-columns: masonry;
-  //grid-template-rows: repeat(4, 1fr);
-  //grid-template-columns: fit-content(700px) fit-content(700px) 1fr;
-  //grid-template-columns: repeat(4, 10px [col-start] 250px [col-end]) 10px;
-  //grid-template-columns: repeat(6, 1fr);
-  //grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)) 100px repeat(3, 200px);
+
 }
 
 .blog_img-grid img{
@@ -73,3 +211,4 @@
     object-fit: cover;
     overflow: hidden;
 }
+*/

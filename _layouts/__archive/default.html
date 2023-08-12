@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include ui_preloader.html %}
+    {% include ui_custom-cursor.html %}
+    <div id="ui_head">
+      <div class="deviceVisibility_tablet">
+        {% include ui_home.html %}
+      </div>
+      {% include ui_menu.html %}
+    </div>
+    <div id="ui_foot">
+      {% include ui_darkMode.html %}
+    </div>
+    {% include ui_menu_overlay.html %}
+
+    <div id="content" class="scroll_snap">
+      <div id="content-height">
+        
+        {% include ui_scroll.html %}
+        
+        <section>
+          {% include content_stage.html %}
+          {% include content_stage_pressAndHold_video.html %}
+        </section>
+        
+
+  
+        <section class="blog-post_content_height content_about" >
+          <div class="project_content about_txt_title" >
+            {{ page.title }}
+          </div>
+          <div class="project_content project_txt" >
+            {{ page.content }}
+          </div>
+        </section>
+
+
+        <section >
+          <div id="content_projects_type" class="content_projects_img" >
+            {% include content_projects_wortmarke.html %}
+          </div>
+        </section>
+
+        {% include content_footer.html %}
+
+      </div>
+    </div>
+
+      {% include scripts_foot.html %}
+  </body>
+</html>

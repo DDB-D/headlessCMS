@@ -1,17 +1,14 @@
-#content_stage_bg-img{
-  display: none;
-}
 
-@media only screen and (min-width: 1023px) {
   #content_stage_bg-img{
-    position: relative;
+    position: fixed;
+    z-index: -5;
     /*
     top: -75vh;
     bottom: 15vh;
     left: 37.5vw;
     right: 15vw;
     */
-    top: -100vh;
+    top: 0vh;
     bottom: 0vh;
     left: 0vw;
     right: 0vw;
@@ -22,7 +19,6 @@
     opacity: 1;
 
   }
-}
 
 #content_stage_bg-img > video {
     position: absolute;
@@ -41,7 +37,7 @@
 
 .target_stage_bg-img{
   position: absolute; 
-  top: -100vh; 
+  top: 0; 
   left: 0; 
   right: 0; 
   bottom: 0; 

@@ -5,7 +5,9 @@
 
 
 html, body {
-  overflow-x:hidden
+  overflow-x:hidden;
+  height:auto;
+  width: 100%;
 }
 
 body{
@@ -72,8 +74,10 @@ body{
   //set pointer
   //set menu button on top of overlay-menu
   z-index: 2;
+  cursor: pointer
 }
 
 .content_stage{
   position: relative;
+  height: 100vh;
 }

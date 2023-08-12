@@ -1,7 +1,6 @@
 ---
 ---
 
-// normalize/reset
 @import "_normalize";
 
 @import "variables";
@@ -24,9 +23,11 @@
 @import "ui_menu_overlay";
 @import "ui_menu_index-table";
 @import "ui_home";
+@import "ui_home_post";
 @import "ui_darkMode-switch";
 @import "ui_custom-cursor";
 @import "ui_preloader";
+@import "ui_scroll";
 
 // content stage: press and hold
 @import "content_stage_pressAndHold";
@@ -41,16 +42,20 @@
 @import "content_gallery";
 
 @import "post_stage";
+
 @import "project_page";
 @import "project_stage_bg-imgs";
+
+@import "project_overview";
 
 @import "content";
 @import "content_about";
 @import "content_projects";
 @import "content_project_cta";
-
+@import "content_project_list";
 @import "content_project";
 
+/*
 @import "content_project_absicht";
 @import "content_project_dieHaeftlinge";
 @import "content_project_miele";
@@ -59,9 +64,13 @@
 @import "content_project_kzgHT-Fest";
 @import "content_project_liMa";
 @import "content_project_menschenZweiterKlasse";
+*/
 @import "content_footer";
+@import "content_footer_cta";
 
 @import "contact";
 
 @import "blog";
+
+
 

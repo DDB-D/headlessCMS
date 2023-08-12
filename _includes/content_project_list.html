@@ -1,0 +1,39 @@
+    
+   
+    <section>
+        <div class="content_project_index ">
+            <table class="content_project_index_table" cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>projects</th>
+                        <td>media</td>
+                        <td>date</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% assign sorted-projects = site.projects | sort: 'date' | reverse %}
+                    {% for item in sorted-projects %}
+                        <tr>
+                            <th>
+                                <a href="{{ site.url }}/{{item.permalink}}">
+                                    <span class="content_project_index_table_link">
+                                        {{ item.title }}
+                                    </span>
+                                </a>
+                            </th>
+                            <td>
+                                <a href="{{ site.url }}/{{item.permalink}}">
+                                    {{ item.media }}
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{{ site.url }}/{{item.permalink}}">
+                                    {{ item.date | date: "%Y" }}
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>    
+            </table>
+        </div>
+    </section>

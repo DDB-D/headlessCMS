@@ -1,0 +1,28 @@
+{% for item in sorted-projects %}
+    <section>
+        <div class="content_project" >
+            <div class="content_project_txt">
+                <div>
+                    <div class="content_project_txt_subtitle">
+                        {{item.media}}
+                    </div>
+                    <div class="content_project_txt_title">
+                        {{item.title}}
+                    </div>
+                    <div class="content_project_txt_excerpt">
+                        {{item.excerpt}}
+                    </div>
+                    {% include content_project_cta.html %}
+                </div>
+            </div>
+        </div>
+        <div class="content_project_img content_project_img_fit " >
+            {% if item.image_stage %}
+                {% assign path = item.image_stage %}
+                {% responsive_image_block %}
+                    path: {{ path }}
+                {% endresponsive_image_block %}
+            {% endif %}             
+        </div>
+    </section>
+{% endfor %}

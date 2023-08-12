@@ -1,35 +1,58 @@
-<!--<nav style="position: relative;">-->
-<div>
-  <table class="ui_menu_index-table">
-
-    <thead class="ui_menu_index-table_head">
-      <tr>
-        <th class="ui_menu_head ui_type">index
-        </th>
-      </tr>
-    </thead>
-
-    <tbody>
-
-      <tr>
-        <td>
-          <a class="ui_menu_index-item custom-cursor_hoverable" href="{{ site.url }}">Home</a>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <a class="ui_menu_index-item custom-cursor_hoverable" href="{{ site.url }}/contact">Contact</a>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <a class="ui_menu_index-item custom-cursor_hoverable" href="{{ site.url }}/blog">Blog</a>
-        </td>
-      </tr>
-
-    </tbody>
-  </table>
+<section>
+  <div id="ui_menu_index">
+      <table class="ui_menu_index_table" cellpadding="0" cellspacing="0">
+          <thead>
+              <tr>
+                <th>index</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                  <a href="{{ site.url }}">
+                    <span class="content_project_index_table_link">
+                      Home
+                    </span>
+                  </a>
+              </th>
+            </tr>
+            <tr>
+              <th>
+                  <a href="{{ site.url }}/project-overview">
+                    <span class="content_project_index_table_link">
+                      Projects
+                    </span>
+                  </a>
+              </th>
+            </tr>
+            <tr>
+              <th>
+                  <a href="{{ site.url }}/about">
+                    <span class="content_project_index_table_link">
+                      About
+                    </span>
+                  </a>
+              </th>
+            </tr>
+            <tr>
+              <th>
+                  <a href="{{ site.url }}/contact">
+                    <span class="content_project_index_table_link">
+                      Contact
+                    </span>
+                  </a>
+              </th>
+            </tr>
+            <tr>
+              <th>
+                  <a href="{{ site.url }}/blog-overview">
+                    <span class="content_project_index_table_link">
+                      Notes
+                    </span>
+                  </a>
+              </th>
+            </tr>
+          </tbody>    
+      </table>
   </div>
-<!--</nav>-->
+</section>

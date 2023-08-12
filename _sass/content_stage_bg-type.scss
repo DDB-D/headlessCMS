@@ -1,8 +1,7 @@
 #content_stage_bg-type{
-  display: none;
+  //display: none;
 }
 
-@media only screen and (min-width: 1023px) {
   #content_stage_bg-type{
 
     display: flex;
@@ -10,11 +9,10 @@
     align-items: center;
 
     position: absolute;
-    top: -100vh;
+    margin-top: 0vh;
     height: 100vh;
     width: 100%;
 
     transition: opacity 0s linear;
 
   }
-}

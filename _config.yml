@@ -3,8 +3,7 @@
 
 title: ARDELT VEREDELT
 email: mail@holgerardelt.de
-description: >
-  concept art-direction motion ux ui prototype development
+description: concept art-direction motion ux ui prototype development
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.holgerardelt.de/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: hlgrrdlt
@@ -12,21 +11,31 @@ github_username:  hartgeld
 
 # Build settings
 markdown: kramdown
+
 kramdown: 
   parse_block_html: true
+
 theme: minima
+
 plugins:
   - jekyll-feed
   - jekyll-responsive-image
+
+gems:
+- jekyll-email-protect
+
 exclude:
   - Gemfile
   - Gemfile.lock
+
 sass:
-    # style: compact
+    style: compact
     load_paths:
       - _sass
       - node_modules/normalize-scss/sass
+
 exclude: [vendor]
+
 assets:
    sources:
      -assets/favicon
@@ -35,8 +44,26 @@ assets:
      -assets/graphics
      -assets/videos
      -node_modules
-     
+
+include:
+  - _pages
+
+defaults:
+  - scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      permalink: /:basename/ # make URL of pages in the folder _pages as on the root.
+
+# Add collection for project-list
+collections:
+  projects:
+    output: true
+  pages:
+    output: true
+
 responsive_image:
+  cache: true
   # [Required]
   # Path to the image template.
   template: _includes/responsive-image.html

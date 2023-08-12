@@ -1,0 +1,70 @@
+<section>
+    <div class="content_project" >
+
+        <div class="project_btn_backToOverview">
+        </div>
+
+        <div class="content_project_txt">
+            <div>
+                <div class="content_project_txt_subtitle">
+                    {{page.media}}
+                </div>
+                <div class="content_project_txt_title">
+                    {{page.title}}
+                </div>
+                <div class="content_project_txt_excerpt">
+                    {{page.excerpt}}
+                </div>
+                <div class="project_info">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if page.client %}
+                            <tr>
+                                <th>client</th>
+                                <td>{{page.client}}</td>
+                            </tr>
+                            {% endif %}
+                            {% if page.partner %}
+                            <tr>
+                                <th>partner</th>
+                                <td>{{page.partner}}</td>
+                            </tr>
+                            {% endif %}
+
+                            {% if page.action %}
+                            <tr>
+                                <th>action</th>
+                                <td>{{page.action}}</td>
+                            </tr>
+                            <tr>
+                                <th>year</th>
+                                <td>
+                                    {{ page.date | date: "%Y" }}
+                                </td>
+                            </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content_project_img content_project_img_fit " >
+        {% if page.image_stage %}
+            {% assign path = page.image_stage %}
+            {% responsive_image_block %}
+                path: {{ path }}
+            {% endresponsive_image_block %}
+        {% endif %}             
+    </div>
+</section>
+
+
+
+

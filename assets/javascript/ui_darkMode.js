@@ -20,7 +20,8 @@ var content_stage_bg_type_themeSwitch = document.getElementById('content_stage_b
 var content_stage_bg_type_themeSwitch_elements = content_stage_bg_type_themeSwitch.querySelectorAll("path");
 
 //get element content_projects bg-typefaces
-var projects_bg_type_themeSwitch = document.getElementById('content_projects_bg-img');
+
+var projects_bg_type_themeSwitch = document.getElementById('content_projects_type');
 var projects_bg_type_themeSwitch_elements = projects_bg_type_themeSwitch.querySelectorAll("path");
 
 
@@ -96,6 +97,7 @@ function switchTheme(e) {
     })
     // set content_bg-type to color-bg-graf
     var projects_bg_type_color_themeSwitch = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
+    
     projects_bg_type_themeSwitch_elements.forEach(function(element, index){
       element.setAttribute("fill", projects_bg_type_color_themeSwitch);
     })
@@ -124,14 +126,14 @@ $ui_darkMode_switch.on({
 
       if ($ui_darkMode_switch.hasClass('darkmodeActive')) {
         //set txt
-        ui_darkMode_switch_txt.setText("switch to light");
+        ui_darkMode_switch_txt.setText("light");
         ui_darkMode_switch_txt.start();
         //set ui_menu_icon
         ui_darkMode_switch_ico.innerHTML = "&#x263C";
 
       } else {
         //set txt
-        ui_darkMode_switch_txt.setText("switch to dark");
+        ui_darkMode_switch_txt.setText("dark");
         ui_darkMode_switch_txt.start();
         //set ui_menu_icon
         ui_darkMode_switch_ico.innerHTML = "&#x2022";

@@ -22,7 +22,7 @@ function checkVisible( elm, eval ) {
   if (eval == "above") return ((y < (viewportHeight + scrolltop)));
 }
 
-
+/*
 locoScroll.on('call', func => {
   $("#content_stage_bg-img").css({
     "transition": "opacity 1s", 
@@ -44,7 +44,7 @@ locoScroll.on('call', func => {
     console.log("0");
   }
   });
-
+*/
 
 /*
 locoScroll.on('call', func => {

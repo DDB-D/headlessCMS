@@ -5,6 +5,7 @@ var ui_menu_text = new ShuffleText(document.querySelector('#ui_menu_changeType')
 var $my_menuButton = $(".layout_ui_menu");
 // hide content if menu is isActive
 var content_display = document.getElementById("content");
+var menu_display = document.getElementById("ui_menu_index");
 
 
 /* first animation on page load */
@@ -15,7 +16,6 @@ var ui_darkMode_switchColorOnClick = document.getElementById('ui_darkMode').getE
 
 // on click execute overlay
 $my_menuButton.on("click", function(){
-  console.log("menu clicked");
 
   // menu overlay is active onClick to inactive
   if ($my_menuButton.hasClass('isActive')) {
@@ -36,7 +36,7 @@ $my_menuButton.on("click", function(){
     }
 
       content_display.style.display = "block";
-
+      menu_display.style.display = "none";
 
     // run text animation
     ui_menu_text.setText("MENU");
@@ -45,7 +45,7 @@ $my_menuButton.on("click", function(){
     $(".ui_menu_icon").toggleClass('open_menuIcon');
     // close modal
     $('.overlay').removeClass('open');
-    $('.ui_menu_index-table').removeClass('open');
+    $('.ui_menu_index_table').removeClass('open');
     // set modal to isActive=false
     $(this).toggleClass('isActive');
   } else {
@@ -65,7 +65,7 @@ $my_menuButton.on("click", function(){
     }
 
     content_display.style.display = "none";
-
+    menu_display.style.display = "block";
 
     // run text animation
     ui_menu_text.setText("CLOSE");
@@ -74,7 +74,7 @@ $my_menuButton.on("click", function(){
     $(".ui_menu_icon").toggleClass('open_menuIcon');
     // open modal
     $('.overlay').addClass('open');
-    $('.ui_menu_index-table').addClass('open');
+    $('.ui_menu_index_table').addClass('open');
     // set modal to isActive=false
     $(this).toggleClass('isActive');
   }

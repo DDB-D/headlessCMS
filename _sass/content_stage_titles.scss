@@ -11,7 +11,7 @@
 .content_stage_titles_buzzwords{
   display: flex;
   align-items: center;
-  margin-left: 10px;
+  //margin-left: 10px;
   width: 75vw;
   height: auto;
 }
@@ -28,10 +28,11 @@
 }
 
 .content_stage_scroll{
+  position: absolute;
   display: flex;
   width: 100vw;
   height: 10vh;
-  margin-top: -10vh;
+  //margin-top: -10vh;
   align-items: center;
   justify-content: center;
   overflow: hidden!important;
@@ -55,12 +56,17 @@
 @media only screen and (min-width: 1023px) {
 
   .content_stage_scroll{
-    padding-right: 5vw;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    margin-top: -60vh;
-    align-items: center;
+    position: absolute;
+    height:200%; 
+    //top: 0;
+    //bottom: 0;
+    z-index: 50;
+    //padding-right: 2vw;
+    //display: flex;
+    //width: 100vw;
+    //height: 100%;
+    //margin-top: -60vh;
+    //align-items: center;
     justify-content: flex-end;
     overflow: hidden!important;
   }
