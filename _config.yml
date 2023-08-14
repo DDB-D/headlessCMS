@@ -20,9 +20,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-responsive-image
-
-gems:
-- jekyll-email-protect
+  - jekyll-email-protect
 
 exclude:
   - Gemfile
