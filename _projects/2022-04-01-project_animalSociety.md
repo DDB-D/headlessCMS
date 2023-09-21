@@ -4,9 +4,9 @@ title: Animal Society
 action: Art-Direction UI UX Campaign
 permalink: project/animalSociety/
 excerpt: Designsystem für Campaign-Website und SocialMedia-Assets
-image_stage: assets/graphics/animalSociety_teaser.png
+image_stage: 
 client: <a href="https://animalsociety.de/">Animal Society</a>
-media: Website
+media: Campaign Website
 ---
 {:.project_txt_title}
 About
@@ -16,6 +16,9 @@ Animal Society is a non-profit organization advocating for the rights and intere
 
 Visit: [Animal Society](https://animalsociety.de/)
 {:.custom-cursor_hoverable .project_content_cta}
+
+{:.project_img}
+![Integration](/assets/graphics/animalSociety_integration.png)
 
 {:.project_video}
 <div>

@@ -7,7 +7,7 @@ excerpt: zum 12-jährigen Bestehen der KZ-Gedenkstätte Hailfingen-Tailfingen
 image_stage: assets/graphics/KZ-Gedenkstaette-7354_2.png
 client: <a href="https://kz-gedenkstaette-hailfingen-tailfingen.de/KZ"> Gedenkstätte Hailfingen/Tailfingen</a>
 partner: <a href="https://www.wolfgang-schmidt-foto.de/">Wolfgang Schmidt </a>
-media: Print
+media: Print Magazine
 ---
 {:.project_txt_title}
 About
@@ -18,6 +18,9 @@ Ein besonderes Dankeschön geht auch an die Landkreise Böblingen und Tübingen 
 
 [Mehr erfahren](https://kz-gedenkstaette-hailfingen-tailfingen.de/index.php/2022/05/16/festschrift2022/)
 {:.custom-cursor_hoverable .project_content_cta}
+
+{:.project_img}
+![Magazin](/assets/graphics/kzght_fest_img-heft.png)
 
 {:.project_video}
 <div>

@@ -16,9 +16,9 @@ function  checkInView(elem,partial)
 }
 
 var el1=$("#content_projects_type");
-var el2=$(".content_project_index");
+var el2=$(".content_project_index_table");
 var el1_inView = checkInView(el1);
-var el2_inView = checkInView(el2);
+var el2_inView = checkInView(el2, true);
 
 var target=$("#content_projects_index_bg-img");
 
@@ -29,6 +29,7 @@ window.onload = function(){
       "display": "block",
       "opacity": "1.0", 
     });
+    console.log("el1 is in view");
   } 
 
   if (el2_inView == true){
@@ -36,20 +37,24 @@ window.onload = function(){
       "display": "block", 
       "opacity": "0.5",
     });
+    console.log("el2 is in view");
   } 
 
   if (el1_inView == false && el2_inView == false ){
     target.css({
       "display": "none", 
     });
+    console.log("no el in view");
   } 
-  
+  /*
   else {    
     target.css({
       "display": "block", 
     });
+    console.log("no no no el in view");
     
   }
+  */
 }
 
 $(document).ready(function () {
@@ -57,13 +62,15 @@ $(document).ready(function () {
   $("#content").scroll(function(){
     
     el1_inView = checkInView(el1);
-    el2_inView = checkInView(el2);
+    el2_inView = checkInView(el2, true);
 
     if (el1_inView == true ){
       target.css({
         "display": "block",
         "opacity": "1.0", 
       });
+      console.log("el1 is in view");
+
     } 
 
     if (el2_inView == true){
@@ -71,19 +78,22 @@ $(document).ready(function () {
         "display": "block", 
         "opacity": "0.5",
       });
+      console.log("el2 is in view");
     } 
 
     if (el1_inView == false && el2_inView == false ){
       target.css({
         "display": "none", 
       });
+      console.log("no el in view");
     } 
-    
+    /*
     else {    
       target.css({
         "display": "block", 
       });
-      
+      console.log("no no no el in view");
     }
+    */
   });
 });

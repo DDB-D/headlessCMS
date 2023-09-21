@@ -7,7 +7,7 @@ excerpt: Interaktives Exponat für die David Hockney Ausstellung „A year in No
 image_stage: assets/graphics/hockney_tease.png
 client: <a href="https://kunst.wuerth.com/kunst/Ausstellungen/David-Hockney.-A-Year-in-Normandie-und-Sammlung-W%C3%BCrth/David-Hockney.php">Museum Würth 2</a>
 partner: <a href="https://www.blubbmedia.com/">blubb.media </a>
-media: Exhibit
+media: Interactive Exhibit
 ---
 {:.project_txt_title}
 About

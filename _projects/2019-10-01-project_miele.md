@@ -7,7 +7,7 @@ excerpt: Global campaign website for G7000 dishwasher by Miele
 image_stage: assets/graphics/project_miele.png
 client: <a href="https://www.miele.de/">Miele</a>
 partner: <a href="https://www.de.ddb.com/">DDB Germany</a>
-media: Website
+media: Campaign Website
 ---
 
 {:.project_txt_title}

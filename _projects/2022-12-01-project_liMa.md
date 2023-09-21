@@ -7,7 +7,7 @@ excerpt: Interaktives Exponat der Sammlung „Die Seele 2“ im Literaturmuseum 
 image_stage: assets/graphics/liMa_integration.png
 client: <a href="https://www.dla-marbach.de/museen/literaturmuseum-der-moderne/">Literaturmuseum der Moderne  </a>
 partner: <a href="https://www.blubbmedia.com/">blubb.media </a>
-media: Exhibit
+media: Interactive Exhibit
 ---
 {:.project_txt_title}
 About

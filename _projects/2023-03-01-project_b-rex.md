@@ -4,9 +4,9 @@ title: b.ReX
 action: UI UX Art-Direction Concept
 permalink: project/b-rex/
 excerpt: Redesign der Website für die Digitalagentur b.ReX
-image_stage: #assets/graphics/b-rex_ripples.gif
+image_stage: assets/graphics/b-rex_tease.png
 client: <a href="https://www.b-rex.de/">b-ReX </a>
-media: Website
+media: Corporate Website
 ---
 {:.project_txt_title}
 About

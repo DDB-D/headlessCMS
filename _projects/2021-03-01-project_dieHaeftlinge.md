@@ -23,4 +23,9 @@ biographical research and photos.
 {:.custom-cursor_hoverable .project_content_cta}
 
 {:.project_img}
+![Impressions](/assets/graphics/ktght_haeftlinge_img-book.png)
+
+{:.project_img}
 ![Impressions](/assets/graphics/project_dieHaeftlinge_01.png)
+
+

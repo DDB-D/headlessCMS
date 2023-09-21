@@ -7,7 +7,7 @@ excerpt: Designsystem für eine B2B App
 image_stage: assets/graphics/wm_leadLab_kv.png
 client: <a href="https://wiredminds.de/">WiredMinds </a>
 partner: <a href="https://www.ichbi.nz/">Sebastian Binz </a>
-media: B2B App
+media: B2B Web-App
 ---
 {:.project_txt_title}
 About

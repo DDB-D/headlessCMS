@@ -7,7 +7,7 @@ excerpt: Website-Interfaces für digitale Touchpoints
 image_stage: #assets/graphics/ki-nrw_tease.gif
 client: <a href="https://www.ki.nrw/en/">KI.NRW </a>
 partner: <a href="https://www.blubbmedia.com/">blubb.media </a>, <a href="https://www.ichbi.nz/">Sebastian Binz </a>
-media: Website
+media: Corporate Website
 ---
 {:.project_txt_title}
 About
@@ -21,6 +21,9 @@ KI.NRW supports the transformation of North Rhine-Westphalia into a nationwide l
 
 [KI-Welten](https://welten.ki.nrw)
 {:.custom-cursor_hoverable .project_content_cta}
+
+{:.project_img}
+![integration](/assets/graphics/kiNRW_integration.png)
 
 {:.project_video}
 <div>

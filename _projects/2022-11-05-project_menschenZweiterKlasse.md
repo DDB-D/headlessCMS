@@ -19,6 +19,9 @@ Die Geschichte der 1040 im Sommer 1944 von Athen nach Deutschland deportierten G
 [Details](https://www.lesejury.de/iason-chandrinos/buecher/wir-waren-menschen-zweiter-klasse/9783756204861)
 {:.custom-cursor_hoverable .project_content_cta}
 
+{:.project_img}
+![Book](/assets/graphics/kzght_menschen_img-book.png)
+
 {:.project_video}
 <div>
 <video loop muted autoplay >

@@ -4,9 +4,9 @@ title: Absicht AG
 action: Concept Art-Direction UI UX Production
 permalink: project/absicht/
 excerpt: Redesign der Website
-image_stage: # assets/graphics/content_project_absicht_wortmarke_dropShadow.svg
+image_stage: assets/graphics/project_absicht_tease.png
 client: <a href="https://www.absicht.ag/">Absicht Werbeagentur</a>
-media: Website
+media: Corporate Website
 ---
 {:.project_txt_title}
 About

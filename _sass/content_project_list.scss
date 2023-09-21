@@ -19,7 +19,7 @@ table.content_project_index_table{
     width: 100%;
     text-align: left;
 	vertical-align: middle;
-    border-collapse: collapse;
+    //border-collapse: collapse;
     border-spacing: 0;
     margin: 0;
 }
@@ -51,10 +51,12 @@ table.content_project_index_table {
             padding-left: 1vw;
             padding-bottom: 1em;          
             font-weight: 500!important;
+            border-bottom: 1px solid var(--color-type);
         }
         & td {
             width: 20vw;
-            padding-bottom: 1em;          
+            padding-bottom: 1em;    
+            border-bottom: 1px solid var(--color-type);      
 
         }
     }
