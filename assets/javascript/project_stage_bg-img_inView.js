@@ -29,7 +29,6 @@ window.onload = function(){
       "display": "block",
       "opacity": "1.0", 
     });
-    console.log("el1 is in view");
   } 
 
   if (el2_inView == true){
@@ -37,14 +36,12 @@ window.onload = function(){
       "display": "block", 
       "opacity": "0.5",
     });
-    console.log("el2 is in view");
   } 
 
   if (el1_inView == false && el2_inView == false ){
     target.css({
       "display": "none", 
     });
-    console.log("no el in view");
   } 
   /*
   else {    
@@ -69,7 +66,6 @@ $(document).ready(function () {
         "display": "block",
         "opacity": "1.0", 
       });
-      console.log("el1 is in view");
 
     } 
 
@@ -78,14 +74,12 @@ $(document).ready(function () {
         "display": "block", 
         "opacity": "0.5",
       });
-      console.log("el2 is in view");
     } 
 
     if (el1_inView == false && el2_inView == false ){
       target.css({
         "display": "none", 
       });
-      console.log("no el in view");
     } 
     /*
     else {    
