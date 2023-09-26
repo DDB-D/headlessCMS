@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+      {% include ui_preloader_mygram.html %}
+      {% include ui_custom-cursor.html %}
+      <div id="ui_head">
+        <div class="deviceVisibility_tablet">
+          {% include ui_home_post.html %}
+        </div>
+        {% include ui_menu.html %}
+      </div>
+      <div id="ui_foot">
+        {% include ui_darkMode.html %}
+      </div>
+      {% include ui_menu_overlay.html %}
+      <div id="content" class="scroll_snap">
+        <div id="content-height">
+          {% include ui_scroll.html %}
+          {% include mygram_stage.html %}
+
+          <section>
+          {% assign sorted-mygrams = site.mygram | sort: 'date' | reverse %}
+          
+          {% for item in sorted-mygrams %}
+            <tr>
+                <th>
+                    <a href="{{ site.url }}/{{item.url}}">
+                        <span class="content_project_index_table_link">
+                          {{ item.title }}
+                        </span>
+                    </a>
+                </th>
+                <td>
+                    <a href="{{ site.url }}/{{item.url}}">
+                      {{ item.date | date: "%-d %B %Y" }}
+                    </a>
+                </td>
+            </tr>
+          {% endfor %}
+
+          {% for item in sorted-mygrams %}
+            {% assign foundImage = 0 %}
+            {% assign images = item.content | split:"<img" %}
+
+              {{ item.content }}
+
+              {% for image in images %}
+                {% if image contains 'src' %}
+                  <p>x</p>
+                {% endif %}              
+              {% endfor %}
+            {% endfor %}
+          
+          </section>
+
+
+          {% include content_footer_small.html %}
+        </div>
+      </div>
+    {% include scripts_foot_blog-overview.html %}
+  </body>
+</html>

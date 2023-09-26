@@ -10,17 +10,17 @@
 :root {
   /* Typography */
   /* Color */
-  --color-type: #4A4C4E;
-  --color-bg: #C8CACC;
-  --color-bg-graf: #C8CACC;
-  --color-highlight: #4A4C4E;
+  --color-type: #524748;
+  --color-bg: #eae5e3;
+  --color-bg-graf: #eae5e3;
+  --color-highlight: #524748;
 }
 
 [data-theme="dark"] {
-  --color-type: #C8CACC;
-  --color-bg: #4A4C4E;
-  --color-bg-graf: #4A4C4E;
-  --color-highlight: #C8CACC;
+  --color-type: #eae5e3;
+  --color-bg: #524748;
+  --color-bg-graf: #524748;
+  --color-highlight: #eae5e3;
 }
 
 // tablet

@@ -2,7 +2,7 @@
 <html lang="en">
   {% include head.html %}
   <body>
-      {% include ui_preloader_blank.html %}
+      {% include ui_preloader_contact.html %}
       {% include ui_custom-cursor.html %}
       <div id="ui_head">
         <div class="deviceVisibility_tablet">
@@ -17,7 +17,7 @@
       <div id="content" class="scroll_snap">
         <div id="content-height">
           {% include ui_scroll.html %}
-          {% include content_projects.html %}
+          {% include contact_stage_bg-canvas.html %}
           <section class="blog-post_content_height">
             <div class="content_contact ">
                 <table class="contact_table" cellpadding="0" cellspacing="0">
@@ -56,6 +56,23 @@
                                   </a>
                               </td>
                           </tr>
+
+
+                        <tr>
+                          <th>
+                              <a href="https://matrix.org/">
+                                  <span class="content_project_index_table_link">
+                                    @hartgeld:matrix.org
+                                  </span>
+                              </a>
+                          </th>
+                          <td>
+                            <a href="https://matrix.org/">
+                              Matrix
+                            </a>
+                          </td>
+                        </tr>
+
                           
                         <tr>
                           <th>
@@ -70,20 +87,16 @@
                               Github
                             </a>
                           </td>
-                      </tr>
-                    </tbody>    
+                        </tr>
+                        
+
+                    </tbody>                       
                 </table>
             </div>
           </section>
           {% include content_footer_small.html %}
         </div>
       </div>
-
-      
-
-
-
-
     {% include scripts_foot_contact.html %}
   </body>
 </html>

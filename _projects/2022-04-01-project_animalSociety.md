@@ -4,7 +4,7 @@ title: Animal Society
 action: Art-Direction UI UX Campaign
 permalink: project/animalSociety/
 excerpt: Designsystem für Campaign-Website und SocialMedia-Assets
-image_stage: 
+image_stage: assets/graphics/animalSociety_tease.png
 client: <a href="https://animalsociety.de/">Animal Society</a>
 media: Campaign Website
 ---

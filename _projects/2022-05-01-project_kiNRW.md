@@ -4,7 +4,7 @@ title: KI.NRW
 action: UI UX
 permalink: project/kiNRW/
 excerpt: Website-Interfaces für digitale Touchpoints
-image_stage: #assets/graphics/ki-nrw_tease.gif
+image_stage: assets/graphics/ki-nrw_tease.png
 client: <a href="https://www.ki.nrw/en/">KI.NRW </a>
 partner: <a href="https://www.blubbmedia.com/">blubb.media </a>, <a href="https://www.ichbi.nz/">Sebastian Binz </a>
 media: Corporate Website
