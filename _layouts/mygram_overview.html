@@ -17,11 +17,62 @@
       <div id="content" class="scroll_snap">
         <div id="content-height">
           {% include ui_scroll.html %}
+
           {% include mygram_stage.html %}
 
-          <section>
           {% assign sorted-mygrams = site.mygram | sort: 'date' | reverse %}
           
+          {% for item in sorted-mygrams %}
+            <section>
+              <div>
+                {% if item.image %}
+                  {% assign path = item.image %}
+                  {% responsive_image_block %}
+                    path: {{ path }}
+                  {% endresponsive_image_block %}
+                {% endif %}             
+              </div>          
+            </section>
+          {% endfor %}
+
+
+          {% include content_footer_small.html %}
+        </div>
+      </div>
+    {% include scripts_foot_blog-overview.html %}
+  </body>
+</html>
+
+
+
+          <!--
+  {% for item in sorted-mygrams %}
+
+              {% assign foundImage = 0 %}
+              {% assign item-content = item.content | split:"(" %}
+              {% assign item-url = item-content.last | split:")" %}
+              {% assign path = item-url.first %}
+              
+              {{ path }}
+
+
+            
+              {% comment %}
+              {% responsive_image_block %}
+                path: {{ path }}
+              {% endresponsive_image_block %}
+              {% endcomment %}
+
+
+            {% endfor %}
+              
+              <div class="content_project_img content_project_img_fit " >
+                <img src="{{ path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }}" class="lazyload">
+              </div>
+            
+
+
+
           {% for item in sorted-mygrams %}
             <tr>
                 <th>
@@ -39,25 +90,6 @@
             </tr>
           {% endfor %}
 
-          {% for item in sorted-mygrams %}
-            {% assign foundImage = 0 %}
-            {% assign images = item.content | split:"<img" %}
-
-              {{ item.content }}
-
-              {% for image in images %}
-                {% if image contains 'src' %}
-                  <p>x</p>
-                {% endif %}              
-              {% endfor %}
-            {% endfor %}
-          
-          </section>
 
 
-          {% include content_footer_small.html %}
-        </div>
-      </div>
-    {% include scripts_foot_blog-overview.html %}
-  </body>
-</html>
+          -->
