@@ -1,7 +1,7 @@
 ---
 layout: myGram_post
-title: Threlfalls Brewery on Cook St
+title: Wave Riding
 image: images/uploads/f1000022.jpg
 ---
 
-Waves
+St Mary's Parsonage, Manchester

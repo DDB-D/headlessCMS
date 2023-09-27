@@ -33,7 +33,7 @@
               
               <div class="mygram_type-container">
                 <span class="mygram_type_title">
-                  {{ item.title }} &#8194;&frasl;&#8194; {{ item.content }} &#8194;&frasl;&#8194; {{ item.date | date: "%Y" }}
+                  {{ item.title }} &#8194;&frasl;&frasl;&#8194; {{ item.content }} &#8194;&frasl;&frasl;&#8194; {{ item.date | date: "%Y" }}
                 </span>
               </div>
             </div>
@@ -42,6 +42,6 @@
         {% include content_footer.html %}
       </div>
     </div>
-    {% include scripts_foot_blog-overview.html %}
+    {% include scripts_foot_mygram.html %}
   </body>
 </html>
