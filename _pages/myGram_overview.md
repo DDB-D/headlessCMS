@@ -1,6 +1,6 @@
 ---
 layout: mygram_overview
 title: myGram overview
-permalink: /mygram-overview/
+permalink: /mygram/
 ---
 
