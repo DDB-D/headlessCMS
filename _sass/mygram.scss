@@ -1,0 +1,65 @@
+.mygram_item-container{
+    width: 100vw;
+    height: 100vh;
+}
+
+.mygram_img-container{
+    height: 70vh;
+    width: 70vw; 
+    padding-top: 15vh;
+    padding-right: 15vw;
+    padding-bottom: 0;
+    padding-left: 15vw;
+}
+
+.mygram_img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.mygram_type-container{
+    position: relative;
+    width: 70vw;
+    height: 15vh;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .mygram_type_title{
+
+    position: absolute;
+    bottom: 10vh;
+    font-family: 'Inter', sans;
+    font-weight: 500;
+    font-style: normal;
+    font-variant-ligatures: normal;  
+    color: var(--color-type);
+    $map: (576: 18, 768: 18, 992: 18);
+    font-size: least-squares-fit($map)!important;
+    text-align: center;
+    //$map: (576: 32, 768: 32, 992: 32);
+    //line-height: least-squares-fit($map);
+  }
+
+  .mygram_stage_type{
+    position: absolute;
+    width: 70vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    bottom: 10vh;
+    font-family: 'Inter', sans;
+    font-weight: 500;
+    font-style: normal;
+    font-variant-ligatures: normal;  
+    color: var(--color-type);
+    $map: (576: 18, 768: 18, 992: 18);
+    font-size: least-squares-fit($map)!important;
+    text-align: center;
+  }
+

@@ -2,94 +2,46 @@
 <html lang="en">
   {% include head.html %}
   <body>
-      {% include ui_preloader_mygram.html %}
-      {% include ui_custom-cursor.html %}
-      <div id="ui_head">
-        <div class="deviceVisibility_tablet">
-          {% include ui_home_post.html %}
-        </div>
-        {% include ui_menu.html %}
+    {% include ui_preloader_mygram.html %}
+    {% include ui_custom-cursor.html %}
+    <div id="ui_head">
+      <div class="deviceVisibility_tablet">
+        {% include ui_home_post.html %}
       </div>
-      <div id="ui_foot">
-        {% include ui_darkMode.html %}
-      </div>
-      {% include ui_menu_overlay.html %}
-      <div id="content" class="scroll_snap">
-        <div id="content-height">
-          {% include ui_scroll.html %}
-
-          {% include mygram_stage.html %}
-
-          {% assign sorted-mygrams = site.mygram | sort: 'date' | reverse %}
-          
-          {% for item in sorted-mygrams %}
-            <section>
-              <div>
+      {% include ui_menu.html %}
+    </div>
+    <div id="ui_foot">
+      {% include ui_darkMode.html %}
+    </div>
+    {% include ui_menu_overlay.html %}
+    <div id="content" class="scroll_snap">
+      <div id="content-height">
+        {% include ui_scroll.html %}
+        {% include mygram_stage.html %}
+        {% assign sorted-mygrams = site.mygram | sort: 'date' | reverse %}        
+        {% for item in sorted-mygrams %}
+          <section>
+            <div class="mygram_item-container">
+              <div class="mygram_img-container">
                 {% if item.image %}
                   {% assign path = item.image %}
                   {% responsive_image_block %}
                     path: {{ path }}
                   {% endresponsive_image_block %}
                 {% endif %}             
-              </div>          
-            </section>
-          {% endfor %}
-
-
-          {% include content_footer_small.html %}
-        </div>
+              </div>
+              
+              <div class="mygram_type-container">
+                <span class="mygram_type_title">
+                  {{ item.title }} &#8194;&frasl;&#8194; {{ item.content }} &#8194;&frasl;&#8194; {{ item.date | date: "%Y" }}
+                </span>
+              </div>
+            </div>
+          </section>
+        {% endfor %}
+        {% include content_footer.html %}
       </div>
+    </div>
     {% include scripts_foot_blog-overview.html %}
   </body>
 </html>
-
-
-
-          <!--
-  {% for item in sorted-mygrams %}
-
-              {% assign foundImage = 0 %}
-              {% assign item-content = item.content | split:"(" %}
-              {% assign item-url = item-content.last | split:")" %}
-              {% assign path = item-url.first %}
-              
-              {{ path }}
-
-
-            
-              {% comment %}
-              {% responsive_image_block %}
-                path: {{ path }}
-              {% endresponsive_image_block %}
-              {% endcomment %}
-
-
-            {% endfor %}
-              
-              <div class="content_project_img content_project_img_fit " >
-                <img src="{{ path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }}" class="lazyload">
-              </div>
-            
-
-
-
-          {% for item in sorted-mygrams %}
-            <tr>
-                <th>
-                    <a href="{{ site.url }}/{{item.url}}">
-                        <span class="content_project_index_table_link">
-                          {{ item.title }}
-                        </span>
-                    </a>
-                </th>
-                <td>
-                    <a href="{{ site.url }}/{{item.url}}">
-                      {{ item.date | date: "%-d %B %Y" }}
-                    </a>
-                </td>
-            </tr>
-          {% endfor %}
-
-
-
-          -->

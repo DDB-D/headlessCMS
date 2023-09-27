@@ -16,6 +16,7 @@
       {% include ui_menu_overlay.html %}
       <div id="content" >
         <div id="content-height">
+          {% include ui_scroll.html %}
           <section class="blog-post_content_height">
             <div class="project_content project_txt_title blog-post_content_txt_meta" >
                 {{ page.date | date: "%-d %B %Y" }}
@@ -30,6 +31,6 @@
           {% include content_footer_small.html %}
         </div>
       </div>
-    {% include scripts_foot_contact.html %}
+    {% include scripts_foot_blog.html %}
   </body>
 </html>

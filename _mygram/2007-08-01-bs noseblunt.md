@@ -1,7 +1,7 @@
 ---
 layout: myGram_post
-title: my first gram
+title: Bs Noseblunt
 image: images/uploads/bs-noseblunt-benni.jpg
 ---
 
-*Bs Noseblunt*
+Stuttgart Feuersee
