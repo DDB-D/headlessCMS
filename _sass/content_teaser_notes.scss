@@ -1,0 +1,21 @@
+.content_teaser_notes_img{
+    width: 50vw;
+    height: 50vh;
+    background-image: url('/assets/graphics/blog-overview_stage_bg-canvas.png');
+    position: absolute;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150% auto;
+
+    opacity: 0.65;
+}
+
+#content_notes_type{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -20,10 +20,16 @@ var content_stage_bg_type_themeSwitch = document.getElementById('content_stage_b
 var content_stage_bg_type_themeSwitch_elements = content_stage_bg_type_themeSwitch.querySelectorAll("path");
 
 //get element content_projects bg-typefaces
-
 var projects_bg_type_themeSwitch = document.getElementById('content_projects_type');
 var projects_bg_type_themeSwitch_elements = projects_bg_type_themeSwitch.querySelectorAll("path");
 
+// get element content_notes bg-type
+var notes_bg_type_themeSwitch = document.getElementById('content_notes_type');
+var notes_bg_type_themeSwitch_elements = notes_bg_type_themeSwitch.querySelectorAll("path");
+
+// get element content_mygram bg-type
+var mygram_bg_type_themeSwitch = document.getElementById('content_mygram_type');
+var mygram_bg_type_themeSwitch_elements = mygram_bg_type_themeSwitch.querySelectorAll("path");
 
 // theme already set in browser cookies?
 if (currentTheme) {
@@ -97,11 +103,19 @@ function switchTheme(e) {
     })
     // set content_bg-type to color-bg-graf
     var projects_bg_type_color_themeSwitch = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
-    
     projects_bg_type_themeSwitch_elements.forEach(function(element, index){
       element.setAttribute("fill", projects_bg_type_color_themeSwitch);
     })
-
+    // set content_teaser_notes bg-type to color-bg-graf
+    var notes_bg_type_color_themeSwitch = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
+    notes_bg_type_themeSwitch_elements.forEach(function(element, index){
+      element.setAttribute("fill", notes_bg_type_color_themeSwitch);
+    })
+    // set content_teaser_mygram bg-type to color-bg-graf
+    var mygram_bg_type_color_themeSwitch = getComputedStyle(document.documentElement).getPropertyValue("--color-type");
+    mygram_bg_type_themeSwitch_elements.forEach(function(element, index){
+      element.setAttribute("fill", mygram_bg_type_color_themeSwitch);
+    })
 
 }
 

@@ -14,59 +14,17 @@
       {% include ui_darkMode.html %}
     </div>
     {% include ui_menu_overlay.html %}
-
     <div id="content" class="scroll_snap">
       <div id="content-height">
-        
-        {% include ui_scroll.html %}
-        
-        <section>
-          {% include content_stage.html %}
-          {% include content_stage_pressAndHold_video.html %}
-        </section>
-        
-        <section class="blog-post_content_height content_about" >
-          <div class="project_content about_txt_title" >
-            {{ page.subtitle }}
-          </div>
-          <div class="project_content project_txt" >
-              {{ page.content }}
-          </div>
-        </section>
-
-        <section >
-          <div id="content_projects_container">
-            <div class="blog-post_content_height content_projects_titles"  >
-              <div class="project_content about_txt_title" >
-                Archiv
-              </div>
-              <div class="project_content project_txt" >
-                  <p>2010&#8202;&#8212;&#8202;ongoing</p>
-              </div>
-            </div>
-            <div class="content_projects_img" ></div>
-            <div class="content_projects_type_pos" id="content_projects_type">
-              {% include content_projects_wortmarke.html %}
-            </div>
-            <div class="content_projects_cta">
-              <a class="content_footer_cta_type" href="{{ site.url }}/projects/">
-                <div class="content_footer_cta_type_container custom-cursor_hoverable content_projects_cta_type_container">
-                  <div class = "content_footer_cta_arrow">
-                    &#10149;
-                  </div>
-                  <div class="content_projects_cta_label">explore</div>
-                </div>
-              </a>
-            </div>
-          </div>
-        
-        </section>
-
+        {% include ui_scroll.html %}       
+        {% include content_stage.html %}
+        {% include content_about.html %}
+        {% include content_teaser_projects.html %}
+        {% include content_teaser_notes.html %}
+        {% include content_teaser_mygram.html %}
         {% include content_footer.html %}
-
       </div>
     </div>
-
-      {% include scripts_foot.html %}
+    {% include scripts_foot.html %}
   </body>
 </html>

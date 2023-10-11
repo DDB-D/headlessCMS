@@ -1,35 +1,8 @@
-
-<section data-scroll-section id="section_about">
-  <div class="section-inner" data-scroll data-scroll-repeat data-scroll-call="testEvent1" data-scroll-speed="8">
-      <!-- buzzwordz -->
-
-  
-      <div class="content_about" >
-
-        <div class="content_stage_titles_buzzwords" >
-          <h3 >
-            <span id="buzzwords_changeType_1">
-              concept
-            </span>
-            <span id="buzzwords_changeType_2">
-              art-direction
-            </span>
-            <span id="buzzwords_changeType_3">
-              prototype
-            </span>
-            <span id="buzzwords_changeType_4">
-              ui ux
-            </span>
-          </h3>
-        </div>
-        
-        <div data-scroll data-scroll-repeat class="content_about_txt">
-          {% for page in site.pages %}
-            {% if page.layout == 'about' %}
-              {{page.content | markdownify | strip_html}}
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
+<section class="blog-post_content_height content_about" >
+  <div class="project_content about_txt_title" >
+    {{ page.subtitle }}
+  </div>
+  <div class="project_content project_txt" >
+      {{ page.content }}
   </div>
 </section>

@@ -1,0 +1,21 @@
+.content_teaser_mygram_img{
+    width: 50vw;
+    height: 50vh;
+    background-image: url('/assets/graphics/DSC_0062_min.png');
+    position: absolute;
+
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 200% auto;
+
+    opacity: 0.75;
+}
+
+#content_mygram_type{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
