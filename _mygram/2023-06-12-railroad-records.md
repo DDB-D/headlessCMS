@@ -1,5 +1,5 @@
 ---
-layout: myGram_post
+layout: mygram_post
 title: King Crucial Soundsystem
 image: images/uploads/IMG_20230709_032254.jpg
 ---

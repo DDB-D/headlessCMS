@@ -1,5 +1,5 @@
 ---
-layout: myGram_post
+layout: mygram_post
 title: Posh Birds
 image: images/uploads/f1000015.jpg
 ---

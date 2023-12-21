@@ -36,12 +36,12 @@ exclude: [vendor]
 
 assets:
    sources:
-     -assets/favicon
-     -assets/fonts
-     -assets/javascript
-     -assets/graphics
-     -assets/videos
-     -node_modules
+     - assets/favicon
+     - assets/fonts
+     - assets/javascript
+     - assets/graphics
+     - assets/videos
+     - node_modules
 
 include:
   - _pages

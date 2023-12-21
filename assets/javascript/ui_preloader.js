@@ -16,6 +16,11 @@ $(window).on('load', function(){
       setTimeout(function(){
         element.setAttribute("style","opacity:1.0; -moz-opacity:1.0; filter:alpha(opacity=100)");
       }, 5000);
-  })*/
+  })
   $("#preloader-fade").fadeOut(500);
+  */
+  $("#preloader-fade").fadeOut(500, function() {
+    // After the preloader has faded out, set the visibility of the content to visible
+    //$("#content").css("visibility", "visible");
+  });
 });

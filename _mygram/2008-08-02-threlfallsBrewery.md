@@ -1,5 +1,5 @@
 ---
-layout: myGram_post
+layout: mygram_post
 title: Wave Riding
 image: images/uploads/f1000022.jpg
 ---

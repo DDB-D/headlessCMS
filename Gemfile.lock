@@ -5,7 +5,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     colorator (1.1.0)
     ffi (1.15.5)
-    ffi (1.15.5-x64-mingw-ucrt)
+    ffi (1.15.5-x64-unknown)
     forwardable-extended (2.6.0)
     jekyll (3.6.3)
       addressable (~> 2.4)
